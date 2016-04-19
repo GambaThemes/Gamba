@@ -1,0 +1,12 @@
+{
+    "index": {
+        "title": "Home",
+        "nav": "Home",
+        "url_style": [],
+        "url_script": [
+            {
+                "url": "assets/js/pages/sample-page.js"
+            }
+        ]
+    }
+}
