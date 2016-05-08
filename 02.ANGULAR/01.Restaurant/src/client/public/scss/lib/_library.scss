@@ -1,0 +1,28 @@
+/* VARIABLES */
+
+$brand-primary: #ff7256;
+$brand-secondary: #ff4676;
+$brand-success: #7afc8c;
+$brand-info: #78eaff;
+$brand-warning: #ffdd00;
+$brand-danger: #ff3939;
+$black-color: #000000;
+$gray-color: #979798;
+$text-color: #555555;
+$text-color-light: #cbcbce;
+$text-color-dark: #000000;
+$border-radius: 2px;
+
+/* MIXIN */
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin box-shadow($shadow) {
+    -webkit-box-shadow: $shadow;
+    box-shadow: $shadow;
+}

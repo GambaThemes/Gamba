@@ -1,0 +1,124 @@
+@import 'lib/library';
+
+/* SPINNER */
+
+.spinner {
+    min-width: 24px;
+    min-height: 24px;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 16px;
+        height: 16px;
+        margin-top: -10px;
+        margin-left: -10px;
+        z-index: 1;
+    }
+    &:not(:required):before {
+        content: '';
+        border-radius: 50%;
+        border: 2px solid rgba(0, 0, 0, 0.15);
+        border-top-color: rgba(0, 0, 0, 0.25);
+        animation: spinner .6s linear infinite;
+        -webkit-animation: spinner .6s linear infinite;
+    }
+}
+
+@keyframes spinner {
+    to {transform: rotate(360deg);}
+}
+ 
+@-webkit-keyframes spinner {
+    to {-webkit-transform: rotate(360deg);}
+}
+
+
+/* BUTTON */
+
+@mixin button-mixin($color, $text-color) {
+    background-color: $color;
+    border-color: $color;
+    color: $text-color;
+    &:hover {
+        background-color: darken($color, 10%);
+        border-color: darken($color, 10%);
+        &:focus,
+        &:active {
+            background-color: darken($color, 15%);
+            border-color: darken($color, 15%);
+            color: $text-color;
+            @include box-shadow(none);
+        }
+    }
+    &:focus,
+    &:active {
+        background-color: darken($color, 15%);
+        border-color: darken($color, 15%);
+        outline: none !important;
+        color: $text-color;
+        @include box-shadow(none);
+        -webkit-transform: translateY(1px);
+        -ms-transform: translateY(1px);
+        transform: translateY(1px);
+    }
+}
+
+.btn {
+    border-radius: $border-radius;
+    transition: all 0.25s ease-in-out;
+    &:focus,
+    &:active{
+    	outline: none !important;
+    }
+    &.btn-primary {
+        @include button-mixin($brand-primary, #ffffff);
+    }
+    &.btn-secondary {
+        @include button-mixin($brand-secondary, #ffffff);
+    }
+    &.btn-success {
+        @include button-mixin($brand-success, #ffffff);
+    }
+    &.btn-info {
+        @include button-mixin($brand-info, #ffffff);
+    }
+    &.btn-warning {
+        @include button-mixin($brand-warning, #ffffff);
+    }
+    &.btn-danger {
+        @include button-mixin($brand-danger, #ffffff);
+    }
+    &.btn-black {
+        @include button-mixin($black-color, #ffffff);
+    }
+    &.btn-gray {
+        @include button-mixin($gray-color, #ffffff);
+    }
+}
+
+
+/* FORM */
+
+.form-control {
+    border-radius: $border-radius;
+    border: 1px solid transparent;
+    box-shadow: none;
+    &:focus {
+        border-color: transparent;
+        box-shadow: none;
+    }
+}
+
+
+/* DROPDOWN MENU */
+
+.dropdown-menu {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 0;
+    border-radius: $border-radius;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.08);
+}
