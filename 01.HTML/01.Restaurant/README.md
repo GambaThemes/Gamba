@@ -1,2 +1,0 @@
-# gamba
-code sample

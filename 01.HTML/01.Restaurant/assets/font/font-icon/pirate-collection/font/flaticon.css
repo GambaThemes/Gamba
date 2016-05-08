@@ -1,0 +1,71 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 13/04/2016 15:30
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-anchor:before { content: "\f100"; }
+.flaticon-barrel:before { content: "\f101"; }
+.flaticon-bomb:before { content: "\f102"; }
+.flaticon-cannon:before { content: "\f103"; }
+.flaticon-coin:before { content: "\f104"; }
+.flaticon-compass:before { content: "\f105"; }
+.flaticon-dice:before { content: "\f106"; }
+.flaticon-eyepatch:before { content: "\f107"; }
+.flaticon-gallows:before { content: "\f108"; }
+.flaticon-helm:before { content: "\f109"; }
+.flaticon-hook:before { content: "\f10a"; }
+.flaticon-hook-1:before { content: "\f10b"; }
+.flaticon-island:before { content: "\f10c"; }
+.flaticon-jolly-roger:before { content: "\f10d"; }
+.flaticon-kraken:before { content: "\f10e"; }
+.flaticon-letter-of-marque:before { content: "\f10f"; }
+.flaticon-lighthouse:before { content: "\f110"; }
+.flaticon-message-in-a-bottle:before { content: "\f111"; }
+.flaticon-musket:before { content: "\f112"; }
+.flaticon-octopus:before { content: "\f113"; }
+.flaticon-paddles:before { content: "\f114"; }
+.flaticon-parrot:before { content: "\f115"; }
+.flaticon-pipe:before { content: "\f116"; }
+.flaticon-pirate:before { content: "\f117"; }
+.flaticon-pirate-1:before { content: "\f118"; }
+.flaticon-round-shot:before { content: "\f119"; }
+.flaticon-rum:before { content: "\f11a"; }
+.flaticon-saber:before { content: "\f11b"; }
+.flaticon-ship:before { content: "\f11c"; }
+.flaticon-ship-in-a-bottle:before { content: "\f11d"; }
+.flaticon-skull:before { content: "\f11e"; }
+.flaticon-skull-1:before { content: "\f11f"; }
+.flaticon-spyglass:before { content: "\f120"; }
+.flaticon-starfish:before { content: "\f121"; }
+.flaticon-sword:before { content: "\f122"; }
+.flaticon-tortoise:before { content: "\f123"; }
+.flaticon-treasure:before { content: "\f124"; }
+.flaticon-treasure-map:before { content: "\f125"; }
+.flaticon-whale:before { content: "\f126"; }
+.flaticon-wooden-leg:before { content: "\f127"; }

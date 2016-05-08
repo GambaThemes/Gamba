@@ -1,0 +1,36 @@
+section.menu-of-day.style-1
+    .left-image
+    .right-infomation
+        .content-wrapper.padding-top-100.padding-bottom-100
+            .main-title
+                .bg-image
+                    img(src="assets/images/seafood/kingcrab.png", alt="")
+                h2.title menu of the day
+            .main-content
+                ul.tab-menu(role="tablist")
+                    li(role="presentation")
+                        a.name(href="#starters", aria-controls="starters", role="tab", data-toggle="tab") 
+                            i.icons.flaticon-hot-soup-in-a-bowl
+                            span starters
+                    li.active(role="presentation")
+                        a.name(href="#dishes", aria-controls="dishes", role="tab", data-toggle="tab") 
+                            i.icons.flaticon-lobster
+                            span Dishes
+                    li(role="presentation")
+                        a.name(href="#deserts", aria-controls="deserts", role="tab", data-toggle="tab") 
+                            i.icons.flaticon-fluffy-pancakes-with-syrup
+                            span deserts
+                    li(role="presentation")
+                        a.name(href="#drinks", aria-controls="drinks", role="tab", data-toggle="tab") 
+                            i.icons.flaticon-sundae-with-cherry
+                            span Drinks
+                // Tab panes
+                .tab-content.content-menu
+                    #starters.tab-pane.fade(role="tabpanel")
+                        != partial("list-menu-1")
+                    #dishes.tab-pane.fade.in.active(role="tabpanel")
+                        != partial("list-menu-1")
+                    #deserts.tab-pane.fade(role="tabpanel")
+                        != partial("list-menu-1")
+                    #drinks.tab-pane.fade(role="tabpanel")
+                        != partial("list-menu-1")
