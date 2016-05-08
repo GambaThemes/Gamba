@@ -6,13 +6,9 @@
             
         ],
         "url_script": [
-<<<<<<< HEAD
             {
                 "src": "assets/js/pages/homepage.js"
             }
-=======
-            
->>>>>>> 2a86b2ac4c99a99fd019468b99bf001827e8a7ac
         ]
     }
 }

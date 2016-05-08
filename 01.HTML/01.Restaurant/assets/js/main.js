@@ -19,10 +19,7 @@ jQuery(function($) {
                 }
                 else {
                     $(".header-main").removeClass('header-fixed');
-<<<<<<< HEAD
                     $(".header-main").removeClass('hide-menu');
-=======
->>>>>>> 2a86b2ac4c99a99fd019468b99bf001827e8a7ac
                 }
             });
 
@@ -69,12 +66,9 @@ jQuery(function($) {
 
     SLZ.mainFunction = function() {
 
-<<<<<<< HEAD
+
         // ----------------------- WOW-JS --------------------------- //
         new WOW().init();
-
-=======
->>>>>>> 2a86b2ac4c99a99fd019468b99bf001827e8a7ac
         // slide gallery footer
         $('.gamba-gallery .content-widget').slick({
             infinite: true,
