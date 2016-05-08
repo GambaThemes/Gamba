@@ -1,0 +1,35 @@
+ul.nav-links.nav.navbar-nav
+   li(class="#{ current.source == 'index' ? 'active' : '' }")
+      a.main-menu(href="javascript:void(0)")
+         span.text Home
+   li(class="#{ current.source == 'about' ? 'active' : '' }")
+      a.main-menu(href="about.html")
+         span.text about
+   li(class="#{ current.source == 'Reservation' ? 'active' : '' }")
+      a.main-menu(href="javascript:void(0)")
+         span.text Reservation
+   li(class="#{ current.source == 'menu' ? 'active' : '' }")
+      a.main-menu(href="javascript:void(0)")
+         span.text menu
+   li(class="#{ current.source == 'event' ? 'active' : '' }")
+      a.main-menu(href="javascript:void(0)")
+         span.text event
+   li(class="#{ current.source == 'blog' ? 'active' : '' }")
+      a.main-menu(href="javascript:void(0)")
+         span.text blog
+   li(class="#{ current.source == 'shop' ? 'active' : '' }")
+      a.main-menu(href="javascript:void(0)")
+         span.text shop
+   li(class="#{ current.source == 'gallery' ? 'active' : '' }")
+      a.main-menu(href="javascript:void(0)")
+         span.text gallery
+   li(class="#{ current.source == 'contact' ? 'active' : '' }")
+      a.main-menu(href='contact.html')
+         span.text contact
+   li.button-search
+      p.main-menu
+         i.fa.fa-search
+.nav-search.hide
+   form
+      input.searchbox(type='text' placeholder='Search')
+      button.searchbutton.fa.fa-search(type='submit')
