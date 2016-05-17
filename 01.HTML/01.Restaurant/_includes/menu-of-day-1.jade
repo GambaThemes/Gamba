@@ -10,7 +10,7 @@ section.menu-of-day.style-1
                 ul.tab-menu(role="tablist")
                     li(role="presentation")
                         a.name(href="#starters", aria-controls="starters", role="tab", data-toggle="tab") 
-                            i.icons.flaticon-hot-soup-in-a-bowl
+                            i.icons.flaticon-food-2
                             span starters
                     li.active(role="presentation")
                         a.name(href="#dishes", aria-controls="dishes", role="tab", data-toggle="tab") 
@@ -22,15 +22,15 @@ section.menu-of-day.style-1
                             span deserts
                     li(role="presentation")
                         a.name(href="#drinks", aria-controls="drinks", role="tab", data-toggle="tab") 
-                            i.icons.flaticon-sundae-with-cherry
+                            i.icons.flaticon-drink
                             span Drinks
                 // Tab panes
                 .tab-content.content-menu
                     #starters.tab-pane.fade(role="tabpanel")
                         != partial("list-menu-1")
                     #dishes.tab-pane.fade.in.active(role="tabpanel")
-                        != partial("list-menu-1")
+                        != partial("list-menu-1-b")
                     #deserts.tab-pane.fade(role="tabpanel")
-                        != partial("list-menu-1")
+                        != partial("list-menu-1-c")
                     #drinks.tab-pane.fade(role="tabpanel")
-                        != partial("list-menu-1")
+                        != partial("list-menu-1-d")

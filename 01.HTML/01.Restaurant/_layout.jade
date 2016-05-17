@@ -13,8 +13,7 @@ html(lang="en")
         link(type="text/css", rel="stylesheet", href="assets/font/font-family/roboto/stylesheet.css")
         link(type="text/css", rel="stylesheet", href="assets/font/font-family/antonio/stylesheet.css")
         link(type="text/css", rel="stylesheet", href="assets/font/font-icon/font-awesome/css/font-awesome.css")
-        link(type="text/css", rel="stylesheet", href="assets/font/font-icon/aliment/font/flaticon.css")
-
+        link(type="text/css", rel="stylesheet", href="assets/font/font-icon/font-restaurant/font/flaticon.css")
 
         // LIBRARY CSS
         link(type="text/css", rel="stylesheet", href="assets/libs/bootstrap/css/bootstrap.min.css")
@@ -44,17 +43,27 @@ html(lang="en")
             .wrapper-content
                 // HEADER
                 header
-                    != partial("_includes/header")
+                    if (current.source == 'index')
+                        != partial("_includes/header/header")
+                    else if (current.source == 'homepage-2')
+                        != partial("_includes/header/header-2")
+                    else if (current.source == 'homepage-3')
+                        != partial("_includes/header/header-3")
+                    else if (current.source == '404')
+                        // NULL
+                    else
+                        != partial("_includes/header/header")
+                    
 
                 // WRAPPER
                 #wrapper-content
                     // MAIN CONTENT
-                    .main-content
+                    .main-contents
                         != yield
 
                 // FOOTER
                 footer
-                    != partial("_includes/footer")
+                    != partial("_includes/footer/footer")
 
                 // BUTTON BACK TO TOP
                 //- .btn-wrapper.back-to-top

@@ -8,6 +8,45 @@
         "url_script": [
             {
                 "src": "assets/js/pages/homepage.js"
+            },
+            {
+                "src": "assets/libs/background-video/video-bg.js"
+            },
+            {
+                "src": "assets/js/pages/coming-soon.js"
+            }
+        ]
+    },
+    "homepage-2": {
+        "title": "Homepage 2",
+        "nav": "Homepage 2",
+        "url_style": [
+            
+        ],
+        "url_script": [
+            {
+                "src": "assets/js/pages/homepage.js"
+            },
+            {
+                "src": "assets/libs/background-video/video-bg.js"
+            },
+            {
+                "src": "assets/js/pages/coming-soon.js"
+            }
+        ]
+    },
+    "homepage-3": {
+        "title": "Homepage 3",
+        "nav": "Homepage 3",
+        "url_style": [
+            
+        ],
+        "url_script": [
+            {
+                "src": "assets/js/pages/homepage.js"
+            },
+            {
+                "src": "assets/js/pages/coming-soon.js"
             }
         ]
     }

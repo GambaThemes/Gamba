@@ -101,6 +101,12 @@ a {
 }
 
 
+.main-contents {
+    background-color: #fff;
+    position: relative;
+    z-index: 10;
+}
+
 /*----------  1.2. CSS for page  ----------*/
 
 .padding-top-100 {
@@ -127,6 +133,12 @@ a {
     margin-bottom: 70px;
 }
 
+
+.margin-top-50 {
+    margin-top: 50px;
+}
+
+
 /*===============================
  ======  END GLOBAL STYLE  ======
  ===============================*/
@@ -135,13 +147,73 @@ a {
  /*==============================
  ========     HEADER     ========
  ===============================*/
-header {
-    min-height: 152px;
-}
 
 .bg-transparent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     background-color: transparent;
     .transition (all 0.6s ease);
+}
+
+.header-01 {
+    .nav-search {
+        top: 60px;
+    }
+    .header-main {
+        .logo-wrapper {
+            text-align: center;
+            display: block;
+            float: none;
+        }
+        .navigation {
+            float: none;
+            &:before {
+                position: absolute;
+                content: "";
+                top: 0;
+                bottom: 0;
+                left: -100%;
+                width: 300%;
+                border-top: 1px solid rgba(255, 255, 255, 0.3);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
+            }
+            .nav-links {
+                display: table;
+                float: none;
+                margin: 0 auto;
+                .main-menu {
+                    line-height: 60px;
+                }
+            }
+        }
+        &.header-fixed {
+            .logo-wrapper {
+                display: inherit;
+                float: left;
+            }
+            .logo {
+                text-align: left;
+                line-height: 50px;
+            }
+            .navigation {
+                float: right;
+                &:before {
+                    display: none;
+                }
+                .nav-links .main-menu {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }   
+}
+
+.header-02 {
+    .header-main {
+        display: none;
+    }
 }
 
 /*----------  2.1. Topbar Header  ----------*/
@@ -350,7 +422,22 @@ header {
             height: 40px;
             padding: 0 20px;
             background-color: rgba(255, 225, 255, 0.5);
-            color: @text-color;
+            color: @title-color;
+            ::-webkit-input-placeholder {
+               color: @title-color;
+            }
+
+            :-moz-placeholder {
+               color: @title-color;
+            }
+
+            ::-moz-placeholder {
+               color: @title-color;
+            }
+
+            :-ms-input-placeholder {
+               color: @title-color;
+            }
         }
         .searchbutton {
             width: 40px;
@@ -379,10 +466,13 @@ header {
  ========     FOOTER     ========
 ================================*/
 footer {
+    position: fixed;
+    z-index: 0;
+    bottom: 0;
     width: 100%;
     height: 100vh;
     display: table;
-    position: relative;
+    //position: relative;
     color: #d8e3f7;
     background-color: #000205;
     background-image: url('../images/background-full/footer.jpg');

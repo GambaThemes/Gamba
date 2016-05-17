@@ -9,7 +9,7 @@ jQuery(function($) {
 
     SLZ.headerFunction = function() {
         //js for menu PC
-        if ($(window).width() > 768){
+        if ($(window).width() > 768) {
              // Add class fixed for menu when scroll
             var window_height = $(window).height();
 
@@ -44,7 +44,6 @@ jQuery(function($) {
                     $('.header-main').addClass('hide-menu');
                 }
                 lastScroll = st;
-
             });
 
             
@@ -69,6 +68,29 @@ jQuery(function($) {
 
         // ----------------------- WOW-JS --------------------------- //
         new WOW().init();
+
+        // ----------------------- Play videos --------------------------- //
+        // JS for section Videos bg
+        if ($('section').hasClass('about-us-3')) {
+            var gurl = $(".video-embed")[0].src;
+            $(".video-button-play ").on('click', function(event) {
+                $(".video-embed").addClass('show-video');
+                $(".video-button-close").addClass('show-video');
+                $(".video-embed")[0].src += "&autoplay=1";
+                event.preventDefault();
+            });
+
+            $(".video-button-close").on('click', function(event) {
+                $(".video-embed")[0].src = gurl;
+                $(".video-embed").removeClass('show-video');
+                $(".video-button-close").removeClass('show-video');
+            });
+        };
+        
+
+
+
+        // ----------------------- Footer JS --------------------------- //
         // slide gallery footer
         $('.gamba-gallery .content-widget').slick({
             infinite: true,
@@ -81,13 +103,7 @@ jQuery(function($) {
             arow:true
         });
 
-
-        // css for header transparent
-        var header_height = $('header').height();
-        $('.homepage-banner').css('top',header_height*(-1));
-        $('.homepage-banner').css('margin-bottom',header_height*(-1));
-        $('.homepage-default .homepage-banner-content').css('padding-top',header_height);
-
+        $('.body-wrapper').css('padding-bottom',$('footer').height());
     };
 
     /*======================================
@@ -101,7 +117,7 @@ jQuery(function($) {
 
     /*=====  End of INIT FUNCTIONS  ======*/
 
-    $(window).on('resize load', function() {
+    $(window).on('load', function() {
     });
 
 });
