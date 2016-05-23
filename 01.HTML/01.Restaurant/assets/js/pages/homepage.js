@@ -180,7 +180,6 @@ jQuery(function($) {
             ]
         });
 
-
         // slide testimonial
          $('.slider-for').slick({
               slidesToShow: 1,

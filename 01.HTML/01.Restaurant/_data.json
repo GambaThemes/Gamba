@@ -3,7 +3,6 @@
         "title": "Home Default",
         "nav": "Home Default",
         "url_style": [
-            
         ],
         "url_script": [
             {
@@ -14,6 +13,9 @@
             },
             {
                 "src": "assets/js/pages/coming-soon.js"
+            },
+            {
+                "src": "assets/libs/parallax/jquery.parallax-scroll.js"
             }
         ]
     },
@@ -21,7 +23,6 @@
         "title": "Homepage 2",
         "nav": "Homepage 2",
         "url_style": [
-            
         ],
         "url_script": [
             {
@@ -39,7 +40,6 @@
         "title": "Homepage 3",
         "nav": "Homepage 3",
         "url_style": [
-            
         ],
         "url_script": [
             {
@@ -49,5 +49,109 @@
                 "src": "assets/js/pages/coming-soon.js"
             }
         ]
+    },
+    "about": {
+        "title": "About",
+        "nav": "About",
+        "url_style": [
+        ],
+        "url_script": [
+            {
+                "src": "assets/js/pages/homepage.js"
+            },
+            {
+                "src": "assets/js/pages/about.js"
+            },
+            {
+                "src": "assets/js/pages/coming-soon.js"
+            }
+        ]
+    },
+    "reservation": {
+        "title": "Reservation",
+        "nav": "Reservation",
+        "url_style": [
+        ],
+        "url_script": [
+            {
+                "src": "assets/js/pages/about.js"
+            },
+            {
+                "src": "assets/js/pages/coming-soon.js"
+            }
+        ]
+    },
+    "menu-gird": {
+        "title": "Menu Gird",
+        "nav": "Menu Gird",
+        "url_style": [
+        ],
+        "url_script": [
+        ]
+    },
+    "menu-gird-2": {
+        "title": "Menu Gird",
+        "nav": "Menu Gird",
+        "url_style": [
+        ],
+        "url_script": [
+        ]
+    },
+    "blog": {
+        "title": "Blog",
+        "nav": "Blog",
+        "url_style": [
+            {
+                "src": "assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css"
+            }
+        ],
+        "url_script": [
+            {
+                "src": "assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"
+            },
+            {
+                "src": "assets/js/pages/blog.js"
+            }
+        ]
+    },
+    "blog-detail": {
+        "title": "Blog Detail",
+        "nav": "Blog Detail",
+        "url_style": [
+            {
+                "src": "assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css"
+            }
+        ],
+        "url_script": [
+            {
+                "src": "assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"
+            },
+            {
+                "src": "assets/js/pages/blog.js"
+            }
+        ]
+    },
+    "contact": {
+        "title": "Contact",
+        "nav": "Contact",
+        "url_style": [
+        ],
+        "url_script": [
+            {
+                "src": "http://maps.googleapis.com/maps/api/js"
+            },
+            {
+                "src": "assets/js/pages/contact.js"
+            }
+        ]
+    },
+    "404": {
+        "title": "404",
+        "nav": "404",
+        "url_style": [
+        ],
+        "url_script": [
+        ]
     }
+
 }

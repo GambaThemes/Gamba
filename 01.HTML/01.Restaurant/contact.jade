@@ -1,0 +1,57 @@
+section.morepage-banner-wrapper.contact
+    .container
+        .morepage-banner
+            .group-icons
+                i.icons.flaticon-anchor-1
+            h2.title contact us
+            ol.breadcrumb
+                li
+                    a.link(href='index.html') Home
+                li.active
+                    a.link(href='#') contact us
+section.page-main.padding-top-100.padding-bottom-100
+    .container
+        .main-title-2
+            .icons //
+            h2.title we are here for you
+        .main-content
+            .row.contact-info
+                .col-sm-4.col-xs-12
+                    .contact-info-item
+                        i.icons.flaticon-clock
+                        p.title Open Time
+                        p.text Monday - Friday : 8:30AM - 5:30PM
+                        p.text Saturday -Sunday : 09:00AM - 01:00PM
+                .col-sm-4.col-xs-12
+                    .contact-info-item
+                        i.icons.flaticon-shop
+                        p.title Our Address
+                        p.text Gamba Restaurant, 3 The Boulevarde, Strathfield NSW 2135, australia
+                .col-sm-4.col-xs-12
+                    .contact-info-item
+                        i.icons.flaticon-people
+                        p.title Support
+                        p.text Phone:  (+36) 468-245-891
+                        p.text Email:  hello@gamba.com
+section.contact-form-wrapper.padding-top-100.padding-bottom-100
+    .container
+        .main-title-2
+            .icons //
+            h2.title get in touch today
+        .main-content
+            form.contact-form#contact-form
+                .row
+                    .col-sm-4
+                        input.form-control(type="text", placeholder="Your Name")
+                    .col-sm-4
+                        input.form-control(type="email", placeholder="Your Email")
+                    .col-sm-4 
+                        input.form-control(type="textr", placeholder="Your Phone")
+                .row
+                    .col-sm-12
+                        textarea.form-control.form-textarea( placeholder="Your Message")
+                button.btn.btn-maincolor.margin-top-50(type="submit") Send Message 
+        .bg-images-pc
+            img.img-responsive(src="assets/images/more-image/chef-4.png", alt="")
+.contact-map
+    #googleMap

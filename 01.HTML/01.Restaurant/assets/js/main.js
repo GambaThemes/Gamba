@@ -10,7 +10,7 @@ jQuery(function($) {
     SLZ.headerFunction = function() {
         //js for menu PC
         if ($(window).width() > 768) {
-             // Add class fixed for menu when scroll
+            // Add class fixed for menu when scroll
             var window_height = $(window).height();
 
             $(window).on('scroll load', function (event) {
@@ -65,13 +65,12 @@ jQuery(function($) {
 
     SLZ.mainFunction = function() {
 
-
         // ----------------------- WOW-JS --------------------------- //
         new WOW().init();
 
         // ----------------------- Play videos --------------------------- //
         // JS for section Videos bg
-        if ($('section').hasClass('about-us-3')) {
+        if ($('.video-thumbnail').length) {
             var gurl = $(".video-embed")[0].src;
             $(".video-button-play ").on('click', function(event) {
                 $(".video-embed").addClass('show-video');
@@ -88,8 +87,6 @@ jQuery(function($) {
         };
         
 
-
-
         // ----------------------- Footer JS --------------------------- //
         // slide gallery footer
         $('.gamba-gallery .content-widget').slick({
@@ -103,7 +100,7 @@ jQuery(function($) {
             arow:true
         });
 
-        $('.body-wrapper').css('padding-bottom',$('footer').height());
+        $('.body-wrapper').css('padding-bottom',$('.footer').height());
     };
 
     /*======================================

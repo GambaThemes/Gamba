@@ -63,7 +63,10 @@ html(lang="en")
 
                 // FOOTER
                 footer
-                    != partial("_includes/footer/footer")
+                    if (current.source == '404')
+                        // NULL
+                    else
+                        != partial("_includes/footer/footer")
 
                 // BUTTON BACK TO TOP
                 //- .btn-wrapper.back-to-top
