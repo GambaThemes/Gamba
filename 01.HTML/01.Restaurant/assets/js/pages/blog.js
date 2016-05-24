@@ -3,8 +3,13 @@ jQuery(function($) {
 
     var SLZ = window.SLZ || {};
 
-    // js for calendar
-    SLZ.datepick = function() {
+    SLZ.mainFunction = function(){
+        $('.fancybox').fancybox( {
+            
+        });
+
+
+        // js for calendar
         $('.input-daterange, .archive-datepicker').datepicker({
             format: 'mm/dd/yy',
             maxViewMode: 0
@@ -16,7 +21,7 @@ jQuery(function($) {
     ======================================*/
 
     $(document).ready(function() {
-        SLZ.datepick();
+        SLZ.mainFunction();
     });
     /*=====  End of INIT FUNCTIONS  ======*/
 

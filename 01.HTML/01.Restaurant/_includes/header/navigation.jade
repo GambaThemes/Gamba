@@ -1,5 +1,5 @@
 ul.nav-links.nav.navbar-nav
-   li.dropdown(class="#{ current.source == 'index' ? 'active' : '' }")
+   li.dropdown(class="#{ current.source == 'index' || current.source == 'homepage-2' || current.source == 'homepage-3' ? 'active' : '' }")
       a.main-menu(href="index.html")
          span.text Home
       ul.menu-dropdown
@@ -18,7 +18,7 @@ ul.nav-links.nav.navbar-nav
    li(class="#{ current.source == 'Reservation' ? 'active' : '' }")
       a.main-menu(href="reservation.html")
          span.text Reservation
-   li.dropdown(class="#{ current.source == 'menu' ? 'active' : '' }")
+   li.dropdown(class="#{ current.source == 'menu-gird' || current.source == 'menu-gird-2' ? 'active' : '' }")
       a.main-menu(href="menu-gird.html")
          span.text menu
       ul.menu-dropdown
@@ -28,7 +28,7 @@ ul.nav-links.nav.navbar-nav
          li
             a.sub-menu(href="menu-gird-2.html")
                span.text menu 2
-   li.dropdown(class="#{ current.source == 'blog' ? 'active' : '' }")
+   li.dropdown(class="#{ current.source == 'blog' || current.source == 'blog-detail' ? 'active' : '' }")
       a.main-menu(href="blog.html")
          span.text blog
       ul.menu-dropdown
@@ -38,6 +38,16 @@ ul.nav-links.nav.navbar-nav
          li
             a.sub-menu(href="blog-detail.html")
                span.text blog detail
+          li.dropdown-2
+            a.sub-menu(href="blog-detail.html")
+               span.text more page
+            ul.menu-dropdown-2.right
+               li
+                  a.sub-menu(href="blog.html")
+                     span.text blog sidebar left
+               li
+                  a.sub-menu(href="blog-detail.html")
+                     span.text blog two column
    li.dropdown(class="#{ current.source == 'gallery' ? 'active' : '' }")
       a.main-menu(href="javascript:void(0)")
          span.text pages

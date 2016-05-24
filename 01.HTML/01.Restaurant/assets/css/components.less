@@ -367,7 +367,7 @@
 .tab-menu {
     margin: 0 0 50px 0;
     padding: 0;
-    display: block;
+    display: inline-block;
     width: 100%;
     list-style: none;
     li {
@@ -375,6 +375,7 @@
         display: inline-block;
         text-align: center;
         position: relative;
+        float: left;
         &.active {
             .name {
                 color: @main-color;
@@ -740,6 +741,7 @@
                     .fillWidth {
                         width: 209% !important;
                         margin-left: -50%;
+                        max-width: 1300px !important;
                     }
                 }
             }
@@ -1187,22 +1189,22 @@
             &:hover, &:focus {
                 border-color: rgba(255,255,255,0.5);
             }
-            ::-webkit-input-placeholder {
+            &::-webkit-input-placeholder {
                color: rgba(255,255,255,0.5);
                font-weight: 300;
             }
 
-            :-moz-placeholder {
+            &:-moz-placeholder {
                color: rgba(255,255,255,0.5);
                font-weight: 300;
             }
 
-            ::-moz-placeholder {
+            &::-moz-placeholder {
                color: rgba(255,255,255,0.5);
                font-weight: 300;
             }
 
-            :-ms-input-placeholder {
+            &:-ms-input-placeholder {
                color: rgba(255,255,255,0.5);
                font-weight: 300;
             }
@@ -1335,19 +1337,19 @@
                 &:hover, &:focus {
                     border-color: @sub-color;
                 }
-                ::-webkit-input-placeholder {
+                &::-webkit-input-placeholder {
                    color: #50545c;
                 }
 
-                :-moz-placeholder {
+                &:-moz-placeholder {
                    color: #50545c;
                 }
 
-                ::-moz-placeholder {
+                &::-moz-placeholder {
                    color: #50545c;
                 }
 
-                :-ms-input-placeholder {
+                &:-ms-input-placeholder {
                    color: #50545c;
                 }
             }
@@ -1419,19 +1421,19 @@
                     border-bottom: 1px solid #fff;
                     color: #fff;
                     padding-left: 30px;
-                    ::-webkit-input-placeholder {
+                    &::-webkit-input-placeholder {
                        color: rgba(255,255,255,0.5);
                     }
 
-                    :-moz-placeholder {
+                    &:-moz-placeholder {
                        color: rgba(255,255,255,0.5);
                     }
 
-                    ::-moz-placeholder {
+                    &::-moz-placeholder {
                        color: rgba(255,255,255,0.5);
                     }
 
-                    :-ms-input-placeholder {
+                    &:-ms-input-placeholder {
                        color: rgba(255,255,255,0.5);
                     }
                 }
