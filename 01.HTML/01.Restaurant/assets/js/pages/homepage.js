@@ -31,8 +31,8 @@ jQuery(function($) {
             arrows: false,
             speed: 700,
             fade: true,
-            autoplay: true,
-            autoplaySpeed: 7000,
+            //autoplay: true,
+            //autoplaySpeed: 7000,
             cssEase: 'linear',
             pauseOnHover: false
         });
@@ -84,21 +84,19 @@ jQuery(function($) {
             speed: 500,
             dots: false,
             arrows: true,
-            autoplay: true,
-            autoplaySpeed: 7000,
+            //autoplay: true,
+            //autoplaySpeed: 7000,
             responsive: [
                 {
                     breakpoint: 769,
                     settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
+                        slidesToShow: 2
                     }
                 },
                 {
-                    breakpoint: 420,
+                    breakpoint: 481,
                     settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
+                        slidesToShow: 1
                         
                     }
                 }
@@ -123,8 +121,8 @@ jQuery(function($) {
             speed: 500,
             dots: false,
             arrows: false,
-            autoplay: true,
-            autoplaySpeed: 5000,
+            //autoplay: true,
+            //autoplaySpeed: 5000,
             responsive: [
                 {
                     breakpoint: 769,
@@ -152,8 +150,8 @@ jQuery(function($) {
             speed: 900,
             dots: false,
             arrows: false,
-            autoplay: true,
-            autoplaySpeed: 5000,
+            //autoplay: true,
+            //autoplaySpeed: 5000,
             responsive: [
                 {
                     breakpoint: 1025,

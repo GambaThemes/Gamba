@@ -116,6 +116,7 @@ a {
     z-index: 10;
 }
 
+
 /*----------  1.2. CSS for page  ----------*/
 
 .padding-top-100 {
@@ -151,6 +152,252 @@ a {
 /*===============================
  ======  END GLOBAL STYLE  ======
  ===============================*/
+
+
+/* MENU MOBILE */
+.wrapper-content {
+    .transition (transform .7s ease);
+    -webkit-transform-origin: 50% 100px 0;
+    -moz-transform-origin: 50% 100px 0;
+    -o-transform-origin: 50% 100px 0;
+    transform-origin: 50% 100px 0;
+}
+
+.wrapper-menu-mobile {
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    z-index: 121;
+    .transition(all 0.5s ease);
+    transform: translate3d(-99%,0,0);
+    -webkit-transform: translate3d(-99%,0,0);
+    -moz-transform: translate3d(-99%,0,0);
+    -ms-transform: translate3d(-99%,0,0);
+    -o-transform: translate3d(-99%,0,0);
+    left: -1%;
+    .mb-social-wrapper {
+        padding: 15px 30px;
+        .mb-socials {
+            float: left;
+        }
+        .mb-button-close {
+            float: right
+        }
+    }
+}
+
+
+.wrapper-menu-mobile-background {
+    background-image: url('../images/background-full/homepage-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 120;
+    visibility: hidden;
+    transform: translate3d(-100%,0,0);
+    .transition(all 0.5s ease);
+    -webkit-transform: translate3d(-100%,0,0);
+    -moz-transform: translate3d(-100%,0,0);
+    -ms-transform: translate3d(-100%,0,0);
+    -o-transform: translate3d(-100%,0,0);
+    &:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.4);
+        z-index: 121;
+    }
+    // &:before {
+    //     content: '';
+    //     width: 100%;
+    //     height: 100%;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     opacity: .98;
+    //     background: #333145;
+    //     background: -moz-linear-gradient(top,#333145 0%,#b8333e 100%);
+    //     background: -webkit-gradient(left top,left bottom,color-stop(0%,#333145),color-stop(100%,#b8333e));
+    //     background: -webkit-linear-gradient(top,#333145 0%,#b8333e 100%);
+    //     background: -o-linear-gradient(top,#333145 0%,#b8333e 100%);
+    //     background: -ms-linear-gradient(top,#333145 0%,#b8333e 100%);
+    //     background: linear-gradient(to bottom,#333145 0%,#b8333e 100%);
+    //     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333145', endColorstr='#b8333e', GradientType=0);
+    // }
+}
+
+.open-menu-mobile {
+    .body-wrapper {
+        overflow: inherit;
+    }
+    .wrapper-content {
+        position: fixed;
+        .transform(scale3d(.9,.9,.9));
+        -webkit-box-shadow: 0 0 46px #000;
+        -moz-box-shadow: 0 0 46px #000;
+        box-shadow: 0 0 46px #000;
+    }
+    .wrapper-menu-mobile-background {
+        visibility: visible;
+        -webkit-transition-delay: 0.18s;
+        transition-delay: 0.18s;
+        .transform(translate3d(0,0,0));
+    }
+    .wrapper-menu-mobile {
+        height: auto;
+        overflow: auto;
+        left: 0;
+        -webkit-transition-delay: 0.18s;
+        transition-delay: 0.18s;
+        .transform(translate3d(0,0,0)); 
+    }
+}
+
+.mb-socials {
+    ul {
+        margin: 0;
+    }
+    .link {
+        width: 30px;
+        text-align: center;
+        color: #fff;
+        display: block;
+    }
+}
+
+.mb-button-close {
+    color: #fff;
+    font-size: 20px;
+    float: right;
+    position: relative;
+    z-index: 200;
+}
+
+.mb-login-wrapper {
+    margin-top: 20px;
+    .mb-guest-wrapper {
+        height: 40px;
+        text-align: center;
+        .mb-avatar {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            top: auto;
+            left: auto;
+            margin-right: 15px;
+            .mb-avatar-container {
+                width: 40px;
+                height: 40px;
+                box-shadow: 0 0 0 4px rgba(255,255,255,.1);
+                overflow: hidden;
+                .circle(50%);
+            }
+        }
+        .mb-name {
+            display: inline-block;
+            font-size: 20px;
+            font-family: "antoniobold";
+            color: #fff;
+            text-transform: uppercase;
+            vertical-align: middle;
+            .link {
+                color :#fff;
+            }
+        }
+    }
+}
+
+.mb-nav {
+    margin: 0;
+    padding: 20px 20px 0 20px;
+    li {
+        position: relative;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .main-menu {
+        font-size: 20px;
+        line-height: 30px;
+        color: #fff;
+        font-family: @font-family2;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        .text {
+            font-family: @font-family2;
+        }
+        &:hover, &:focus {
+            background-color: transparent;
+        }
+    }
+    .icons-dropdown {
+        position: absolute;
+        font-size: 20px;
+        color: #fff;
+        right: 0;
+        top: 0;
+        z-index: 999;
+        float: right;
+        padding: 0 15px;
+        line-height: 50px;
+        cursor: pointer;
+        .transition(all 0.3s ease);
+    }
+    .mb-menu-dropdown, .mb-menu-dropdown-2 {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        .transition(all 0.5s ease);
+        -webkit-transition: max-height 0.5s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+        -moz-transition: max-height 0.5s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+        -o-transition: max-height 0.5s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+        transition: max-height 0.5s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+        .sub-menu {
+            font-size: 16px;
+            display: block;
+            color: #fff;
+            text-transform: capitalize;
+            padding: 6px 15px 6px 30px;
+        }
+    }
+
+    .mb-menu-dropdown-2 {
+        .sub-menu {
+            padding-left: 50px;
+        }
+
+    }
+
+    .dropdown-2 {
+        .icons-dropdown { 
+            line-height: 36px;
+        }
+    }
+
+    .mb-menu-dropdown-open {
+        >ul {
+            display: block;
+            max-height: 2000px;
+            opacity: .9;
+        }
+        >.icons-dropdown {
+            .transform(rotate(90deg));
+        }
+    }
+}
 
 
  /*==============================
@@ -245,7 +492,7 @@ a {
     position: relative;
     z-index: 101;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    font-size: 0.9rem;
+    font-size: 12px;
     .link {
         color: #e3e3e3;
         &:hover {
@@ -432,7 +679,7 @@ a {
         margin-right: 0;
         line-height: 100px;
         padding: 0;
-        margin: 0 24px;
+        margin: 0 10px 0 24px;
         font-size: 1.143rem;
         color: #e3e3e3;
         position: relative;
@@ -522,7 +769,7 @@ a {
         text-align: center;
     }
     li {
-        width: 220px;
+        width: 200px;
         overflow: hidden;
         height: 0;
         .transition(height 0.3s ease);
@@ -602,6 +849,30 @@ a {
         }
     }
 }
+
+
+/*----------  2.5. Menu Mobile  ----------*/
+
+.hamburger-menu-mobile, .button-search-mobile {
+    display: none;
+    .icons {
+        font-size: 26px;
+        color: #fff;
+        line-height: 100px;
+    }
+}
+
+.hamburger-menu-mobile {
+    float: left;
+}
+
+.button-search-mobile {
+    float: right;
+    .icons {
+        font-size: 20px;
+    }
+}
+
 /*===============================
  =======  End of HEADER  ========
  ===============================*/
@@ -712,6 +983,9 @@ a {
                 border: none;
                 width: 100%;
                 padding: 0 0 10px;
+                &:last-child {
+                    padding-bottom: 0;
+                }
                 .icons {
                     display: table-cell;
                     width: 25px;
@@ -753,6 +1027,9 @@ a {
         margin: 0 -10px;
         .item {
             padding: 0 10px;
+            img {
+                width: 100%;
+            }
         }
     }
     .slick-prev, .slick-next {

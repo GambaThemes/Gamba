@@ -41,75 +41,908 @@
 
 /*----------  1.0. Media screen min width 1600px  ----------*/
 @media screen and (min-width: 1600px) {
-	.menu-of-day.style-1 {
-		.right-infomation {
-			.content-wrapper {
-			    width: 76%;
-    			margin-left: 12%;
-			}
-		}
-	}
 
-	.book-table {
-		&.style-1, &.style-2, &.style-4 {
-			.bg-images-pc {
-				display: block;
-			}
-		}
-		&.style-3 {
-			background-position: center;
-			.main-content {
-				width: 100%;
-			}
-		}
-	}
+    /********************* HOME PAGE ***********************/
+    .homepage-default {
+        .homepage-banner-content {
+            .group-title {
+                .title {
+                    font-size: 3.5rem;
+                    margin-bottom: 25px;
+                }
+                .text {
+                    font-size: 16px;
+                }
+            }
+            .group-open-hours {
+                margin-top: 30px;
+                .title {
+                    font-size: 20px;
+                }
+                .time-1, .time-2 {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
 
-	.contact-form-wrapper {
-		.bg-images-pc {
-			display: block;
-		}
-	}
+    .menu-of-day.style-1 {
+        .right-infomation {
+            .content-wrapper {
+                width: 76%;
+                margin-left: 12%;
+            }
+        }
+    }
 
+    .book-table {
+        &.style-1, &.style-2, &.style-4 {
+            .bg-images-pc {
+                display: block;
+            }
+        }
+        &.style-3 {
+            background-position: center;
+            .main-content {
+                width: 100%;
+            }
+        }
+    }
 
-	.banner-prallax {
-		.title-bg {
-			left: 8%;
-		}
-		.infomation-wrapper {
-			left: 7%;
-		}
-	}
+    .contact-form-wrapper {
+        .bg-images-pc {
+            display: block;
+        }
+    }
+
+    .banner-prallax {
+        .title-bg {
+            left: 8%;
+        }
+        .infomation-wrapper {
+            left: 7%;
+        }
+    }
 
 }
 
 /*----------  1.1. Media screen max width 1024px  ----------*/
 @media screen and (max-width: 1024px) {
+
+    /********************* HOME PAGE ***********************/
+    .main-title .title {
+        margin: 20px 0 50px 0;
+        font-size: 3.8rem;
+    }
+
+    .about-us-1 {
+        .left-image .homepage-hero-module {
+            display: none;
+        }
+        .right-infomation {
+            .content-wrapper {
+                width: 100%;
+                padding-left: 30px;
+                padding-right: 30px;
+                margin-left: 0;
+            }
+            .text {
+                margin-bottom: 20px;
+            }
+            .signature {
+                img {
+                    max-width: 100px;
+                }
+            }
+        }
+    }
+
+    .dish {
+        .box {
+            .border-efect {
+                display: none;
+            }
+        }
+        .wrapper {
+            border: 1px solid #cdcfd1;
+        }
+    }
+
+    .tab-menu {
+        .name {
+            .icons {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .banner-prallax {
+        text-align: center;
+        height: 450px;
+        .title-bg {
+            font-size: 7rem;
+            position: relative;
+            top: 45%;
+            margin-top: -50px;
+        }
+        .infomation-wrapper {
+            top: 45%;
+        }
+        .img-wrapper {
+            display: none;
+        }
+    }
+
+    .new-of-day {
+        .list-news {
+            margin-bottom: 45px;
+            .item {
+                .infomation {
+                    width: 60%;
+                }
+                .images {
+                    width: 40%;
+                }
+            }
+            .slick-dots {
+                right: auto;
+                left: 50%;
+                margin-left: -60px;
+                top: auto;
+                margin-top: 0;
+                margin-bottom: 0;
+                bottom: -45px;
+                li {
+                    display: inline-block;
+                    margin: 0 10px;
+                    button {
+                        text-align: center;
+                        right: auto !important;
+                    }
+                    button:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .blog-detail-content {
+        .content {
+            padding-left: 15px;
+            .title {
+                font-size: 2rem;
+            }
+            .info {
+                margin-bottom: 20px;
+            }
+            
+            .description .text {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .book-table {
+        .left-image {
+            width: 30%;
+        }
+        .right-infomation {
+            .content-wrapper {
+                width: 100%;
+                margin-left: 0;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+    }
+
+    .coming-soon-wrapper {
+        .left-infomation {
+            width: 45%;
+            .open-hours-bg {
+                width: 100%;
+            }
+        }
+        .right-infomation {
+            width: 55%;
+        }
+    }
+
+    .open-hours-bg .open-hours-wrapper .content .item .day:after {
+        width: 140px;
+    }
+
+    .coming-soon-event-wrapper {
+        .coming-soon-count {
+            .count-wrapper {
+                height: 140px;
+                .time .count {
+                    font-size: 6rem;
+                    line-height: 140px;
+                }  
+            }
+        }
+    }
+
+    .subscribe-email {
+        .subscribe-email-wrapper {
+            .subscribe-email-left {
+                max-width: 580px;
+            }
+            .subscribe-email-right {
+                max-width: 325px;
+                .form-subscribe-email .form-control {
+                    padding-left: 15px;
+                }
+            }
+        }
+    }
+
+    /********************* HOME PAGE 2 ***********************/
+    .about-us-2 {
+        .right-image {
+            right: 0;
+            left: auto;
+            margin-left: 0;
+            width: 38%;
+        }
+        .left-infomation {
+            .text {
+                margin-bottom: 20px;
+            }
+            .signature {
+                img {
+                    max-width: 100px;
+                }
+            }
+        }
+    }
+
+    .menu-items.style-2 .item-image {
+        width: 38%;
+    }
+
+    .testimonial-list {
+        width: 90%;
+    }
+
+    .testimonial-list {
+        .slider-for {
+            left: 0;
+        }
+
+        .testimonial-item .news-content .content {
+            margin-left: -135px;
+        }
+    }
 }
 
 /*----------  1.2. Media screen max width 768px  ----------*/
 @media screen and (max-width: 768px) {
+    .header-main {
+        .logo-wrapper {
+            .logo {
+                img {
+                    max-width: 110px;
+                }
+            }
+        }
+    }
+
+    .navigation {
+        .nav-links {
+            .main-menu {
+                margin: 0 18px;
+            }
+        }
+    }
+
+    .button-search .main-menu {
+        margin-right: 0;
+        margin-left: 18px;
+    }
+
+
+    /********************* HOME PAGE ***********************/
+    .homepage-default .homepage-banner-content {
+        text-align: center;
+    }
+
+    .about-us-1 .left-image {
+        display: none;
+    }
+
+    .menu-of-day.style-1 {
+        .left-image {
+            display: none;
+        }
+        .right-infomation {
+            .content-wrapper {
+                width: 100%;
+                margin: 0;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+    }
+
+    .banner-prallax .infomation-wrapper .description {
+        width: 90%;
+    }
+
+    .new-of-day {
+        .list-news {
+            .item {
+                .infomation, .images {
+                    width: 100%;
+                    float: left;
+                    padding: 0 15px;
+                }
+                .images { 
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+    .book-table.style-1 .left-image {
+        display: none;
+    }
+
+    .coming-soon-wrapper {
+        display: block;
+        .left-infomation, .right-infomation {
+            display: block;
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .left-infomation {
+            padding-top: 100px;
+            .open-hours-bg {
+                max-width: 470px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .open-hours-bg .open-hours-wrapper .content .item .day:after{
+        width: 210px;
+    }
+
+    .subscribe-email {
+        .subscribe-email-wrapper {
+            .subscribe-email-right {
+                margin-top: 20px;
+                float: left;
+            }
+        }
+    }
+
+    .footer-wrapper {
+        .col-2 {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .blog-detail-content .content .tags {
+        margin-top: 30px;
+    }
+
+    .book-table .right-infomation .content-wrapper {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 /*----------  1.3. Media screen max width 767px  ----------*/
 @media screen and (max-width: 767px) {
+
+    .padding-top-100 {
+        padding-top: 60px;
+    }
+    .padding-bottom-100 {
+        padding-bottom: 60px;
+    }
+    /********************* MENU ***********************/
+    .header-main {
+        .navigation {
+            display: none;
+        }
+        &.header-fixed {
+            .hamburger-menu-mobile, .button-search-mobile {
+                .icons {
+                    line-height: 50px;
+                }
+            }
+        }
+    }
+
+    .hamburger-menu-mobile, .button-search-mobile {
+        display: block;
+    }
+
+    .header-main-wrapper {
+        position: relative;
+    }
+
+    .logo-wrapper {
+        left: 50%;
+        margin-left: -55px;
+        position: absolute;
+    }
+
+    .homepage-banner {
+        min-height: 667px;
+    }
+
+
+    /********************* HOME PAGE ***********************/
+
+    .homepage-default, .special-menu {
+        background-attachment: scroll;
+    }
+
+    .main-title {
+        .bg-image {
+            margin-top: -60px;
+            .crawfish {
+                max-width: 170px;
+            }
+            .clamp {
+                max-width: 120px;
+            }
+            .kingcrab {
+                max-width: 140px;
+                position: relative;
+                top: -15px;
+            }
+            .cuttle {
+                max-width: 280px;
+            }
+            .scallop {
+                max-width: 120px;
+            }
+            .shrimp {
+                max-width: 170px;
+                position: relative;
+                top: 10px;
+            }
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        .title {
+            margin-bottom: 40px;
+            font-size: 3.2rem;
+        }
+    }
+
+    .tab-menu {
+        margin-bottom: 30px;
+    }
+
+    .banner-prallax {
+        height: 380px;
+        .title-bg {
+            font-size: 6rem;
+        }
+        .infomation-wrapper {
+            .title {
+                font-size: 2.4rem;
+            }
+        }
+    }
+
+    .new-of-day .list-news .slick-dots{
+        bottom: -35px;
+    }
+
+    .book-table .form-group {
+        margin-bottom: 30px;
+    }
+
+    .coming-soon-wrapper .left-infomation {
+        padding-top: 60px;
+    }
+
+    .subscribe-email .subscribe-email-wrapper .subscribe-email-right {
+        margin-top: 15px;
+    }
+
+    .footer {
+        position: relative;
+        width: auto;
+        height: auto;
+        display: block;
+        .footer-wrapper {
+            display: block;
+        }
+        .footer-main {
+            padding: 80px 0 100px 0;
+        }
+    }
+
+    .gamba-descripton .logo-foogter {
+        margin-bottom: 30px;
+    }
+
+    .footer-wrapper .widget .content-widget {
+        margin-top: 30px;
+    }
+
+    .hyperlink {
+        padding: 15px 0;
+    }
+
+    .banner-prallax {
+        .infomation-wrapper {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .img-wrapper-2 {
+            width: 40%;
+        }
+    }
+
+    .menu-of-day.style-1 .right-infomation .content-wrapper,
+    .about-us-1 .right-infomation .content-wrapper {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
 }
 
 /*----------  1.4. Media screen max width 600px  ----------*/
 @media screen and (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }
+
+    .header-topbar .topbar-right {
+        display: none;
+    }
+
+    .header-topbar .topbar-left > li {
+        padding: 0 10px;
+    }
+
+
+
+    /********************* HOME PAGE ***********************/
+    .homepage-default {
+        .homepage-banner-content {
+            .group-title .title {
+                font-size: 3rem;
+                line-height: 1.4;
+            }
+        }
+    }
+
+    .special-menu .list-dish {
+        margin: 0 -10px;
+        .dish {
+            margin: 0 10px;
+        }
+    }
+
+    .dish .box .image-dish {
+        min-height: 120px;
+        max-width: 160px;
+    }
+
+    .tab-menu {
+        border-bottom: 1px dashed #dfe0e1;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        .name {
+            border-bottom: 1px dashed #dfe0e1;
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+        li {
+            width: 50%;
+            margin-bottom: 15px;
+            &:nth-child(odd) {
+                &:before {
+                    border-left: none;
+                }
+            }
+            &:nth-child(even) {
+                &:before {
+                    border-left: 1px dashed #dfe0e1;
+                }
+            }
+            &:nth-last-child(-n+2) {
+                margin-bottom: 0;
+                .name {
+                    border: none;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
 }
 
 /*----------  1.5. Media screen max width 480px  ----------*/
 @media screen and (max-width: 480px) {
+
+
+    /********************* HOME PAGE ***********************/
+    .group-btn {
+        .btn-left {
+            margin: 0 auto;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .btn-right {
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+    .menu-of-day {
+        .content-menu {
+            .col-sm-6.col-xs-6 {
+                width: 100%;
+            }
+            .col-sm-6 {
+                &:nth-last-child(-n + 2) {
+                    .menu-items.style-1 {
+                        border-bottom: 1px dashed #ebebeb;
+                        padding-bottom: 20px;
+                        margin-bottom: 20px;
+                    }
+                }
+                &:last-child {
+                    .menu-items.style-1 {
+                        border: none;
+                        padding-bottom: 0;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .blog-detail-content {
+        .dates {
+            display: none;
+        }
+        .content {
+            padding-left: 0;
+        }
+    }
+
+    .new-of-day .list-news {
+        margin-bottom: 30px;
+        .slick-dots {
+            bottom: -25px
+        }
+    }
+
+    .book-table .form-group .col-sm-6 {
+        width: 100%;
+        margin-bottom: 20px;
+        &:nth-last-child(-n + 2) {
+            margin-bottom: 20px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .open-hours-bg .open-hours-wrapper .content .item .day:after {
+        width: 130px;
+    }
+
+    .coming-soon-event-wrapper {
+        .coming-soon-count {
+            margin-top: 30px;
+            .count-wrapper {
+                height: 100px;
+                .time .count {
+                    font-size: 4.8rem;
+                    line-height: 100px;
+                }
+            }
+        }
+    }
+
+
+
+    .footer .footer-main {
+        padding-top: 60px;
+    }
+
+    .footer-wrapper .col-2 {
+        .col-md-3 {
+            width: 100%;
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .banner-prallax {
+        .img-wrapper-2 {
+            width: 70%;
+        }
+    }
+
+    .gamba-descripton {
+        top: 0;
+    }
+
+    .gamba-gallery {
+        .slick-prev, .slick-next {
+            top: 108%;
+        }
+    }
 }
 
 /*----------  1.6. Media screen max width 414px  ----------*/
 @media screen and (max-width: 414px) {
+
+
+    /********************* HOME PAGE ***********************/
+    .banner-prallax { 
+        .title-bg {
+            font-size: 5rem;
+        }
+    }
+
+    .open-hours-bg .open-hours-wrapper .content .item .day:after {
+        display: none;
+    }
+    .banner-prallax {
+        .title-bg {
+            margin-top: -50px;
+            top: 40%;
+        }
+        .infomation-wrapper {
+            top: 35%;
+        }
+    }
+
+    .coming-soon-event-wrapper {
+        .coming-soon-count {
+            margin-left: -10px;
+            margin-right: -10px;
+            .count-wrapper {
+                padding: 0 10px;
+            }
+        }
+    }
 }
 
 /*----------  1.7. Media screen max width 380px  ----------*/
 @media screen and (max-width: 380px) {
+
+
+    /********************* HOME PAGE ***********************/
+    .homepage-default .homepage-banner-content .group-title .title {
+        font-size: 2.6rem;
+    }
+
+    .header-topbar .topbar-left > li {
+        padding: 0 7px;
+    }
+
+    .coming-soon-event-wrapper .coming-soon-count .count-wrapper .time .count {
+        font-size: 4.2rem;
+    }
+
+    .dish .box {
+        height: 420px;
+    }
+
+    .menu-items.style-1 {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+    }
+
+    .menu-of-day .content-menu .col-sm-6 {
+        &:nth-last-child(-n + 2) .menu-items.style-1 {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+        }
+        &:last-child .menu-items.style-1 {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+    }
+
+    .new-of-day .list-news .item .images {
+        margin-bottom: 20px;
+    }
+
+    .open-hours-bg {
+        .open-hours-wrapper {
+            .content {
+                margin-top: 25px;
+                .item {
+                    font-size: 14px;
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    .mb-nav {
+        padding: 20px 10px 0 10px;
+    }
+
+    .wrapper-menu-mobile .mb-social-wrapper {
+        padding: 15px;
+        padding-left: 5px;
+    }
+
+    .footer-wrapper {
+        .widget {
+            .title {
+                padding-bottom: 10px;
+            }
+            .content-widget {
+                margin-top: 20px;
+            }
+        }
+    }
+
 }
 
 /*----------  1.8. Media screen max width 320px  ----------*/
 @media screen and (max-width: 320px) {
+    .header-topbar {
+        display: none;
+    }
+
+    .homepage-default .homepage-banner-content {
+        padding-top: 60px;
+    }
+
+    .banner-prallax {
+        .title-bg {
+            margin-top: 0;
+            top: 25%;
+        }
+        .infomation-wrapper .title {
+            font-size: 2rem;
+        }
+    }
+
+    .open-hours-bg {
+        .open-hours-wrapper {
+            padding: 50px 25px;
+            &:before {
+                top: 18px;
+                bottom: 18px;
+                left: 10px;
+                right: 10px;
+            }
+        }
+    }
+
+    .coming-soon-event-wrapper {
+        .coming-soon-count {
+            .count-wrapper .time-label{
+                font-size: 1.2rem;
+                width: 58px;
+                margin-left: -29px;
+            }
+        }
+    }
+
+    .mb-nav {
+        padding: 20px 5px 0 5px;
+    }
 }

@@ -9,56 +9,79 @@ jQuery(function($) {
 
     SLZ.headerFunction = function() {
         //js for menu PC
-        if ($(window).width() > 768) {
-            // Add class fixed for menu when scroll
-            var window_height = $(window).height();
+        // Add class fixed for menu when scroll
+        var window_height = $(window).height();
 
-            $(window).on('scroll load', function (event) {
-                if ($(window).scrollTop() > window_height) {
-                    $(".header-main").addClass('header-fixed');
+        $(window).on('scroll load', function (event) {
+            if ($(window).scrollTop() > window_height) {
+                $(".header-main").addClass('header-fixed');
+            }
+            else {
+                $(".header-main").removeClass('header-fixed');
+                $(".header-main").removeClass('hide-menu');
+            }
+        });
+
+        // Show menu when scroll up, hide menu when scroll down
+        var lastScroll = 50;
+        $(window).on('scroll load', function (event) {
+            var st = $(this).scrollTop();
+            if (st > lastScroll) {
+                $('.header-main').addClass('hide-menu');
+                if ($('.nav-search').hasClass('hide') === false) {
+                    $('.nav-search').toggleClass('hide');
+                }
+            }
+            else if (st < lastScroll) {
+                $('.header-main').removeClass('hide-menu');
+            }
+
+            if ($(window).scrollTop() <= 200 ){
+                $('.header-main').removeClass('.header-fixed').removeClass('hide-menu');
+            }
+            else if ($(window).scrollTop() < window_height && $(window).scrollTop() > 0) {
+                $('.header-main').addClass('hide-menu');
+            }
+            lastScroll = st;
+        });
+
+        
+        // Show - hide box search on menu
+        $('.button-search').on('click', function () {
+            $('.nav-search').toggleClass('hide');
+        });
+
+        //hide box seach when click outside
+        $('body').on('click', function (event) {
+            if ($('.button-search').has(event.target).length === 0 && !$('.button-search').is(event.target) && $('.nav-search').has(event.target).length === 0 && !$('.nav-search').is(event.target)) {
+                if ($('.nav-search').hasClass('hide') === false) {
+                    $('.nav-search').toggleClass('hide');
+                }
+            }
+        });
+
+        // Menu Mobile
+        if ($(window).width() <= 767) {
+            $(".wrapper-menu-mobile").css("min-height", $(window).height());
+            $(".hamburger-menu-mobile").on("click", function(){
+                $('body').addClass("open-menu-mobile");
+            });
+            $(".mb-button-close").on("click", function(){
+                $('body').removeClass("open-menu-mobile");
+            });
+
+            // show hide dropdown menu
+            $('.mb-nav>.dropdown>.icons-dropdown').on('click', function(){
+                if ($(this).parents('.dropdown').hasClass('mb-menu-dropdown-open') === true) {
+                    $(this).parents('.dropdown').removeClass('mb-menu-dropdown-open');
                 }
                 else {
-                    $(".header-main").removeClass('header-fixed');
-                    $(".header-main").removeClass('hide-menu');
+                    $('.mb-nav .dropdown').removeClass('mb-menu-dropdown-open');
+                    $(this).parents('.dropdown').addClass('mb-menu-dropdown-open');
                 }
             });
-
-            // Show menu when scroll up, hide menu when scroll down
-            var lastScroll = 50;
-            $(window).on('scroll load', function (event) {
-                var st = $(this).scrollTop();
-                if (st > lastScroll) {
-                    $('.header-main').addClass('hide-menu');
-                    if ($('.nav-search').hasClass('hide') === false) {
-                        $('.nav-search').toggleClass('hide');
-                    }
-                }
-                else if (st < lastScroll) {
-                    $('.header-main').removeClass('hide-menu');
-                }
-
-                if ($(window).scrollTop() <= 200 ){
-                    $('.header-main').removeClass('.header-fixed').removeClass('hide-menu');
-                }
-                else if ($(window).scrollTop() < window_height && $(window).scrollTop() > 0) {
-                    $('.header-main').addClass('hide-menu');
-                }
-                lastScroll = st;
-            });
-
-            
-            // Show - hide box search on menu
-            $('.button-search').on('click', function () {
-                $('.nav-search').toggleClass('hide');
-            });
-
-            //hide box seach when click outside
-            $('body').on('click', function (event) {
-                if ($('.button-search').has(event.target).length === 0 && !$('.button-search').is(event.target) && $('.nav-search').has(event.target).length === 0 && !$('.nav-search').is(event.target)) {
-                    if ($('.nav-search').hasClass('hide') === false) {
-                        $('.nav-search').toggleClass('hide');
-                    }
-                }
+            $('.dropdown-2 .icons-dropdown').on('click', function(){
+                $(this).parents('.dropdown-2').toggleClass('mb-menu-dropdown-open');
             });
         }
     };
@@ -93,14 +116,16 @@ jQuery(function($) {
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 5000,
+            //autoplay: true,
+            //autoplaySpeed: 5000,
             speed: 500,
             dots: false,
-            arow:true
+            arows:true
         });
 
-        $('.body-wrapper').css('padding-bottom',$('.footer').height());
+        if ($(window).width() > 767) {
+            $('.body-wrapper').css('padding-bottom',$('.footer').height());
+        }
     };
 
     /*======================================
