@@ -280,6 +280,19 @@
     }
 
     /********************* HOME PAGE 2 ***********************/
+    .background-video {
+        background-image: url("../images/background-full/homepage-2.jpg");
+        .homepage-hero-module {
+            display: none;
+        }
+        .bg-image {
+            display: none;
+        }
+        .btn-click {
+            display: none;
+        }
+    }
+
     .about-us-2 {
         .right-image {
             right: 0;
@@ -316,6 +329,12 @@
             margin-left: -135px;
         }
     }
+
+
+    /********************* ABOUT US ***********************/
+    .logo-bg {
+        max-width: 400px;
+    }
 }
 
 /*----------  1.2. Media screen max width 768px  ----------*/
@@ -343,26 +362,87 @@
         margin-left: 18px;
     }
 
+    .sidebar {
+        margin-top: 100px;
+        .col-1 {
+            width: 100%;
+        }
+        .col-2 {
+            float: left;
+            width: 50%;
+            .widget:last-child {
+                margin-bottom: 0;
+            }
+            &:nth-child(even) {
+                padding-right: 15px;
+            }
+            &:nth-child(odd) {
+                padding-left: 15px;
+            }
+        }
+    }
+
 
     /********************* HOME PAGE ***********************/
     .homepage-default .homepage-banner-content {
         text-align: center;
     }
 
-    .about-us-1 .left-image {
-        display: none;
-    }
-
-    .menu-of-day.style-1 {
+    .about-us-1 {
         .left-image {
             display: none;
         }
-        .right-infomation {
-            .content-wrapper {
+        .right-infomation .text {
+            text-align: justify;
+        }
+    }
+
+    .about-us-2 .left-infomation .text, .about-us-3 .text {
+        text-align: justify;
+    }
+
+    .about-us-2 .left-infomation {
+        .group-list .box-media {
+            margin-bottom: 30px;
+            .text {
+                text-align: left;
+            }
+        }
+    }
+
+    .menu-of-day {
+        &.style-1 {
+            .left-image {
+                display: none;
+            }
+            .right-infomation {
+                .content-wrapper {
+                    width: 100%;
+                    margin: 0;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+            }
+        }
+        &.style-2 {
+            .tab-menu {
                 width: 100%;
-                margin: 0;
-                padding-left: 30px;
-                padding-right: 30px;
+            }
+            .col-md-6:nth-child(even) {
+                .menu-items.style-2 {
+                    .item-image {
+                        float: right;
+                        margin-right: 0;
+                        margin-left: 20px;
+                    }
+                }
+            }
+            .col-md-6:last-child {
+                .menu-items.style-2 {
+                    border-bottom: none;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
             }
         }
     }
@@ -386,8 +466,16 @@
         }
     }
 
-    .book-table.style-1 .left-image {
-        display: none;
+    .book-table {
+        &.style-1, &.style-2 {
+            .left-image {
+                display: none;
+            }
+        }
+        .right-infomation .content-wrapper {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
     }
 
     .coming-soon-wrapper {
@@ -435,10 +523,107 @@
         margin-top: 30px;
     }
 
-    .book-table .right-infomation .content-wrapper {
-        padding-left: 15px;
-        padding-right: 15px;
+    /******************** HOME PAGE 2 **********************/
+
+    .background-video .group-title {
+        width: 80%;
+        margin: 0 auto;
     }
+
+    .about-us-2 {
+        .right-image {
+            display: none;
+        }
+        .left-infomation .content-wrapper {
+            width: 100%;
+        }
+    }
+
+    .menu-items {
+        &.style-2 {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 25px;
+            padding-bottom: 30px;
+            border-bottom: 1px dashed #ebebeb;
+            .item-image {
+                display: inline-block;
+                float: left;
+                width: 40%;
+                margin-right: 20px;
+                img {
+                    width: 100%;
+                }
+            }
+            .item-content {
+                display: inline-block;
+                float: left;
+                width: calc(~"60% - 20px");
+                padding: 15px 0;
+            }
+        }
+    }
+
+    .book-table {
+        &.style-3, &.style-4 {
+            .main-content {
+                width: 100%;
+            }
+        }
+    }
+
+    .testimonial.style-2 {
+        .testimonial-list {
+            .testimonial-item .news-content:after{
+                left: 10%;
+            }
+        }
+    }
+
+    .testimonial-list .testimonial-item .news-content {
+        padding: 30px 0 0 20px;
+    }
+
+
+    /******************** HOME PAGE 3 **********************/
+    .background-slide .slide-item.background-item-3 .homepage-banner-content {
+        text-align: center;
+    }
+
+
+    /******************** ABOUT US **********************/
+    .coming-soon.style-2 {
+        .logo-bg {
+            max-width: 470px;
+            margin: 0 auto 50px auto;
+            background-position: top;
+        }
+        .coming-soon-wrapper .left-infomation {
+            padding-top: 0;
+        }
+    }
+
+
+    /******************** LIST MENU **********************/
+    .meal-wrapper {
+        .col-md-6:nth-child(even) {
+            .menu-items.style-2 {
+                .item-image {
+                    float: right;
+                    margin-right: 0;
+                    margin-left: 20px;
+                }
+            }
+        }
+        .col-md-6:last-child {
+            .menu-items.style-2 {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+
 }
 
 /*----------  1.3. Media screen max width 767px  ----------*/
@@ -447,9 +632,26 @@
     .padding-top-100 {
         padding-top: 60px;
     }
+
     .padding-bottom-100 {
         padding-bottom: 60px;
     }
+
+    .margin-top-70 {
+        margin-top: 50px;
+    }
+
+    .margin-top-50 {
+        margin-top: 30px;
+    }
+
+    .sidebar {
+        margin-top: 60px;
+        .widget {
+            margin-bottom: 30px;
+        }
+    }
+
     /********************* MENU ***********************/
     .header-main {
         .navigation {
@@ -478,14 +680,15 @@
         position: absolute;
     }
 
-    .homepage-banner {
+    .homepage-banner, .background-slide .slide-item {
         min-height: 667px;
     }
 
 
     /********************* HOME PAGE ***********************/
 
-    .homepage-default, .special-menu {
+    .homepage-default, .special-menu, .banner,
+    .testimonial, .morepage-banner-wrapper {
         background-attachment: scroll;
     }
 
@@ -513,6 +716,9 @@
                 max-width: 170px;
                 position: relative;
                 top: 10px;
+            }
+            .swordfish {
+                max-width: 250px;
             }
             img {
                 display: block;
@@ -597,7 +803,82 @@
         padding-left: 15px;
         padding-right: 15px;
     }
+
+
+    /******************** HOME PAGE 2 **********************/
+    .background-video .homepage-banner-content {
+        padding-top: 140px;
+    }
+
+
+
+    /******************** HOME PAGE 3 **********************/
+    .menu-of-day .content-menu {
+        .col-sm-6 {
+            &:nth-last-child(-n + 2) {
+                .menu-items.style-3 {
+                    border-bottom: 1px dashed #ebebeb;
+                    padding-bottom: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+            &:last-child {
+                .menu-items.style-3 {
+                    border-bottom: none;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .background-slide {
+        .homepage-banner-content {
+            .logo-images {
+                margin-bottom: 60px;
+            }
+        }
+    }
+
+    .about-us-3 .video-thumbnail {
+        margin-top: 30px;
+    }
+
+    .special-menu.style-3 {
+        .dish {
+            .box {
+                border: 3px solid #eee;
+            }
+            .wrapper {
+                border: none;
+            }
+        }
+    }
     
+
+    /******************** RESERVATION **********************/
+    .main-title-2 {
+        margin-bottom: 40px;
+    }
+
+    .book-table .more-infomation {
+        .col-sm-6 {
+            margin-top: 40px;
+        }
+        .title-info {
+            margin-bottom: 20px;
+        }
+    }
+
+    .taste-of-fresh {
+        width: 100%;
+    }
+
+
+    /******************** BLOG **********************/
+    .blog-post {
+        margin-bottom: 40px;
+    }
 }
 
 /*----------  1.4. Media screen max width 600px  ----------*/
@@ -614,7 +895,24 @@
         padding: 0 10px;
     }
 
-
+    .sidebar {
+        .col-1 {
+            width: 100%;
+        }
+        .col-2 {
+            width: 100%;
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &:nth-child(even) {
+                padding-right: 0;
+            }
+            &:nth-child(odd) {
+                padding-left: 0;
+            }
+        }
+    }
 
     /********************* HOME PAGE ***********************/
     .homepage-default {
@@ -626,6 +924,11 @@
         }
     }
 
+    .background-video .homepage-banner-content .group-title .title {
+        font-size: 3rem;
+        line-height: 1.4;
+    }
+
     .special-menu .list-dish {
         margin: 0 -10px;
         .dish {
@@ -633,9 +936,12 @@
         }
     }
 
-    .dish .box .image-dish {
-        min-height: 120px;
-        max-width: 160px;
+    .dish .box {
+        height: 420px;
+        .image-dish {
+            min-height: 120px;
+            max-width: 160px;
+        }
     }
 
     .tab-menu {
@@ -668,6 +974,72 @@
                 }
             }
         }
+    }
+
+    .menu-items {
+        &.style-2 {
+            margin-bottom: 15px;
+            padding-bottom: 20px;
+        }
+    }
+
+    .testimonial-list {
+        width: 100%;
+        .testimonial-item {
+            padding: 0;
+            .icons {
+                display: none;
+            }
+            .news-content {
+                padding: 20px 0 0 0;
+                text-align: center;
+                .content {
+                    margin-left: 0;
+                    display: inline-block;
+                    width: auto;
+                    left: auto;
+                    top: -20px;
+                }
+            }
+        }
+    }
+
+
+    /********************* HOME PAGE 3 **********************/
+    .main-title-2 {
+        margin-bottom: 30px;
+    }
+    .background-slide .homepage-banner-content {
+        .group-title .title, .group-title-2 .title {
+            font-size: 3rem;
+        }
+    }
+
+    .logo-bg .list-logo {
+        padding: 50px 0;
+    }
+
+
+    
+    /********************* LIST MENU **********************/
+    .meal-wrapper {
+        .description-menu {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .more-image {
+            margin-bottom: 30px;
+            img {
+                max-width: 45%;
+            }
+        }
+    }
+
+
+
+    /********************* BLOG **********************/
+    .blog-post .blog-image {
+        margin-bottom: 30px;
     }
 }
 
@@ -756,8 +1128,6 @@
         }
     }
 
-
-
     .footer .footer-main {
         padding-top: 60px;
     }
@@ -765,7 +1135,7 @@
     .footer-wrapper .col-2 {
         .col-md-3 {
             width: 100%;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             &:last-child {
                 margin-bottom: 0;
             }
@@ -785,6 +1155,110 @@
     .gamba-gallery {
         .slick-prev, .slick-next {
             top: 108%;
+        }
+    }
+
+
+    /******************** HOME PAGE 2 **********************/
+    .video-thumbnail {
+        .video-button-play {
+            width: 50px;
+            height: 50px;
+            line-height: 46px;
+            font-size: 1.4rem;
+            padding-left: 3px;
+        }
+    }
+
+
+
+    /******************** ABOUT US **********************/
+    .about-us-2 {
+        .left-infomation .group-list {
+            margin-top: 30px;
+            .col-xs-6 {
+                width: 100%;
+                .box-media {
+                    margin-bottom: 20px;
+                }
+                &:nth-last-child(-n + 2) {
+                    .box-media {
+                        margin-bottom: 20px;
+                    }
+                }
+                &:last-child {
+                    .box-media {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .coming-soon.style-2 .logo-bg {
+        margin-bottom: 40px;
+    }
+
+
+    /******************** RESERVATION **********************/
+    .taste-of-fresh .title {
+        font-size: 2.8rem;
+        .name-2 {
+            font-size: 26px;
+        }
+    }
+
+
+    /******************** LIST MENU **********************/
+    .menu-items.style-2 .item-content {
+        padding: 0;
+    }
+
+
+
+    /********************* BLOG ***********************/
+    .blog-author {
+        background-color: #f9f9f9;
+        .media-left {
+            vertical-align: top;
+            padding: 20px;
+            width: auto;
+        }
+        .media-right {
+            display: block;
+            width: 100%;
+            padding: 0 20px 20px 20px;
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    .blog-comment .comment-list {
+        .parent {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .comment-list-children {
+            margin-left: 0;
+        }
+        .comment-item:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .leave-comment {
+        margin-top: 50px;
+        .comment-form {
+            .col-50 {
+                width: 100%;
+                padding: 0 !important;
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
         }
     }
 }
@@ -822,6 +1296,21 @@
             }
         }
     }
+
+    .logo-bg .list-logo {
+        padding: 30px 0;
+    }
+
+
+
+    /********************* BLOG ***********************/
+    .blog-post .blog-image {
+        margin-bottom: 20px;
+    }
+
+    .blog-detail-content .content .title {
+        font-size: 1.6rem;
+    }
 }
 
 /*----------  1.7. Media screen max width 380px  ----------*/
@@ -831,6 +1320,16 @@
     /********************* HOME PAGE ***********************/
     .homepage-default .homepage-banner-content .group-title .title {
         font-size: 2.6rem;
+    }
+
+    .background-video .homepage-banner-content {
+        padding: 0 15px;
+        .group-title {
+            width: 100%;
+            .title {
+                font-size: 2.6rem;
+            }
+        }
     }
 
     .header-topbar .topbar-left > li {
@@ -898,10 +1397,77 @@
         }
     }
 
+    .social-footer {
+        display: none;
+    }    
+
+
+    /******************** HOME PAGE 2 **********************/
+    .testimonial.style-2 .testimonial-list .testimonial-item .news-content:after {
+        font-size: 5rem;
+    }
+
+    .pagination li .btn-pagination {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+    }
+
+
+
+    /******************** HOME PAGE 3 **********************/
+    .background-slide .homepage-banner-content {
+        .group-title .title, .group-title-2 .title {
+            font-size: 2.6rem;
+        }
+    }
+
+    .menu-of-day.style-3 {
+        .menu-items .title .name {
+            width: calc(~"100% - 50px");
+        }
+    }
+
+
+
+    /******************** LIST MENU **********************/
+    .menu-items.style-2 {
+        .title .name {
+            width: calc(~"100% - 50px");
+        }
+    }
+
+
+
+    /******************** BLOG **********************/
+    .blog-post {
+        blockquote {
+            .quote-wrapper {
+                padding-left: 10px;
+            }
+            .icons { 
+                font-size: 6rem;
+                line-height: 60px; 
+            }
+        }
+    }
+
+    .blog-comment .comment-list {
+        .comment-left {
+            width: 50px;
+        }
+        .comment-right {
+            padding-left: 60px;
+        }
+    }
+
 }
 
 /*----------  1.8. Media screen max width 320px  ----------*/
 @media screen and (max-width: 320px) {
+
+
+    /********************* HOME PAGE ***********************/
     .header-topbar {
         display: none;
     }
@@ -945,4 +1511,30 @@
     .mb-nav {
         padding: 20px 5px 0 5px;
     }
+
+
+    /********************* HOME PAGE 2 *********************/
+    .menu-items {
+        &.style-2 {
+            .item-image {
+                float: inherit !important;
+                margin: 0 auto !important;
+                width: 100%;
+                display: block;
+            }
+            .item-content {
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+    }
+
+
+    /******************** LIST MENU **********************/
+    .meal-wrapper .more-image img {
+        max-width: 70%;
+    }
+
+
+
 }

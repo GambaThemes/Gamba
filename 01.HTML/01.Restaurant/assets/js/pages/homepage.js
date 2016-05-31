@@ -31,8 +31,8 @@ jQuery(function($) {
             arrows: false,
             speed: 700,
             fade: true,
-            //autoplay: true,
-            //autoplaySpeed: 7000,
+            autoplay: true,
+            autoplaySpeed: 5000,
             cssEase: 'linear',
             pauseOnHover: false
         });
@@ -132,7 +132,7 @@ jQuery(function($) {
                     }
                 },
                 {
-                    breakpoint: 420,
+                    breakpoint: 481,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
@@ -168,7 +168,7 @@ jQuery(function($) {
                     }
                 },
                 {
-                    breakpoint: 420,
+                    breakpoint: 481,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,

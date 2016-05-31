@@ -147,18 +147,14 @@ section.page-main.padding-top-100.padding-bottom-100
                                 span.text Submit Message
                                 span.icons.fa.fa-long-arrow-right   
             .col-md-4.col-xs-12.sidebar
-                .col-2
+                .col-1
                     != partial("_includes/widgets/search-widget")
                 .col-2
-                    .col-1
-                        != partial("_includes/widgets/recent-post-widget")
-                    .col-1
-                        != partial("_includes/widgets/categories-widget")
-                        != partial("_includes/widgets/tags-widget")
+                    != partial("_includes/widgets/recent-post-widget")
+                    != partial("_includes/widgets/categories-widget")
                 .col-2
-                    .col-1
-                        != partial("_includes/widgets/archives-widget")
-                    .col-1
-                        != partial("_includes/widgets/gallery-widget")
-                        != partial("_includes/widgets/social-widget")
+                    != partial("_includes/widgets/tags-widget")
+                    != partial("_includes/widgets/archives-widget")
+                    != partial("_includes/widgets/gallery-widget")
+                    != partial("_includes/widgets/social-widget")
 != partial("_includes/subscribe-email")

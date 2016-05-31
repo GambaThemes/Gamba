@@ -473,6 +473,7 @@
         margin-bottom: 5px;
         .name {
             float: left;
+            text-align: left;
         }
         .price {
             float: right;
@@ -888,7 +889,8 @@
     &.style-2 {
         text-align: center;
         .tab-menu {
-            margin: 0 auto 50px auto;
+            margin-left: auto;
+            margin-right: auto;
             width: 75%;
         }
     }
@@ -1081,7 +1083,7 @@
             font-size: 2.143rem;
             text-transform: capitalize;
             font-family: 'antoniobold';
-            line-height: 1.2;
+            line-height: 1.4;
             &:hover {
                 color: @main-color;
             }
@@ -1267,12 +1269,15 @@
     .more-infomation {
         text-align: left;
         border-top: 1px solid #eeeeee;
+        .col-sm-6 {
+            margin-top: 30px;
+        }
         .title-info {
             text-transform: capitalize;
             color: @title-color;
             font-family: "antoniobold";
             font-size: 22px;
-            margin: 30px 0 25   px 0;
+            margin: 0 0 25px 0;
         }
         .text {
             margin-bottom: 20px;
@@ -1553,7 +1558,7 @@
     max-width: 555px;
     background-image: url('../images/more-image/coming-soon-3.jpg');
     //background-size: cover;
-    background-position: bottom left -30%;
+    background-position: top left -30%;
     background-attachment: fixed;
     text-align: center;
     color: #fff;
@@ -1665,6 +1670,7 @@
                 font-family: 'antoniobold';
                 letter-spacing: 3px;
                 margin-bottom: 20px;
+                line-height: 1.4;
             }
             .text {
                 margin: 0;
@@ -1923,6 +1929,7 @@
         display: table-cell;
         vertical-align: middle;
         text-align: center;
+        padding-top: 50px;
         .logo-images {
             display: block;
             margin-bottom: 80px;
@@ -1940,6 +1947,7 @@
             .title {
                 margin: 0;
                 font-size: 3.214rem;
+                line-height: 1.4;
                 text-transform: uppercase;
                 color: #fff;
                 font-family: 'antoniobold';
@@ -2046,6 +2054,9 @@
     .our-chef-avatar {
         display: block;
         padding-bottom: 147px;
+        img {
+            margin: 0 auto;
+        }
     }
     .our-chef-info {
         position: absolute;
@@ -2723,13 +2734,16 @@ blockquote {
         text-align: left;
     }
     .comment-list {
+        margin-bottom: 0;
         .parent {
             margin-top: 0;
-        }
-        li.parent:last-child {
-            >.comment-item {
-                border-bottom: 0px;
-                margin-bottom: 0px;
+            margin-bottom: 40px;
+            &:last-child {
+                margin-bottom: 0;
+                >.comment-item {
+                    border-bottom: 0px;
+                    margin-bottom: 0px;
+                }
             }
         }
         .comment-item:not(:last-child) {
@@ -2742,6 +2756,17 @@ blockquote {
         }
         .comment-list-children {
             margin-left: 70px;
+            li {
+                .comment-item {
+                    padding: 0;
+                    margin-bottom: 40px;
+                }
+                &:last-child {
+                    .comment-item {
+                        margin-bottom: 0;
+                    }
+                }
+            }
         }
         .comment-left {
             width: 70px;
@@ -2959,6 +2984,7 @@ blockquote {
     padding: 0 !important;
     .table-condensed {
         table-layout: fixed;
+        margin: 0 auto;
     }
 
     thead {

@@ -4,10 +4,6 @@ jQuery(function($) {
     var SLZ = window.SLZ || {};
 
     SLZ.mainFunction = function(){
-        $('.fancybox').fancybox( {
-            
-        });
-
 
         // js for calendar
         $('.input-daterange, .archive-datepicker').datepicker({
