@@ -6,46 +6,88 @@
         .controller('HomeController', HomeController);
 
     function HomeController($scope) {
-        $scope.topDealItems = [
-            { size: { x: 2, y: 2 }, position: [0, 0] },
-            { size: { x: 1, y: 1 }, position: [0, 2] },
-            { size: { x: 1, y: 1 }, position: [1, 0] },
-            { size: { x: 1, y: 1 }, position: [2, 0] },
-            { size: { x: 1, y: 1 }, position: [2, 1] },
-            { size: { x: 1, y: 1 }, position: [2, 2] },
-            { size: { x: 1, y: 1 }, position: [3, 0] },
-            { size: { x: 1, y: 1 }, position: [3, 1] }
-        ];
-
-        $scope.gridsterOpts = {
-            columns: 3, // the width of the grid, in columns
-            pushing: true, // whether to push other items out of the way on move or resize
-            floating: true, // whether to automatically float items up so they stack (you can temporarily disable if you are adding unsorted items with ng-repeat)
-            swapping: false, // whether or not to have items of the same size switch places instead of pushing down if they are the same size
-            width: 'auto', // can be an integer or 'auto'. 'auto' scales gridster to be the full width of its containing element
-            colWidth: 'auto', // can be an integer or 'auto'.  'auto' uses the pixel width of the element divided by 'columns'
-            rowHeight: 220, // can be an integer or 'match'.  Match uses the colWidth, giving you square widgets.
-            margins: [10, 10], // the pixel distance between each widget
-            outerMargin: false, // whether margins apply to outer edges of the grid
-            isMobile: false, // stacks the grid items if true
-            mobileBreakPoint: 600, // if the screen is not wider that this, remove the grid layout and stack the items
-            mobileModeEnabled: true, // whether or not to toggle mobile mode when screen width is less than mobileBreakPoint
-            minColumns: 1, // the minimum columns the grid must have
-            minRows: 1, // the minimum height of the grid, in rows
-            maxRows: 100,
-            defaultSizeX: 1, // the default width of a gridster item, if not specifed
-            defaultSizeY: 1, // the default height of a gridster item, if not specified
-            minSizeX: 1, // minimum column width of an item
-            maxSizeX: null, // maximum column width of an item
-            minSizeY: 1, // minumum row height of an item
-            maxSizeY: null, // maximum row height of an item
-            resizable: {
-                enabled: false
-            },
-            draggable: {
-                enabled: false
-            }
+		console.log('áca');
+    	$scope.OnAfterChange = function() {
+    		console.log('sau');
+    		angular.element('.slick-active  .logo-images').addClass('animated fadeInDown');
+            angular.element('.slick-active  .group-btn-2').addClass('animated fadeInUp');
+            angular.element('.slick-active  .group-title').addClass('animated fadeInUp');
+            angular.element('.slick-active  .group-title-2').addClass('animated fadeInRight');
+            angular.element('.slick-active  .group-open-hours').addClass('animated fadeInRight');
+            angular.element('.slick-active  .btn-left').addClass('animated fadeInLeft');
+            angular.element('.slick-active  .btn-right').addClass('animated fadeInRight');
+            angular.element('.slick-active  .btn-center').addClass('animated zoomIn');
+            angular.element('.slick-active  .logo-images').removeClass('hidden');
+            angular.element('.slick-active  .group-btn-2').removeClass('hidden');
+            angular.element('.slick-active  .group-title').removeClass('hidden');
+            angular.element('.slick-active  .group-title-2').removeClass('hidden');
+            angular.element('.slick-active  .group-open-hours').removeClass('hidden');
+            angular.element('.slick-active  .btn-left').removeClass('hidden');
+            angular.element('.slick-active  .btn-right').removeClass('hidden');
+            angular.element('.slick-active  .btn-center').removeClass('hidden');
+            angular.element(".video-embed").addClass('show-video');
+            angular.element(".video-button-close").addClass('show-video');
+            angular.element(".video-embed img").src += "&autoplay=1";
         };
+
+    	$scope.OnBeforeChange = function() {
+    		console.log('truoc');
+    		angular.element('.slick-active  .logo-images').removeClass('animated fadeInDown');
+            angular.element('.slick-active  .group-btn-2').removeClass('animated fadeInUp');
+            angular.element('.slick-active  .group-title').removeClass('animated fadeInUp');
+            angular.element('.slick-active  .group-title-2').removeClass('animated fadeInRight');
+            angular.element('.slick-active  .group-open-hours').removeClass('animated fadeInRight');
+            angular.element('.slick-active  .btn-left').removeClass('animated fadeInLeft');
+            angular.element('.slick-active  .btn-right').removeClass('animated fadeInRight');
+            angular.element('.slick-active  .btn-center').removeClass('animated zoomIn');
+            angular.element('.slick-active  .logo-images').addClass('hidden');
+            angular.element('.slick-active  .group-btn-2').addClass('hidden');
+            angular.element('.slick-active  .group-title').addClass('hidden');
+            angular.element('.slick-active  .group-title-2').addClass('hidden');
+            angular.element('.slick-active  .group-open-hours').addClass('hidden');
+            angular.element('.slick-active  .btn-left').addClass('hidden');
+            angular.element('.slick-active  .btn-right').addClass('hidden');
+            angular.element('.slick-active  .btn-center').addClass('hidden');
+        };
+
+        // $('.background-slide').on('afterChange', function(event, slick, currentSlide){
+        //     $('.slick-active  .logo-images').addClass('animated fadeInDown');
+        //     $('.slick-active  .group-btn-2').addClass('animated fadeInUp');
+        //     $('.slick-active  .group-title').addClass('animated fadeInUp');
+        //     $('.slick-active  .group-title-2').addClass('animated fadeInRight');
+        //     $('.slick-active  .group-open-hours').addClass('animated fadeInRight');
+        //     $('.slick-active  .btn-left').addClass('animated fadeInLeft');
+        //     $('.slick-active  .btn-right').addClass('animated fadeInRight');
+        //     $('.slick-active  .btn-center').addClass('animated zoomIn');
+        //     $('.slick-active  .logo-images').removeClass('hidden');
+        //     $('.slick-active  .group-btn-2').removeClass('hidden');
+        //     $('.slick-active  .group-title').removeClass('hidden');
+        //     $('.slick-active  .group-title-2').removeClass('hidden');
+        //     $('.slick-active  .group-open-hours').removeClass('hidden');
+        //     $('.slick-active  .btn-left').removeClass('hidden');
+        //     $('.slick-active  .btn-right').removeClass('hidden');
+        //     $('.slick-active  .btn-center').removeClass('hidden');
+        // });
+
+        // $('.background-slide').on('beforeChange', function(event, slick, currentSlide){
+        //     $('.slick-active  .logo-images').removeClass('animated fadeInDown');
+        //     $('.slick-active  .group-btn-2').removeClass('animated fadeInUp');
+        //     $('.slick-active  .group-title').removeClass('animated fadeInUp');
+        //     $('.slick-active  .group-title-2').removeClass('animated fadeInRight');
+        //     $('.slick-active  .group-open-hours').removeClass('animated fadeInRight');
+        //     $('.slick-active  .btn-left').removeClass('animated fadeInLeft');
+        //     $('.slick-active  .btn-right').removeClass('animated fadeInRight');
+        //     $('.slick-active  .btn-center').removeClass('animated zoomIn');
+        //     $('.slick-active  .logo-images').addClass('hidden');
+        //     $('.slick-active  .group-btn-2').addClass('hidden');
+        //     $('.slick-active  .group-title').addClass('hidden');
+        //     $('.slick-active  .group-title-2').addClass('hidden');
+        //     $('.slick-active  .group-open-hours').addClass('hidden');
+        //     $('.slick-active  .btn-left').addClass('hidden');
+        //     $('.slick-active  .btn-right').addClass('hidden');
+        //     $('.slick-active  .btn-center').addClass('hidden');
+        // });
+        
     }
 
 })();

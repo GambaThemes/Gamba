@@ -1,0 +1,44 @@
+<ul class="nav-links nav navbar-nav">
+  <li class="dropdown" ng-class="{ 'active': isActive('/') || isActive('/home-02') || isActive('/home-03') }"><a href="javascript:void(0)" class="main-menu"><span class="text">Home</span></a>
+    <ul class="menu-dropdown">
+      <li><a href="#/" class="sub-menu"><span class="text">Homepage 01</span></a></li>
+      <li><a href="#/home-02" class="sub-menu"><span class="text">Homepage 02</span></a></li>
+      <li><a href="#/home-03" class="sub-menu"><span class="text">Homepage 03</span></a></li>
+    </ul>
+  </li>
+  <li ng-class="{ 'active': isActive('/about') }"><a href="#/about" class="main-menu"><span class="text">about</span></a></li>
+  <li ng-class="{ 'active': isActive('/reservation') }"><a href="#/reservation" class="main-menu"><span class="text">Reservation</span></a></li>
+  <li class="dropdown" ng-class="{ 'active': isActive('/menu-gird') || isActive('/menu-gird-2') }"><a href="javascript:void(0)" class="main-menu"><span class="text">menu</span></a>
+    <ul class="menu-dropdown">
+      <li><a href="#/menu-gird" class="sub-menu"><span class="text">menu 1</span></a></li>
+      <li><a href="#/menu-gird-2" class="sub-menu"><span class="text">menu 2</span></a></li>
+    </ul>
+  </li>
+  <li class="dropdown" ng-class="{ 'active': isActive('/blog') || isActive('/blog-detail') }"><a href="javascript:void(0)" class="main-menu"><span class="text">blog</span></a>
+    <ul class="menu-dropdown">
+      <li><a href="#/blog" class="sub-menu"><span class="text">blog</span></a></li>
+      <li><a href="#/blog-detail" class="sub-menu"><span class="text">blog detail</span></a></li>
+      <li class="dropdown-2"><a href="#/blog-detail" class="sub-menu"><span class="text">more page</span></a>
+        <ul class="menu-dropdown-2 right">
+          <li><a href="#/blog" class="sub-menu"><span class="text">blog sidebar left</span></a></li>
+          <li><a href="#/blog-detail" class="sub-menu"><span class="text">blog two column</span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown"  ng-class="{ 'active': isActive('/404') }"><a href="javascript:void(0)" class="main-menu"><span class="text">pages</span></a>
+    <ul class="menu-dropdown">
+      <li><a href="#/404" class="sub-menu"><span class="text">page 404</span></a></li>
+    </ul>
+  </li>
+  <li  ng-class="{ 'active': isActive('/contact') }"><a href="#/contact" class="main-menu"><span class="text">contact</span></a></li>
+</ul>
+<div class="button-search" ng-click="openSearchForm()">
+  <p class="main-menu"><i class="fa fa-search"></i></p>
+</div>
+<div class="nav-search hide">
+  <form>
+    <input type="text" placeholder="Search" class="searchbox"/>
+    <button type="submit" class="searchbutton fa fa-search"></button>
+  </form>
+</div>

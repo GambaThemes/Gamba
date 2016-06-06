@@ -1,0 +1,655 @@
+/**
+ * [Table of contents]
+ *
+ * [&. Content / #key]
+ * [Let press Ctrl + f and type of paste the key, then press Enter to search the content ]
+ *
+ * Summary:
+ *
+ *  0. VARIABLE LESS
+ *    - 0.1. Color
+ *    - 0.2. Font
+ *  1. GLOBAL STYLE
+ *    - 1.1. Scaffolding
+ *    - 1.2. CSS for page
+ *  2. HEADER
+ *    - 2.1. Header Topbar
+ *    - 2.2. Header banner
+ *    - 2.3. Header main
+ *    - 2.4. Navigation / Menu
+ *    - 2.5. More style
+ *  3. FOOTER
+ *    - 3.1. Main Footer
+ *    - 3.2. Sub Footer
+ *    - 3.3. Copyright
+ *  4. SIDEBAR
+ *    - 4.1. Left Sidebar
+ *    - 4.2. Right Sidebar
+ *    - 4.3. Both Sidebar
+ */
+
+
+/*=============================
+ =====   VARIABLE LESS    =====
+ =============================*/
+
+// Core variables and mixins
+@import "lib/_library.scss";
+
+/*----------  0.1. Color  ----------*/
+$text-color: #50545c;
+$title-color: #01050e;
+$main-color: #ed421c;
+
+
+/*----------  0.2. Font  ----------*/
+
+$font-family: "robotoregular", Helvetica, Arial, sans-serif;
+$font-family2: "antonioregular", sans-serif;
+$font-size: 14px;
+
+/*=============================
+ ====  END VARIABLE LESS   ====
+ =============================*/
+
+
+
+/*=============================
+ ======   GLOBAL STYLE   ======
+ =============================*/
+
+
+/*----------  1.1. Scaffolding  ----------*/
+
+html * {
+    outline: 0 !important;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    -wenkit-font-smoothing: subpixel-antialiased;
+}
+
+html {
+    font-size: $font-size;
+}
+
+body {
+    font-family: $font-family;
+    line-height: 24px;
+    font-weight: 400;
+    color: $text-color;
+    background-color: #fff;
+}
+
+a {
+    @include transition(all 0.3s ease);
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+        border-bottom: none;
+    }
+}
+
+.body-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.main-contents {
+    background-color: #fff;
+    position: relative;
+    z-index: 10;
+}
+
+/*----------  1.2. CSS for page  ----------*/
+
+.padding-top-100 {
+    padding-top: 100px;
+}
+
+.padding-bottom-100 {
+    padding-bottom: 100px;
+}
+
+.padding-top-70 {
+    padding-top: 70px;
+}
+
+.padding-bottom-70 {
+    padding-bottom: 70px;
+}
+
+.margin-top-70 {
+    margin-top: 70px;
+}
+
+.margin-bottom-70 {
+    margin-bottom: 70px;
+}
+
+
+.margin-top-50 {
+    margin-top: 50px;
+}
+
+
+/*===============================
+ ======  END GLOBAL STYLE  ======
+ ===============================*/
+
+
+ /*==============================
+ ========     HEADER     ========
+ ===============================*/
+
+.bg-transparent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    @include transition (all 0.6s ease);
+}
+
+.header-01 {
+    .nav-search {
+        top: 60px;
+    }
+    .header-main {
+        .logo-wrapper {
+            text-align: center;
+            display: block;
+            float: none;
+        }
+        .navigation {
+            float: none;
+            &:before {
+                position: absolute;
+                content: "";
+                top: 0;
+                bottom: 0;
+                left: -100%;
+                width: 300%;
+                border-top: 1px solid rgba(255, 255, 255, 0.3);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
+            }
+            .nav-links {
+                display: table;
+                float: none;
+                margin: 0 auto;
+                .main-menu {
+                    line-height: 60px;
+                }
+            }
+        }
+        &.header-fixed {
+            .logo-wrapper {
+                display: inherit;
+                float: left;
+            }
+            .logo {
+                text-align: left;
+                line-height: 50px;
+            }
+            .navigation {
+                float: right;
+                &:before {
+                    display: none;
+                }
+                .nav-links .main-menu {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }   
+}
+
+.header-02 {
+    .header-main {
+        display: none;
+    }
+}
+
+/*----------  2.1. Topbar Header  ----------*/
+
+.header-topbar {
+    width: 100%;
+    line-height: 50px;
+    position: relative;
+    z-index: 101;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.9rem;
+    .link {
+        color: #e3e3e3;
+        &:hover {
+            color: $main-color;
+        }
+    }
+    .topbar-left {
+        margin-bottom: 0;
+        float: left;
+        > li {
+            display: inline-block;
+            padding: 0 15px;
+            position: relative;
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                padding-right: 0;
+                border: none;
+            }
+        }
+        .link {
+            margin-bottom: 0;
+            @include transition (all 0.3s ease);
+            .icons {
+                font-size: 8px;
+                margin-right: 7px;
+                position: relative;
+                top: -2px;
+            }
+            .icons-2 {
+                margin-right: 7px;
+            }
+        }
+    }
+    .topbar-right {
+        margin-bottom: 0;
+        float: right;
+        .link {
+            width: 25px;
+            display: block;
+            font-size: 14px;
+            text-align: center; 
+        }
+    }
+}
+
+
+/*----------  2.2. Main Header  ----------*/
+
+.header-main {
+    width: 100%;
+    box-shadow: none;
+    position: relative;
+    z-index: 100;
+    @include transition (all 0.6s ease);
+    .navigation {
+        float: right;
+    }
+    .logo-wrapper {
+        float: left;
+        line-height: 100px;
+        .logo img {
+            max-width: 130px;
+            width: 100%;
+            @include transition (all 0.3s ease);
+        }
+    }
+    &.header-fixed {
+        background-color: #121212;
+        position: fixed;
+        top: 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        .logo-wrapper {
+            line-height: 50px;
+            .logo img {
+                max-width: 90px;
+                width: 100%;
+            }
+        }
+        .navigation {
+            .nav-links {
+                .main-menu {
+                    line-height: 50px;
+                }
+            }
+        }
+        .nav-search {
+            top: 50px;
+            background-color: #121212;
+            border-top: 1px solid #e3e3e3;
+            form {
+                input[type='text'] {
+                    background-color: #fff;
+                }
+                .searchbutton {
+                    background-color: $main-color;
+                }
+            }
+        }
+    }
+    &.hide-menu {
+        top: -180px !important;
+        position: fixed;
+        .logo-wrapper {
+            line-height: 50px;
+            .logo img {
+                max-width: 90px;
+                width: 100%;
+            }
+        }
+        .navigation {
+            .nav-links {
+                .main-menu {
+                    line-height: 50px;
+                }
+            }
+        }
+    }
+}
+
+
+/*----------  2.3. Navigation  ----------*/
+
+.navigation {
+    position: relative;
+    .nav-links {
+        position: relative;
+        li {
+            &.active,
+            &:hover {
+                .main-menu {
+                    color: $main-color;
+                }
+            }
+            &.button-search {
+                cursor: pointer;
+                .main-menu {
+                    margin-right: 0;
+                    i {
+                        position: relative;
+                        top: -2px;
+                    }
+                }
+                &:before {
+                    display: none;
+                }
+            }
+        }
+        li + li:before {
+            position: absolute;
+            content: "//";
+            left: -7px;
+            font-size: 13px;
+            color: #e3e3e3;
+            top: 50%;
+            margin-top: -13px;
+        }
+        .main-menu {
+            line-height: 100px;
+            padding: 0;
+            margin: 0 24px;
+            font-size: 1.143rem;
+            color: #e3e3e3;
+            font-family: $font-family2;
+            text-transform: uppercase;
+            position: relative;
+            background-color: transparent;
+            @include transition (all 0.3s ease);
+            .icons-dropdown {
+                padding-left: 5px;
+                i {
+                    @include transition (all 0.4s ease);
+                }
+            }
+        }
+    }
+}
+
+.nav-search {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    right: 0;
+    top: 100px;
+    form {
+        display: table;
+        width: 100%;
+        height: 40px;
+        input[type='text'] {
+            border: none;
+            display: table-cell;
+            width: 225px;
+            height: 40px;
+            padding: 0 20px;
+            background-color: rgba(255, 225, 255, 0.5);
+            color: $title-color;
+            &::-webkit-input-placeholder {
+               color: $title-color;
+            }
+
+            &:-moz-placeholder {
+               color: $title-color;
+            }
+
+            &::-moz-placeholder {
+               color: $title-color;
+            }
+
+            &:-ms-input-placeholder {
+               color: $title-color;
+            }
+        }
+        .searchbutton {
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            display: table-cell;
+            border: none;
+            box-shadow: none;
+            background-color: lighten($main-color, 20%);
+            text-align: center;
+            vertical-align: middle;
+            position: relative;
+            top: -1px;
+        }
+    }
+}
+
+/*===============================
+ =======  End of HEADER  ========
+ ===============================*/
+
+
+
+
+/*===============================
+ ========     FOOTER     ========
+================================*/
+footer {
+    position: fixed;
+    z-index: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    display: table;
+    //position: relative;
+    color: #d8e3f7;
+    background-color: #000205;
+    background-image: url('../images/background-full/footer.jpg');
+    background-size: cover;
+    background-position: center;
+    &:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba( 0, 2, 5, 0.9 );
+    }
+}
+
+.footer-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    .widget {
+        .title {
+            font-family: $font-family2;
+            font-size: 20px;
+            color: #d1d1d1;
+            position: relative;
+            padding-bottom: 15px;
+            text-transform: capitalize;
+            &:before {
+                position: absolute;
+                content: "";
+                bottom: 0;
+                left: 0;
+                width: 50px;
+                height: 2px;
+                background-color: $main-color;
+            }
+        }
+        .content-widget {
+            margin-top: 40px;
+        }
+    }
+}
+
+
+.hyperlink {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    border-top: 1px solid #181e29;
+    padding: 40px 0;
+    color: #303540;
+    .name-company {
+        font-weight: bold;
+    }
+    .social-footer {
+        ul {
+            margin-bottom: 0;
+        }
+        .link {
+            width: 28px;
+            text-align: center;
+            color: #303540;
+            font-size: 18px;
+            display: block;
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+}
+
+.gamba-descripton {
+    position: relative;
+    top: -20px;
+    .logo-foogter {
+        margin-bottom: 40px;
+    }
+    .text {
+        margin-bottom: 0;
+    }
+}
+
+.gamba-info {
+    .info-list {
+        ul {
+            margin-bottom: 0;
+            li {
+                display: table;
+                border: none;
+                width: 100%;
+                padding: 0 0 10px;
+                .icons {
+                    display: table-cell;
+                    width: 25px;
+                }
+                .link {
+                    display: table-cell;
+                    color: #d8e3f7;
+                    @include transition(all 0.6s ease);
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+                .link-2 {
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}
+
+.gamba-opentime {
+    .time-service {
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .title-time {
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .content-time {
+            text-transform: capitalize;
+        }
+    }
+}
+
+.gamba-gallery {
+    .content-widget {
+        margin: 0 -10px;
+        .item {
+            padding: 0 10px;
+        }
+    }
+    .slick-prev, .slick-next {
+        top: 120%;
+        &:before {
+            font-family: 'FontAwesome';
+            font-size: 16px;
+            opacity: 1;
+            color: #d8e3f7;
+            @include transition( all 0.5s ease);
+        }
+        &:hover {
+            &:before {
+                color: $main-color;
+            }
+        }
+    }
+    .slick-prev {
+        left: auto;
+        right: 20px;
+        &:before {
+            content: "\f104";
+        }
+    }
+    .slick-next {
+        right: 0;
+        &:before {
+            content: "\f105";
+            
+        }
+    }
+}
+
+/*===============================
+ ========  End of FOOTER  =======
+ ===============================*/
+
+
+
+
+ /*==============================
+ =======     SIDEBAR      =======
+ ===============================*/
+
+/*===============================
+ =======  End of SIDEBAR  =======
+ ===============================*/

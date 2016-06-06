@@ -1,28 +1,54 @@
-/* VARIABLES */
+/**
+ * [Table of contents]
+ *
+ * [&. Content / #key]
+ * [Let press Ctrl + f and type of paste the key, then press Enter to search the content ]
+ *
+ * Summary:
+ *
+ *  0. VARIABLE LESS
+ *  1. MIXINS
 
-$brand-primary: #ff7256;
-$brand-secondary: #ff4676;
-$brand-success: #7afc8c;
-$brand-info: #78eaff;
-$brand-warning: #ffdd00;
-$brand-danger: #ff3939;
-$black-color: #000000;
-$gray-color: #979798;
-$text-color: #555555;
-$text-color-light: #cbcbce;
-$text-color-dark: #000000;
-$border-radius: 2px;
 
-/* MIXIN */
+/*=============================
+ =====   VARIABLE LESS    =====
+ =============================*/
 
-@mixin border-radius($radius) {
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    -ms-border-radius: $radius;
-    border-radius: $radius;
+/*=============================
+ ====  END VARIABLE LESS   ====
+ =============================*/
+
+/*=============================
+ =====       MIXINS       =====
+ =============================*/
+
+@mixin circle($param) {
+    border-radius: $param;
+    -webkit-border-radius: $param;
+    -moz-border-radius: $param;
 }
 
-@mixin box-shadow($shadow) {
-    -webkit-box-shadow: $shadow;
-    box-shadow: $shadow;
+@mixin transition($param) {
+    transition: $param;
+    -webkit-transition: $param;
+    -moz-transition: $param;
+    -o-transition: $param;
 }
+
+@mixin l-height($param) {
+    height: $param;
+    line-height: $param;
+}
+
+@mixin transform($param) {
+    transform: $param;
+    -webkit-transform: $param;
+    -moz-transform: $param;
+    -ms-transform: $param;
+    -o-transform: $param;
+}
+
+/*=============================
+ ====      END MIXINS      ====
+ =============================*/
+

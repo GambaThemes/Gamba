@@ -37,11 +37,6 @@ var paths = {
     'src/client/views/**/*.html'
   ],
   libsCss: [
-    './src/client/public/libs/bootstrap/dist/css/bootstrap.min.css',
-    './src/client/public/libs/Ionicons/css/ionicons.css',
-    './src/client/public/libs/font-awesome/css/font-awesome.css',
-    './src/client/public/libs/animate.css/animate.css',
-    './src/client/public/libs/angular-gridster/dist/angular-gridster.min.css'
   ],
   server: [
     './src/server/bin/www'

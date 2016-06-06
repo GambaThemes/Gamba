@@ -1,5 +1,5 @@
 {
-  "name": "_example",
+  "name": "Gamba",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -17,21 +17,16 @@
     "browser-sync": "latest",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
-    "gulp-clean": "latest",
     "gulp-clean-css": "latest",
     "gulp-concat": "latest",
-    "gulp-connect": "latest",
     "gulp-inject": "latest",
     "gulp-jshint": "latest",
     "gulp-nodemon": "latest",
-    "gulp-notify": "latest",
     "gulp-rename": "latest",
     "gulp-sass": "latest",
-    "gulp-uglify": "latest",
     "gulp-util": "latest",
     "jshint": "latest",
     "jshint-stylish": "latest",
-    "main-bower-files": "latest",
-    "run-sequence": "latest"
+    "main-bower-files": "latest"
   }
 }

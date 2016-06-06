@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="content-wrapper padding-top-100 padding-bottom-100">
+        <div class="main-title">
+            <div class="bg-image"><img src="public/images/seafood/kingcrab.png" alt="" /></div>
+            <h2 class="title">menu of the day</h2>
+        </div>
+        <div class="main-content">
+            <ul class="tab-menu">
+                <li ng-class="{'active' : active == 0}">
+                    <a href ng-click="active = 0" class="name"><i class="icons flaticon-food-2"></i><span>starters</span></a>
+                </li>
+                <li ng-class="{'active' : active == 1}">
+                    <a href ng-click="active = 1" class="name"><i class="icons flaticon-lobster"></i><span>Dishes</span></a>
+                </li>
+                <li ng-class="{'active' : active == 2}">
+                    <a href ng-click="active = 2" class="name"><i class="icons flaticon-fluffy-pancakes-with-syrup"></i><span>deserts</span></a>
+                </li>
+                <li ng-class="{'active' : active == 3}">
+                    <a href ng-click="active = 3" class="name"><i class="icons flaticon-drink"></i><span>Drinks</span></a>
+                </li>
+            </ul>
+            <!-- Tab panes-->
+            <uib-tabset active="active" class="tab-content content-menu">
+                <uib-tab index="0" id="starters">
+                    <div ui-view="list_menu_2"></div>
+                </uib-tab>
+                <uib-tab index="1" id="dishes">
+                    <div ui-view="list_menu_2_b"></div>
+                </uib-tab>
+                <uib-tab index="2" id="deserts">
+                    <div ui-view="list_menu_2_c"></div>
+                </uib-tab>
+                <uib-tab index="3" id="drinks">
+                    <div ui-view="list_menu_2_d"></div>
+                </uib-tab>
+            </uib-tabset>
+        </div>
+    </div>
+</div>
