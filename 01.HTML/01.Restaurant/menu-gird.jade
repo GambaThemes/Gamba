@@ -15,54 +15,47 @@ section.main-menu.padding-top-100.padding-bottom-100
             .icons //
             h2.title main menu
         .main-content
-                ul.nav.nav-tabs.nav-justified.tab-main-menu(role="tablist")
-                    li.active(role="presentation")
-                        a.name(href="#fish", aria-controls="fish", role="tab", data-toggle="tab") 
-                            img.img-responsive.image-1(src="assets/images/seafood/tab-fish.png", alt="")
-                            img.img-responsive.image-2(src="assets/images/seafood/tab-fish-3.png", alt="")
-                            span.text fish Dishs
-                    li(role="presentation")
-                        a.name(href="#lobster", aria-controls="lobster", role="tab", data-toggle="tab") 
-                            img.img-responsive.image-1(src="assets/images/seafood/tab-crawfish.png", alt="")
-                            img.img-responsive.image-2(src="assets/images/seafood/tab-crawfish-3.png", alt="")
-                            span.text Lobster Dishs
-                    li(role="presentation")
-                        a.name(href="#crab", aria-controls="crab", role="tab", data-toggle="tab") 
-                            img.img-responsive.image-1(src="assets/images/seafood/tab-kingcrab.png", alt="")
-                            img.img-responsive.image-2(src="assets/images/seafood/tab-kingcrab-3.png", alt="")
-                            span.text Crab Dishs
-                    li(role="presentation")
-                        a.name(href="#shirmp", aria-controls="shirmp", role="tab", data-toggle="tab") 
-                            img.img-responsive.image-1(src="assets/images/seafood/tab-shrimp.png", alt="")
-                            img.img-responsive.image-2(src="assets/images/seafood/tab-shrimp-3.png", alt="")
-                            span.text Shirmp Dishs
-                    li(role="presentation")
-                        a.name(href="#clamp", aria-controls="clamp", role="tab", data-toggle="tab") 
-                            img.img-responsive.image-1(src="assets/images/seafood/tab-clamp.png", alt="")
-                            img.img-responsive.image-2(src="assets/images/seafood/tab-clamp-3.png", alt="")
-                            span.text Clamp Dishs
-                    li(role="presentation")
-                        a.name(href="#squid", aria-controls="squid", role="tab", data-toggle="tab") 
-                            img.img-responsive.image-1(src="assets/images/seafood/tab-cuttle.png", alt="")
-                            img.img-responsive.image-2(src="assets/images/seafood/tab-cuttle-3.png", alt="")
-                            span.text Squid Dishs
-                // Tab panes
-                .tab-content.content-menu
-                    #fish.tab-pane.fade.in.active(role="tabpanel")
-                        != partial("_includes/list-menu/list-menu-4")
-                    #lobster.tab-pane.fade(role="tabpanel")
-                        != partial("_includes/list-menu/list-menu-4-b")
-                    #crab.tab-pane.fade(role="tabpanel")
-                        != partial("_includes/list-menu/list-menu-4-d")
-                    #shirmp.tab-pane.fade(role="tabpanel")
-                        != partial("_includes/list-menu/list-menu-4-b")
-                    #clamp.tab-pane.fade(role="tabpanel")
-                        != partial("_includes/list-menu/list-menu-4-c")
-                    #squid.tab-pane.fade(role="tabpanel")
-                        != partial("_includes/list-menu/list-menu-4")
+            .tab-main-menu
+                .name
+                    img.img-responsive.image-1(src="assets/images/seafood/tab-fish.png", alt="")
+                    img.img-responsive.image-2(src="assets/images/seafood/tab-fish-3.png", alt="")
+                    span.text fish Dishs
+                .name
+                    img.img-responsive.image-1(src="assets/images/seafood/tab-crawfish.png", alt="")
+                    img.img-responsive.image-2(src="assets/images/seafood/tab-crawfish-3.png", alt="")
+                    span.text Lobster Dishs
+                .name
+                    img.img-responsive.image-1(src="assets/images/seafood/tab-kingcrab.png", alt="")
+                    img.img-responsive.image-2(src="assets/images/seafood/tab-kingcrab-3.png", alt="")
+                    span.text Crab Dishs
+                .name
+                    img.img-responsive.image-1(src="assets/images/seafood/tab-shrimp.png", alt="")
+                    img.img-responsive.image-2(src="assets/images/seafood/tab-shrimp-3.png", alt="")
+                    span.text Shirmp Dishs
+                .name
+                    img.img-responsive.image-1(src="assets/images/seafood/tab-clamp.png", alt="")
+                    img.img-responsive.image-2(src="assets/images/seafood/tab-clamp-3.png", alt="")
+                    span.text Clamp Dishs
+                .name
+                    img.img-responsive.image-1(src="assets/images/seafood/tab-cuttle.png", alt="")
+                    img.img-responsive.image-2(src="assets/images/seafood/tab-cuttle-3.png", alt="")
+                    span.text Squid Dishs
+            .content-menu
+                .tab-pane
+                    != partial("_includes/list-menu/list-menu-4")
+                .tab-pane
+                    != partial("_includes/list-menu/list-menu-4-b")
+                .tab-pane
+                    != partial("_includes/list-menu/list-menu-4-d")
+                .tab-pane
+                    != partial("_includes/list-menu/list-menu-4-b")
+                .tab-pane
+                    != partial("_includes/list-menu/list-menu-4-c")
+                .tab-pane
+                    != partial("_includes/list-menu/list-menu-4")
 section.banner.banner-deserts.padding-top-100.padding-bottom-100
     .container
-        .main-title-2.white
+        .main-title-2.white.no-margin
             .icons //
             h2.title deserts
 .sub-menu.padding-top-100.padding-bottom-100
@@ -158,7 +151,7 @@ section.banner.banner-deserts.padding-top-100.padding-bottom-100
                         .desciption Lorem ipsum dolor sit a met, consec tetur.
 section.banner.banner-drinks.padding-top-100.padding-bottom-100
     .container
-        .main-title-2.white
+        .main-title-2.white.no-margin
             .icons //
             h2.title drinks
 .sub-menu.padding-top-100.padding-bottom-100

@@ -40,6 +40,9 @@ html(lang="en")
             // MENU MOBILE
             .wrapper-menu-mobile
                 != partial("_includes/header/menu-mobile")
+            //- // SEARCH MOBILE
+            //- .wrapper-menu-mobile
+            //-     != partial("_includes/header/menu-mobile")
 
             // WRAPPER CONTENT
             .wrapper-content
@@ -71,9 +74,9 @@ html(lang="en")
                         != partial("_includes/footer/footer")
 
                 // BUTTON BACK TO TOP
-                //- .btn-wrapper.back-to-top
-                //-     a.btn.btn-transparent(href="#top")
-                //-         i.fa.fa-angle-double-up
+                #back-top
+                    a.link(href="#top")
+                        i.fa.fa-angle-double-up
 
         // LIBRARY JS
         script(src="assets/libs/jquery/jquery-2.2.3.min.js")

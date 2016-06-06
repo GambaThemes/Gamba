@@ -1,15 +1,18 @@
 jQuery(function($) {
     "use strict";
 
-    var SLZ = window.SLZ || {};
+    var gamba = window.gamba || {};
 
-    SLZ.mainFunction = function(){
+    gamba.mainFunction = function(){
 
         // js for calendar
         $('.input-daterange, .archive-datepicker').datepicker({
             format: 'mm/dd/yy',
             maxViewMode: 0
         });
+
+        // show gallery
+        $(".fancybox").fancybox();
     };
 
     /*======================================
@@ -17,7 +20,7 @@ jQuery(function($) {
     ======================================*/
 
     $(document).ready(function() {
-        SLZ.mainFunction();
+        gamba.mainFunction();
     });
     /*=====  End of INIT FUNCTIONS  ======*/
 

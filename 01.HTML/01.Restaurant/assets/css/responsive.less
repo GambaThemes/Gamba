@@ -335,6 +335,12 @@
     .logo-bg {
         max-width: 400px;
     }
+
+
+    /********************* CONTACT ***********************/
+    .contact-info-item {
+        padding: 0;
+    }
 }
 
 /*----------  1.2. Media screen max width 768px  ----------*/
@@ -380,6 +386,10 @@
                 padding-left: 15px;
             }
         }
+    }
+
+    .main-right {
+        float: left;
     }
 
 
@@ -624,6 +634,14 @@
         }
     }
 
+
+    /******************** 404 **********************/
+    .page-404 {
+        .title {
+            margin-top: 15%;
+        }
+    }
+
 }
 
 /*----------  1.3. Media screen max width 767px  ----------*/
@@ -688,7 +706,9 @@
     /********************* HOME PAGE ***********************/
 
     .homepage-default, .special-menu, .banner,
-    .testimonial, .morepage-banner-wrapper {
+    .testimonial, .morepage-banner-wrapper,
+    .background-slide .slide-item,
+    .menu-of-day.style-3, .main-event {
         background-attachment: scroll;
     }
 
@@ -810,7 +830,10 @@
         padding-top: 140px;
     }
 
-
+    .coming-soon-event-wrapper {
+        max-width: 570px;
+        margin: 0 auto;
+    }
 
     /******************** HOME PAGE 3 **********************/
     .menu-of-day .content-menu {
@@ -878,6 +901,117 @@
     /******************** BLOG **********************/
     .blog-post {
         margin-bottom: 40px;
+    }
+
+
+    /******************** CONTACTS **********************/
+    .contact-info-item {
+        max-width: 320px;
+        margin: 0 auto;
+        .icons {
+            margin-bottom: 20px;
+        }
+    }
+
+    .contact-info {
+        .col-sm-4 {
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .contact-form {
+        .col-sm-4 {
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .contact-map #googleMap {
+        height: 400px;
+    }
+
+
+    /******************** LIST MENU **********************/
+
+    .tab-main-menu {
+        .slick-prev {
+            left: -15px;
+        } 
+        .slick-next {
+            right: -15px;
+        }
+    }
+
+    .main-menu {
+        .content-menu {
+            margin-bottom: 0;
+            .menu-items.style-4 {
+                margin-bottom: 30px;
+            }
+            .col-md-4:nth-last-child(-n + 3) {
+                .menu-items.style-4 {
+                    margin-bottom: 30px;
+                }
+            }
+            .col-md-4:nth-last-child(-n + 2) {
+                .menu-items.style-4 {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .sub-menu .col-sm-6 {
+        &:nth-last-child(-n+2) .menu-items.style-3 {
+            border-bottom: 1px dashed #ebebeb;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        &:last-child .menu-items.style-3 {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border: none;
+        }
+    }
+
+
+    /******************** EVENT **********************/
+    .more-event {
+        .coming-soon-wrapper {
+            .left-infomation {
+                padding-top: 0;
+                padding-bottom: 60px;
+            }
+            &:last-child {
+                .left-infomation {
+                    padding-top: 60px;
+                    padding-bottom: 0;
+                }
+            }
+            .logo-bg {
+                margin: 0 auto;
+                background-attachment: scroll;
+            }
+        }
+    }
+
+
+    /******************** 404 **********************/
+    .page-404 {
+        min-height: 667px;
+        .title {
+            margin-top: 50px;
+        }
+    }
+
+    /******************** GALLERY **********************/
+    .description-gallery {
+        margin-top: 50px;
     }
 }
 
@@ -1035,11 +1169,79 @@
         }
     }
 
+    .menu-items.style-4 {
+        .item-content {
+            .price {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
 
 
     /********************* BLOG **********************/
     .blog-post .blog-image {
         margin-bottom: 30px;
+    }
+
+
+    /******************** EVENT **********************/
+    .main-event .coming-soon-event-wrapper {
+        .coming-soon-count {
+            margin: 50px 0 0 0;
+        }
+    }
+
+    .more-event {
+        .coming-soon-wrapper {
+            .left-infomation {
+                padding-bottom: 30px;
+            }
+            &:last-child {
+                .left-infomation {
+                    padding-top: 30px;
+                }
+            }
+        }
+    }
+
+    /******************** GALLERY **********************/
+    .gallery-wrapper {
+        .tab-menu {
+            display: inline-block;
+            width: 100%;
+            li {
+                display: inline-block;
+                width: 25%;
+                float: left;
+                &:before {
+                    position: absolute;
+                    content: "";
+                    border-left: 1px dashed #dfe0e1 !important;
+                    height: 100%;
+                    right: 0;
+                    left: auto;
+                }
+            }
+        }
+    }
+
+    .description-gallery {
+        margin-top: 0;
+    }
+
+    .grid-gallery {
+        margin: 0 -10px;
+    }
+
+    .grid-item-wrapper {
+        width: 50%;
+        .grid-item {
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+        }
     }
 }
 
@@ -1261,6 +1463,33 @@
             }
         }
     }
+
+
+    /********************* CONTACT ***********************/
+    .contact-form {
+        .col-sm-4 {
+            margin-bottom: 20px;
+        }
+
+        .form-textarea {
+            margin-top: 20px;
+        }
+    }
+
+
+    /******************** EVENT **********************/
+    .logo-bg {
+        &.style-2, &.style-3 {
+            min-height: 260px;
+        } 
+    }
+
+
+    /********************* 404 ***********************/
+    .page-404 .title {
+        font-size: 4.2rem;
+        margin-bottom: 20px;
+    }
 }
 
 /*----------  1.6. Media screen max width 414px  ----------*/
@@ -1310,6 +1539,49 @@
 
     .blog-detail-content .content .title {
         font-size: 1.6rem;
+    }
+
+
+    /********************* LIST MENU ***********************/
+    .content-menu {
+        .tab-pane {
+            .col-xs-6 {
+                width: 100%;
+            }
+        }
+    }
+
+    .main-menu {
+        .content-menu {
+            .col-md-4:nth-last-child(-n + 2) {
+                .menu-items.style-4 {
+                    margin-bottom: 30px;
+                }
+            }
+            .col-md-4:last-child {
+                .menu-items.style-4 {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    /******************** EVENT **********************/
+
+    /******************** GALLERY **********************/
+    .grid-item-wrapper {
+        width: 100%;
+    }
+
+    .gallery-wrapper .tab-menu li {
+        width: 33%;
+        &:nth-last-child(-n+3) {
+            margin-bottom: 0;
+            .name {
+                border: none;
+                padding-bottom: 0;
+            }
+        }
     }
 }
 
@@ -1422,10 +1694,8 @@
         }
     }
 
-    .menu-of-day.style-3 {
-        .menu-items .title .name {
-            width: calc(~"100% - 50px");
-        }
+    .menu-items.style-3 .title .name {
+        width: calc(~"100% - 50px");
     }
 
 
@@ -1458,6 +1728,13 @@
         }
         .comment-right {
             padding-left: 60px;
+        }
+    }
+
+    /******************** EVENT **********************/
+    .logo-bg {
+        &.style-2, &.style-3 {
+            min-height: 220px;
         }
     }
 
@@ -1536,5 +1813,13 @@
     }
 
 
-
+    /********************* 404 ***********************/
+    .page-404 {
+        min-height: 568px;
+        .title {
+            font-size: 3.6rem;
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+    }
 }

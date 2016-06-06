@@ -87,6 +87,9 @@
         "url_style": [
         ],
         "url_script": [
+            {
+                "src": "assets/js/pages/menu-gird.js"
+            }
         ]
     },
     "menu-gird-2": {
@@ -132,15 +135,68 @@
             }
         ]
     },
-    "blog-detail": {
-        "title": "Blog Detail",
-        "nav": "Blog Detail",
+    "blog-no-sidebar": {
+        "title": "Blog",
+        "nav": "Blog",
         "url_style": [
+            {
+                "src": "assets/libs/fancybox/css/jquery.fancybox.css?v=2.1.5"
+            },
+            {
+                "src": "assets/libs/fancybox/css/jquery.fancybox-buttons.css?v=1.0.5"
+            },
+            {
+                "src": "assets/libs/fancybox/css/jquery.fancybox-thumbs.css?v=1.0.7"
+            },
             {
                 "src": "assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css"
             }
         ],
         "url_script": [
+            {
+                "src": "assets/libs/fancybox/js/jquery.fancybox.js"
+            },
+            {
+                "src": "assets/libs/fancybox/js/jquery.fancybox-buttons.js"
+            },
+            {
+                "src": "assets/libs/fancybox/js/jquery.fancybox-thumbs.js"
+            },
+            {
+                "src": "assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"
+            },
+            {
+                "src": "assets/js/pages/blog.js"
+            }
+        ]
+    },
+    "blog-detail": {
+        "title": "Blog Detail",
+        "nav": "Blog Detail",
+        "url_style": [
+            {
+                "src": "assets/libs/fancybox/css/jquery.fancybox.css?v=2.1.5"
+            },
+            {
+                "src": "assets/libs/fancybox/css/jquery.fancybox-buttons.css?v=1.0.5"
+            },
+            {
+                "src": "assets/libs/fancybox/css/jquery.fancybox-thumbs.css?v=1.0.7"
+            },
+            {
+                "src": "assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css"
+            }
+        ],
+        "url_script": [
+            {
+                "src": "assets/libs/fancybox/js/jquery.fancybox.js"
+            },
+            {
+                "src": "assets/libs/fancybox/js/jquery.fancybox-buttons.js"
+            },
+            {
+                "src": "assets/libs/fancybox/js/jquery.fancybox-thumbs.js"
+            },
             {
                 "src": "assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"
             },
@@ -160,6 +216,58 @@
             },
             {
                 "src": "assets/js/pages/contact.js"
+            }
+        ]
+    },
+    "event": {
+        "title": "Event",
+        "nav": "Event",
+        "url_style": [
+        ],
+        "url_script": [
+            {
+                "src": "assets/js/pages/coming-soon.js"
+            },
+            {
+                "src": "assets/js/pages/coming-soon-2.js"
+            }
+        ]
+    },
+    "gallery-isotope": {
+        "title": "Gallery",
+        "nav": "Gallery",
+        "url_style": [
+            {
+                "src": "assets/libs/fancybox/css/jquery.fancybox.css?v=2.1.5"
+            },
+            {
+                "src": "assets/libs/fancybox/css/jquery.fancybox-buttons.css?v=1.0.5"
+            },
+            {
+                "src": "assets/libs/fancybox/css/jquery.fancybox-thumbs.css?v=1.0.7"
+            },
+            {
+                "src": "assets/libs/mouse-direction-aware/dist/jquery.directional-hover.min.css"
+            }
+        ],
+        "url_script": [
+            {
+                "src": "assets/libs/fancybox/js/jquery.fancybox.js"
+            },
+            {
+                "src": "assets/libs/fancybox/js/jquery.fancybox-buttons.js"
+            },
+            {
+                "src": "assets/libs/fancybox/js/jquery.fancybox-thumbs.js"
+            },
+            {
+                "src": "assets/libs/mouse-direction-aware/dist/jquery.directional-hover.min.js"
+            },
+            {
+                "src":"assets/libs/isotope/isotope.pkgd.min.js"
+            },
+            {
+                "src":"assets/js/pages/gallery.js"
             }
         ]
     },

@@ -42,14 +42,14 @@ section.contact-form-wrapper.padding-top-100.padding-bottom-100
             form.contact-form#contact-form
                 .row
                     .col-sm-4
-                        input.form-control(type="text", placeholder="Your Name")
+                        input.form-control(type="text", placeholder="Your Name", onfocus="this.placeholder = ''")
                     .col-sm-4
-                        input.form-control(type="email", placeholder="Your Email")
+                        input.form-control(type="email", placeholder="Your Email", onfocus="this.placeholder = ''")
                     .col-sm-4 
-                        input.form-control(type="textr", placeholder="Your Phone")
+                        input.form-control(type="textr", placeholder="Your Phone", onfocus="this.placeholder = ''")
                 .row
                     .col-sm-12
-                        textarea.form-control.form-textarea( placeholder="Your Message")
+                        textarea.form-control.form-textarea( placeholder="Your Message", onfocus="this.placeholder = ''")
                 button.btn.btn-maincolor.margin-top-50(type="submit") Send Message 
         .bg-images-pc
             img.img-responsive(src="assets/images/more-image/chef-4.png", alt="")

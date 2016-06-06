@@ -1,13 +1,13 @@
 jQuery(function($) {
     "use strict";
 
-    var SLZ = window.SLZ || {};
+    var gamba = window.gamba || {};
 
     /*=======================================
     =             MAIN FUNCTION             =
     =======================================*/
 
-    SLZ.mainFunction = function() {
+    gamba.mainFunction = function() {
 
         // slide for group logo
         $('.list-logo').slick({
@@ -25,6 +25,7 @@ jQuery(function($) {
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 1,
+                        autoplay: false
                     }
                 },
                 {
@@ -32,7 +33,7 @@ jQuery(function($) {
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        
+                        autoplay: false
                     }
                 }
             ]
@@ -44,7 +45,7 @@ jQuery(function($) {
     ======================================*/
 
     $(document).ready(function() {
-        SLZ.mainFunction();
+        gamba.mainFunction();
     });
 
     /*=====  End of INIT FUNCTIONS  ======*/

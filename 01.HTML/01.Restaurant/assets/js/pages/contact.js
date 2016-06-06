@@ -1,14 +1,14 @@
 jQuery(function($){
     "use strict";
 
-    var SLZ = window.SLZ || {};
+    var gamba = window.gamba || {};
     
 
     /*=======================================
     =             MAIN FUNCTION             =
     =======================================*/
 
-    SLZ.mainFunction = function(){
+    gamba.mainFunction = function(){
 
         /*Google map*/
         var myLatLng = {lat: -33.869640, lng: 151.094009};
@@ -235,7 +235,7 @@ jQuery(function($){
     ======================================*/
     
     $(document).ready(function(){
-        SLZ.mainFunction();
+        gamba.mainFunction();
     });
     
     /*=====  End of INIT FUNCTIONS  ======*/

@@ -160,6 +160,9 @@
     &.white {
         .title, .subtitle { color: #fff; }
     }
+    &.no-margin {
+        margin-bottom: 0;
+    }
 }
 
 .star-rating {
@@ -628,6 +631,36 @@
     overflow: hidden;
 }
 
+
+#back-top .link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: 2px solid @main-color;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 24px;
+    z-index: 100;
+    color: @main-color;
+    opacity: 0;
+    visibility: hidden;
+    .transform (translateY(-40px));
+    .transition (all 0.5s ease);
+    &.show-btn {
+        .transform (translateY(0px));
+        opacity: 1;
+        visibility: visible;
+    }
+    &:hover {
+        background-color: @main-color;
+        border: 2px solid #000;
+        color: #000;
+        .transform (translateY(-15px));
+    }
+}
 /*=================================
  ======   END GLOBAL STYLE   ======
  =================================*/
@@ -1478,16 +1511,13 @@
     display: table;
     width: 100%;
     max-width: 1170px;
+    //margin-right: -15px;
+    //margin-left: -15px;
     .left-infomation, .right-infomation {
         display: table-cell;
         vertical-align: middle;
         width: 50%;
-    }
-    .left-infomation {
-        padding-right: 15px;
-    }
-    .right-infomation { 
-        padding-left: 15px;
+        padding: 0 15px;
     }
 }
 
@@ -1580,7 +1610,18 @@
             }   
         }
     }
-
+    &.style-2 {
+        background-image: url('../images/background-full/banner-2.jpg');
+        background-size: cover;
+        background-position: center;
+        min-height: 310px;
+    }
+    &.style-3 {
+        background-image: url('../images/background-full/footer.jpg');
+        background-size: cover;
+        background-position: center;
+        min-height: 310px;
+    }
 }
 
 .coming-soon-event-wrapper {
@@ -1592,6 +1633,7 @@
             text-transform: capitalize;
             font-family: 'antoniobold';
             font-size: 2.571rem;
+            margin-bottom: 5px;
         }
         .date {
             color: #8d8f93;
@@ -1620,7 +1662,7 @@
                 .count {
                     font-size: 7.143rem;
                     line-height: 160px;
-                    font-family: 'robotoblack';
+                    font-family: 'robotobold';
                     color: #ced0d6;
                 }
             }
@@ -1641,6 +1683,45 @@
     }
     .btn {
         margin-top: 50px;
+    }
+    &.white {
+        .infomation {
+            .title {
+                color: #fff;
+            }
+            .date {
+                color: #eaeef5;
+            }
+        }
+        .coming-soon-count {
+            .count-wrapper {
+                .time {
+                    border: 1px solid #eaeef5;
+                    overflow: hidden;
+                    .count {
+                        color: @main-color;
+                    }
+                }
+                .time-label {
+                    background-color: transparent;
+                    color: #fff;
+                    position: relative;
+                    width: auto;
+                    left: auto;
+                    margin-left: 0;
+                }
+            }
+        }
+        .btn {
+            margin-top: 70px;
+            background-color: transparent;
+            border: 1px solid #fff;
+            color: #fff;
+            &:hover {
+                background-color: #fff;
+                color: @main-color;
+            }
+        }
     }
 }
 
@@ -1753,11 +1834,12 @@
                 width: 100%;
             }
             video {
+                width: 120% !important;
                 position: absolute;
                 z-index: 0;
                 bottom: 0;
                 left: 0;
-                top: 0;
+                top: -130px;
                 width: 100%;
             }
         }
@@ -1864,7 +1946,7 @@
         color: #fff;
         background-color: #121212;
         overflow: hidden;
-        background-attachment: fixed;
+        //background-attachment: fixed;
         .img-bg {
             position: absolute;
             top: 0;
@@ -2315,6 +2397,12 @@
     &.menu-gird-2 {
         background-image: url('../images/background-full/banner-12.jpg');
     }
+    &.event {
+        background-image: url('../images/background-full/banner-19.jpg');
+    }
+    &.gallery {
+        background-image: url('../images/background-full/banner-20.jpg');
+    }
 }
 
 .morepage-banner {
@@ -2466,71 +2554,85 @@
 
 .tab-main-menu {
     margin-bottom: 60px;
-    li {
-        &.active, &.active:hover {
-            .name {
-                border: none;
-                color: @main-color;
-                .image-1 {
-                    opacity: 0;
-                    visibility: hidden;
-                }
-                .image-2 {
-                    opacity: 1;
-                    visibility: visible;
-                }
-            }
-        }
-        &:hover {
-            .name {
-                background-color: transparent;
-                border: none;
-                color: @main-color;
-                .image-1 {
-                    opacity: 0;
-                    visibility: hidden;
-                }
-                .image-2 {
-                    opacity: 1;
-                    visibility: visible;
-                }
-            }
-        }
-        .name {
-            font-family: "antoniobold";
-            font-size: 18px;
-            color: @title-color;
-            text-transform: capitalize;
-            text-align: center;
+    .name {
+        font-family: "antoniobold";
+        cursor: pointer;
+        font-size: 18px;
+        color: @title-color;
+        text-transform: capitalize;
+        text-align: center;
+        position: relative;
+        padding: 0 15px;
+        border: none !important;
+        .circle(0) !important;
+        .transition(all 0.2s ease);
+        .image-1 {
+            opacity: 1;
+            visibility: visible;
             position: relative;
-            padding: 0 15px;
-            border: none !important;
-            .circle(0) !important;
-            .transition(all 0.2s ease);
-            .text  {
-                
-            }
+        }
+        .image-2 {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            //top: 0;
+            //left: 20px;
+        }
+        img {
+            max-width: 150px;
+            margin: 0 auto;
+            //.transition(all 0.5s ease);
+        }
+        &:hover, &.slick-current {
+            background-color: transparent;
+            border: none;
+            color: @main-color;
             .image-1 {
-
-            }
-            .image-2 {
                 opacity: 0;
                 visibility: hidden;
                 position: absolute;
-                top: 0;
-                left: 20px;
             }
-            img {
-                max-width: 150px;
-                margin: 0 auto;
-                .transition(all 0.5s ease);
+            .image-2 {
+                opacity: 1;
+                visibility: visible;
+                position: relative;
             }
+        }
+    }
+    .slick-prev, .slick-next {
+        width: 36px;
+        height: 36px;
+        margin-top: -18px;
+        &:before {
+            font-family: "FontAwesome";
+            font-size: 2.6rem;
+            color: @title-color;
+            opacity: 1;
+            .transition(all 0.3s ease);
+        }
+        &:hover {
+            &:before {
+                color: @main-color;
+            }
+        }
+    }
+    .slick-prev {
+        //left: -50px;
+        &:before {
+            content: "\f104";
+        }
+    }
+    .slick-next {
+        //right: -50px;
+        &:before {
+            content: "\f105";
         }
     }
 }
 
 .main-menu {
     .content-menu {
+        margin-bottom: 0;
         .col-md-4:nth-last-child(-n + 3) {
             .menu-items.style-4 {
                 margin-bottom: 0;
@@ -2951,7 +3053,7 @@ blockquote {
 
 .page-404 {
     background-size: cover;
-    background-position: middle;
+    background-position: center;
     background-repeat: no-repeat;
     background-image: url('../images/background-full/404.jpg');
     width: 100%;
@@ -2963,6 +3065,157 @@ blockquote {
         margin-top: 5%;
         margin-bottom: 30px;
         color: @title-color;
+    }
+}
+
+/*----------  1.11. Event  ----------*/
+.main-event {
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url('../images/background-full/banner-22.jpg');
+    .coming-soon-event-wrapper {
+        max-width: 568px;
+        margin: 0 auto;
+    }
+}
+
+.more-event {
+    .coming-soon-event-wrapper {
+        .infomation {
+            .title {
+                font-size: 2.143rem;
+            }
+        }
+        .coming-soon-count {
+            max-width: 390px;
+            margin: 20px auto 0 auto;
+            .count-wrapper {
+                height: 50px;
+                .time {
+                    border: none;
+                    border-bottom: 1px solid #b0b5bd;
+                    .count {
+                        font-size: 2.571rem;
+                        color: #81899a;
+                        line-height: 50px;
+                    }
+                }
+                .time-label {
+                    position: relative;
+                    left: auto;
+                    margin-left: 0;
+                    width: auto; 
+                }
+            }
+        }
+        .btn {
+            margin-top: 70px;
+        }
+    }
+}
+
+
+/*----------  1.12. Gallery isotope  ----------*/
+.gallery-wrapper {
+    text-align: center;
+    .tab-menu {
+        display: table;
+        max-width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+        li {
+            display: table-cell;
+            width: 1%;
+            float: none;
+            cursor: pointer;
+        }
+    }
+}
+
+.description-gallery {
+    max-width: 630px;
+    margin: 0 auto 30px auto;
+    .title {
+        text-transform: capitalize;
+        margin: 0 0 15px 0;
+        color: @title-color;
+        font-size: 2.143rem;
+        font-family: "antoniobold"
+    }
+    .text {
+        margin-bottom: 0;
+    }
+}
+
+.grid-gallery {
+    margin: 0 -15px;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+}
+
+.grid-item-wrapper {
+    overflow: hidden;
+    float: left;
+    width: 33%;
+    //width: 350px;
+    //height: 260px;
+    -webkit-transition: box-shadow 0.5s ease;
+    -moz-transition: box-shadow 0.5s ease;
+    -ms-transition: box-shadow 0.5s ease;
+    -o-transition: box-shadow 0.5s ease;
+    transition: box-shadow 0.5s ease;
+    &:before {
+        content: '';
+        display: block;
+        padding-top: 75%;
+    }
+    .grid-item {
+        position: absolute !important;
+        left: 15px;
+        right: 15px;
+        top: 15px;
+        bottom: 15px;
+        overflow: hidden;
+        .link {
+            position: relative;
+            z-index: 1;
+            display: block;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &.grid-item-height2 {
+        &:before {
+            content: '';
+            display: block;
+            padding-top: 150%;
+        }
+    }
+}
+
+.dh-overlay {
+    background-color: rgba(237, 67, 29, 0.5);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 2;
+    display: table;
+    .transition(all 0s ease);
+    .content {
+        display: table-cell;
+        color: #fff;
+        vertical-align: middle;
+        text-transform: capitalize;
+        font-family: "antoniobold";
+        font-size: 1.8rem;
     }
 }
 
@@ -3115,7 +3368,7 @@ blockquote {
         }
     }
 }
-/*=================================
- ======     END PLUGIN       ======
- =================================*/
 
+/*=================================
+======     END PLUGIN       ======
+=================================*/

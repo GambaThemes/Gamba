@@ -15,7 +15,7 @@ ul.nav-links.nav.navbar-nav
    li(class="#{ current.source == 'about' ? 'active' : '' }")
       a.main-menu(href="about.html")
          span.text about
-   li(class="#{ current.source == 'Reservation' ? 'active' : '' }")
+   li(class="#{ current.source == 'reservation' ? 'active' : '' }")
       a.main-menu(href="reservation.html")
          span.text Reservation
    li.dropdown(class="#{ current.source == 'menu-gird' || current.source == 'menu-gird-2' ? 'active' : '' }")
@@ -28,7 +28,7 @@ ul.nav-links.nav.navbar-nav
          li
             a.sub-menu(href="menu-gird-2.html")
                span.text menu 2
-   li.dropdown(class="#{ current.source == 'blog' || current.source == 'blog-detail' ? 'active' : '' }")
+   li.dropdown(class="#{ current.source == 'blog' || current.source == 'blog-detail' || current.source == 'blog-detail-2' ? 'active' : '' }")
       a.main-menu(href="javascript:void(0)")
          span.text blog
       ul.menu-dropdown
@@ -36,22 +36,31 @@ ul.nav-links.nav.navbar-nav
             a.sub-menu(href="blog.html")
                span.text blog
          li
+            a.sub-menu(href="blog-no-sidebar.html")
+               span.text blog no sidebar
+         li
             a.sub-menu(href="blog-detail.html")
                span.text blog detail
-          li.dropdown-2
-            a.sub-menu(href="blog-detail.html")
-               span.text more page
-            ul.menu-dropdown-2.right
-               li
-                  a.sub-menu(href="blog.html")
-                     span.text blog sidebar left
-               li
-                  a.sub-menu(href="blog-detail.html")
-                     span.text blog two column
-   li.dropdown(class="#{ current.source == 'gallery' ? 'active' : '' }")
+         //- li.dropdown-2
+         //-    a.sub-menu(href="blog-detail.html")
+         //-       span.text more page
+         //-    ul.menu-dropdown-2.right
+         //-       li
+         //-          a.sub-menu(href="blog.html")
+         //-             span.text blog sidebar left
+         //-       li
+         //-          a.sub-menu(href="blog-detail.html")
+         //-             span.text blog two column
+   li.dropdown(class="#{ current.source == 'gallery' || current.source == 'event' ? 'active' : '' }")
       a.main-menu(href="javascript:void(0)")
          span.text pages
       ul.menu-dropdown
+         li
+            a.sub-menu(href="event.html")
+               span.text event
+         li
+            a.sub-menu(href="gallery-isotope.html")
+               span.text gallery
          li
             a.sub-menu(href="404.html")
                span.text page 404

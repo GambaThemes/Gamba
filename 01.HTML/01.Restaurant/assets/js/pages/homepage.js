@@ -1,13 +1,13 @@
 jQuery(function($) {
     "use strict";
 
-    var SLZ = window.SLZ || {};
+    var gamba = window.gamba || {};
 
     /*=======================================
     =             MAIN FUNCTION             =
     =======================================*/
 
-    SLZ.mainFunction = function() {
+    gamba.mainFunction = function() {
 
         //JS for homepage 2 - background video
         if ($(window).width() > 767) {
@@ -31,7 +31,7 @@ jQuery(function($) {
             arrows: false,
             speed: 700,
             fade: true,
-            autoplay: true,
+            //autoplay: true,
             autoplaySpeed: 5000,
             cssEase: 'linear',
             pauseOnHover: false
@@ -84,20 +84,21 @@ jQuery(function($) {
             speed: 500,
             dots: false,
             arrows: true,
-            //autoplay: true,
-            //autoplaySpeed: 7000,
+            autoplay: true,
+            autoplaySpeed: 7000,
             responsive: [
                 {
                     breakpoint: 769,
                     settings: {
-                        slidesToShow: 2
+                        slidesToShow: 2,
+                        autoplay: false
                     }
                 },
                 {
                     breakpoint: 481,
                     settings: {
-                        slidesToShow: 1
-                        
+                        slidesToShow: 1,
+                        autoplay: false
                     }
                 }
             ]
@@ -121,14 +122,15 @@ jQuery(function($) {
             speed: 500,
             dots: false,
             arrows: false,
-            //autoplay: true,
-            //autoplaySpeed: 5000,
+            autoplay: true,
+            autoplaySpeed: 5000,
             responsive: [
                 {
                     breakpoint: 769,
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 1,
+                        autoplay: false
                     }
                 },
                 {
@@ -136,7 +138,7 @@ jQuery(function($) {
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        
+                        autoplay: false
                     }
                 }
             ]
@@ -150,8 +152,8 @@ jQuery(function($) {
             speed: 900,
             dots: false,
             arrows: false,
-            //autoplay: true,
-            //autoplaySpeed: 5000,
+            autoplay: true,
+            autoplaySpeed: 5000,
             responsive: [
                 {
                     breakpoint: 1025,
@@ -165,6 +167,7 @@ jQuery(function($) {
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 1,
+                        autoplay: false
                     }
                 },
                 {
@@ -172,7 +175,7 @@ jQuery(function($) {
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        
+                        autoplay: false
                     }
                 }
             ]
@@ -204,7 +207,7 @@ jQuery(function($) {
     ======================================*/
 
     $(document).ready(function() {
-        SLZ.mainFunction();
+        gamba.mainFunction();
     });
 
     /*=====  End of INIT FUNCTIONS  ======*/

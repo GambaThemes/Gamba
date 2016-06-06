@@ -1,13 +1,13 @@
 jQuery(function($) {
     "use strict";
 
-    var SLZ = window.SLZ || {};
+    var gamba = window.gamba || {};
 
     /*=======================================
     =             MAIN FUNCTION             =
     =======================================*/
 
-    SLZ.headerFunction = function() {
+    gamba.headerFunction = function() {
         //js for menu PC
         // Add class fixed for menu when scroll
         var window_height = $(window).height();
@@ -86,10 +86,29 @@ jQuery(function($) {
         }
     };
 
-    SLZ.mainFunction = function() {
+    gamba.mainFunction = function() {
 
         // ----------------------- WOW-JS --------------------------- //
         new WOW().init();
+
+
+         // ----------------------- BACK TOP --------------------------- //
+        $('#back-top .link').on('click', function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 900);
+            return false;
+        });
+
+        var temp = $(window).height();
+        $(window).on('scroll load', function (event) {
+            if ($(window).scrollTop() > temp){
+                $('#back-top .link').addClass('show-btn');
+            }
+            else {
+                $('#back-top .link').removeClass('show-btn');
+            }
+        });
 
         // ----------------------- Play videos --------------------------- //
         // JS for section Videos bg
@@ -120,7 +139,15 @@ jQuery(function($) {
             autoplaySpeed: 5000,
             speed: 500,
             dots: false,
-            arows:true
+            arows:true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        autoplay: false
+                    }
+                }
+            ]
         });
 
         if ($(window).width() > 767) {
@@ -133,8 +160,8 @@ jQuery(function($) {
     ======================================*/
 
     $(document).ready(function() {
-        SLZ.headerFunction();
-        SLZ.mainFunction();
+        gamba.headerFunction();
+        gamba.mainFunction();
     });
 
     /*=====  End of INIT FUNCTIONS  ======*/
