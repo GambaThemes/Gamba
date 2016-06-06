@@ -1,0 +1,308 @@
+<section class="morepage-banner-wrapper menu-gird">
+    <div class="container">
+        <div class="morepage-banner">
+            <div class="group-icons"><i class="icons flaticon-anchor-1"></i></div>
+            <h2 class="title">The Menu Grid 01</h2>
+            <ol class="breadcrumb">
+                <li><a href="#/" class="link">Home</a></li>
+                <li class="active"><a href="#" class="link">Menu</a></li>
+            </ol>
+        </div>
+    </div>
+</section>
+<section class="main-menu padding-top-100 padding-bottom-100">
+    <div class="container">
+        <div class="main-title-2">
+            <div class="icons">//</div>
+            <h2 class="title">main menu</h2>
+        </div>
+        <div class="main-content">
+            <ul class="nav nav-tabs nav-justified tab-main-menu">
+                <li ng-class="{'active' : active == 0}">
+                    <a href ng-click="active = 0" class="name"> 
+                      <img src="public/images/seafood/tab-fish.png" alt="" class="img-responsive image-1" />
+                      <img src="public/images/seafood/tab-fish-3.png" alt="" class="img-responsive image-2" />
+                      <span class="text">fish Dishs</span>
+                    </a>
+                </li>
+                <li ng-class="{'active' : active == 1}">
+                    <a href ng-click="active = 1" class="name">
+                      <img src="public/images/seafood/tab-crawfish.png" alt="" class="img-responsive image-1"/>
+                      <img src="public/images/seafood/tab-crawfish-3.png" alt="" class="img-responsive image-2"/>
+                      <span class="text">Lobster Dishs</span>
+                    </a>
+                </li>
+                <li ng-class="{'active' : active == 2}">
+                    <a href ng-click="active = 2" class="name">
+                      <img src="public/images/seafood/tab-kingcrab.png" alt="" class="img-responsive image-1"/>
+                      <img src="public/images/seafood/tab-kingcrab-3.png" alt="" class="img-responsive image-2"/>
+                      <span class="text">Crab Dishs</span>
+                    </a>
+                </li>
+                <li ng-class="{'active' : active == 3}">
+                    <a href ng-click="active = 3" class="name">
+                      <img src="public/images/seafood/tab-shrimp.png" alt="" class="img-responsive image-1"/>
+                      <img src="public/images/seafood/tab-shrimp-3.png" alt="" class="img-responsive image-2"/>
+                      <span class="text">Shirmp Dishs</span>
+                    </a>
+                </li>
+                <li ng-class="{'active' : active == 4}">
+                    <a href ng-click="active = 4" class="name">
+                      <img src="public/images/seafood/tab-clamp.png" alt="" class="img-responsive image-1"/>
+                      <img src="public/images/seafood/tab-clamp-3.png" alt="" class="img-responsive image-2"/>
+                      <span class="text">Clamp Dishs</span>
+                    </a>
+                </li>
+                <li ng-class="{'active' : active == 5}">
+                    <a href ng-click="active = 5" class="name">
+                      <img src="public/images/seafood/tab-cuttle.png" alt="" class="img-responsive image-1"/>
+                      <img src="public/images/seafood/tab-cuttle-3.png" alt="" class="img-responsive image-2"/>
+                      <span class="text">Squid Dishs</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- Tab panes-->
+            <uib-tabset active="active" class="tab-content content-menu">
+                <uib-tab index="0" id="fish">
+                    <div ui-view="list_menu_4"></div>
+                </uib-tab>
+                <uib-tab index="1" id="lobster">
+                    <div ui-view="list_menu_4_b"></div>
+                </uib-tab>
+                <uib-tab index="2" id="crab">
+                    <div ui-view="list_menu_4_d"></div>
+                </uib-tab>
+                <uib-tab index="3" id="shirmp">
+                    <div ui-view="list_menu_4_b"></div>
+                </uib-tab>
+                <uib-tab index="4" id="clamp">
+                    <div ui-view="list_menu_4_c"></div>
+                </uib-tab>
+                <uib-tab index="5" id="squid">
+                    <div ui-view="list_menu_4"></div>
+                </uib-tab>
+            </uib-tabset>
+        </div>
+    </div>
+</section>
+<section class="banner banner-deserts padding-top-100 padding-bottom-100">
+    <div class="container">
+        <div class="main-title-2 white">
+            <div class="icons">//</div>
+            <h2 class="title">deserts</h2>
+        </div>
+    </div>
+</section>
+<div class="sub-menu padding-top-100 padding-bottom-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="menu-items style-3">
+                    <a href="#" class="item-image"><img src="public/images/menu/small-menu-8.jpg" alt="" class="img-responsive" /></a>
+                    <div class="item-content">
+                        <a href="#" class="title">
+                            <div class="name">Chicken Doro Wat</div>
+                            <div class="price"><sup>$</sup><span>54.00</span></div>
+                        </a>
+                        <div class="desciption">Lorem ipsum dolor sit a met, consec tetur.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="menu-items style-3">
+                    <a href="#" class="item-image"><img src="public/images/menu/small-menu-1.jpg" alt="" class="img-responsive" /></a>
+                    <div class="item-content">
+                        <a href="#" class="title">
+                            <div class="name">Kung pao pastrami</div>
+                            <div class="price"><sup>$</sup><span>65.00</span></div>
+                        </a>
+                        <div class="desciption">Lorem ipsum dolor sit a met, consec tetur.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="menu-items style-3">
+                    <a href="#" class="item-image"><img src="public/images/menu/small-menu-3.jpg" alt="" class="img-responsive" /></a>
+                    <div class="item-content">
+                        <a href="#" class="title">
+                            <div class="name">Masala Spiced Chickpeas</div>
+                            <div class="price"><sup>$</sup><span>73.00</span></div>
+                        </a>
+                        <div class="desciption">Lorem ipsum dolor sit a met, consec tetur.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="menu-items style-3">
+                    <a href="#" class="item-image"><img src="public/images/menu/small-menu-6.jpg" alt="" class="img-responsive" /></a>
+                    <div class="item-content">
+                        <a href="#" class="title">
+                            <div class="name">Annalisa Tomato</div>
+                            <div class="price"><sup>$</sup><span>38.00</span></div>
+                        </a>
+                        <div class="desciption">Lorem ipsum dolor sit a met, consec tetur.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="menu-items style-3">
+                    <a href="#" class="item-image"><img src="public/images/menu/small-menu-7.jpg" alt="" class="img-responsive" /></a>
+                    <div class="item-content">
+                        <a href="#" class="title">
+                            <div class="name">Crab & Tarracon Tart</div>
+                            <div class="price"><sup>$</sup><span>49.00</span></div>
+                        </a>
+                        <div class="desciption">Lorem ipsum dolor sit a met, consec tetur.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="menu-items style-3">
+                    <a href="#" class="item-image"><img src="public/images/menu/small-menu-5.jpg" alt="" class="img-responsive" /></a>
+                    <div class="item-content">
+                        <a href="#" class="title">
+                            <div class="name">Jalapeno Mango Salsa</div>
+                            <div class="price"><sup>$</sup><span>68.00</span></div>
+                        </a>
+                        <div class="desciption">Lorem ipsum dolor sit a met, consec tetur.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="menu-items style-3">
+                    <a href="#" class="item-image"><img src="public/images/menu/small-menu-11.jpg" alt="" class="img-responsive" /></a>
+                    <div class="item-content">
+                        <a href="#" class="title">
+                            <div class="name">West Coast Rock Oysters</div>
+                            <div class="price"><sup>$</sup><span>49.00</span></div>
+                        </a>
+                        <div class="desciption">Lorem ipsum dolor sit a met, consec tetur.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="menu-items style-3">
+                    <a href="#" class="item-image"><img src="public/images/menu/small-menu-4.jpg" alt="" class="img-responsive" /></a>
+                    <div class="item-content">
+                        <a href="#" class="title">
+                            <div class="name">mexico Mango Salas</div>
+                            <div class="price"><sup>$</sup><span>68.00</span></div>
+                        </a>
+                        <div class="desciption">Lorem ipsum dolor sit a met, consec tetur.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="banner banner-drinks padding-top-100 padding-bottom-100">
+    <div class="container">
+        <div class="main-title-2 white">
+            <div class="icons">//</div>
+            <h2 class="title">drinks</h2>
+        </div>
+    </div>
+</section>
+<div class="sub-menu padding-top-100 padding-bottom-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="menu-items style-3">
+                    <a href="#" class="item-image"><img src="public/images/menu/small-menu-12.jpg" alt="" class="img-responsive" /></a>
+                    <div class="item-content">
+                        <a href="#" class="title">
+                            <div class="name">Chicken Doro Wat</div>
+                            <div class="price"><sup>$</sup><span>54.00</span></div>
+                        </a>
+                        <div class="desciption">Lorem ipsum dolor sit a met, consec tetur.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="menu-items style-3">
+                    <a href="#" class="item-image"><img src="public/images/menu/small-menu-2.jpg" alt="" class="img-responsive" /></a>
+                    <div class="item-content">
+                        <a href="#" class="title">
+                            <div class="name">Kung pao pastrami</div>
+                            <div class="price"><sup>$</sup><span>65.00</span></div>
+                        </a>
+                        <div class="desciption">Lorem ipsum dolor sit a met, consec tetur.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="menu-items style-3">
+                    <a href="#" class="item-image"><img src="public/images/menu/small-menu-10.jpg" alt="" class="img-responsive" /></a>
+                    <div class="item-content">
+                        <a href="#" class="title">
+                            <div class="name">Masala Spiced Chickpeas</div>
+                            <div class="price"><sup>$</sup><span>73.00</span></div>
+                        </a>
+                        <div class="desciption">Lorem ipsum dolor sit a met, consec tetur.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="menu-items style-3">
+                    <a href="#" class="item-image"><img src="public/images/menu/small-menu-9.jpg" alt="" class="img-responsive" /></a>
+                    <div class="item-content">
+                        <a href="#" class="title">
+                            <div class="name">Annalisa Tomato</div>
+                            <div class="price"><sup>$</sup><span>38.00</span></div>
+                        </a>
+                        <div class="desciption">Lorem ipsum dolor sit a met, consec tetur.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="menu-items style-3">
+                    <a href="#" class="item-image"><img src="public/images/menu/small-menu-11.jpg" alt="" class="img-responsive" /></a>
+                    <div class="item-content">
+                        <a href="#" class="title">
+                            <div class="name">Crab & Tarracon Tart</div>
+                            <div class="price"><sup>$</sup><span>49.00</span></div>
+                        </a>
+                        <div class="desciption">Lorem ipsum dolor sit a met, consec tetur.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="menu-items style-3">
+                    <a href="#" class="item-image"><img src="public/images/menu/small-menu-6.jpg" alt="" class="img-responsive" /></a>
+                    <div class="item-content">
+                        <a href="#" class="title">
+                            <div class="name">Jalapeno Mango Salsa</div>
+                            <div class="price"><sup>$</sup><span>68.00</span></div>
+                        </a>
+                        <div class="desciption">Lorem ipsum dolor sit a met, consec tetur.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="menu-items style-3">
+                    <a href="#" class="item-image"><img src="public/images/menu/small-menu-4.jpg" alt="" class="img-responsive" /></a>
+                    <div class="item-content">
+                        <a href="#" class="title">
+                            <div class="name">West Coast Rock Oysters</div>
+                            <div class="price"><sup>$</sup><span>49.00</span></div>
+                        </a>
+                        <div class="desciption">Lorem ipsum dolor sit a met, consec tetur.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="menu-items style-3">
+                    <a href="#" class="item-image"><img src="public/images/menu/small-menu-7.jpg" alt="" class="img-responsive" /></a>
+                    <div class="item-content">
+                        <a href="#" class="title">
+                            <div class="name">mexico Mango Salas</div>
+                            <div class="price"><sup>$</sup><span>68.00</span></div>
+                        </a>
+                        <div class="desciption">Lorem ipsum dolor sit a met, consec tetur.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section ui-view="subscribe_email" class="subscribe-email"></section>

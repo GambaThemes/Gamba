@@ -6,7 +6,9 @@
 
 			// Modules
 			'ui.router',
-			'gridster'
+			'ui.bootstrap',
+			'ngAnimate',
+			'slick'
 
 		]);
 

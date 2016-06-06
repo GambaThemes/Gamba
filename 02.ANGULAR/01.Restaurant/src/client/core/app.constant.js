@@ -8,7 +8,7 @@
 		function Constants() {
 			return{
 
-				APP_TITLE: "Get deal shopping online"
+				APP_TITLE: "Gamba - Food & Restaurant Template"
 
 			};
 		}

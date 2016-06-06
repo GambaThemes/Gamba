@@ -1,90 +1,40 @@
-<a href="#/" class="logo">
-    <h1>maxx</h1>
-</a>
-<div class="header-main">
-    <div class="filter-section">
-        <form name="form-filter-category" class="form-filter-category">
-            <div class="box-filter">
-                <input type="text" class="input-filter form-control" />
-                <div class="btn-category">
-                    <div class="btn-group mega-menu-dropdown mega-menu-full">
-                        <button type="button" class="btn btn-gray dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            All category &nbsp;&nbsp;<i class="ion-ios-arrow-down"></i>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-filter ">
-                            <li>
-                                <div class="mega-menu-content">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <ul class="mega-menu-submenu">
-                                                <li>
-                                                    <h3>UI Elements</h3></li>
-                                                <li><a href="ui_buttons.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Buttons</span></a></li>
-                                                <li><a href="ui_components.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Components</span></a>
-                                                </li>
-                                                <li><a href="ui_typography.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Typography</span></a>
-                                                </li>
-                                                <li><a href="ui_modal_notification.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Modals &amp; Notifications</span></a>
-                                                </li>
-                                                <li><a href="ui_panels.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Panels</span></a></li>
-                                                <li><a href="ui_tabs_accordions.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Tabs &amp; Accordions</span></a>
-                                                </li>
-                                                <li><a href="ui_grids.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Grids</span></a></li>
-                                                <li><a href="ui_nestable.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Nestable</span></a>
-                                                </li>
-                                                <li><a href="ui_treeview.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Treeview</span></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <ul class="mega-menu-submenu">
-                                                <li>
-                                                    <h3>Icon Sets</h3></li>
-                                                <li><a href="icon_fontawesome.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Font Awesome</span></a>
-                                                </li>
-                                                <li><a href="icon_simple_line_icon.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Simple Line Icons</span></a>
-                                                </li>
-                                                <li><a href="icon_ionicons.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Ionicons</span></a>
-                                                </li>
-                                                <li><a href="icon_social.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Social Icons</span></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <ul class="mega-menu-submenu">
-                                                <li>
-                                                    <h3>Form Stuff</h3></li>
-                                                <li><a href="form_controls.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Form Controls</span></a>
-                                                </li>
-                                                <li><a href="form_plugins.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Form Plugins</span></a>
-                                                </li>
-                                                <li><a href="form_select.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Form Select</span></a>
-                                                </li>
-                                                <li><a href="form_layouts.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Form Layouts</span></a>
-                                                </li>
-                                                <li><a href="form_validation.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Form Validation</span></a></li>
-                                                <li><a href="form_wizard.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Form Wizard</span></a>
-                                                </li>
-                                                <li><a href="form_editors.html"><i class="fa fa-angle-right"></i><span class="submenu-title">Form Editors</span></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </form>
+<div class="bg-transparent">
+  <div class="header-topbar">
+    <div class="container">
+      <ul class="topbar-left list-unstyled pull-left">
+        <li><a href="#" class="link"> <i class="icons fa fa-circle"></i><span>Book Now</span></a></li>
+        <li><a href="#" class="link"> <i class="icons fa fa-circle"></i><span>Order Online</span></a></li>
+        <li><a href="javascript:void(0)" class="link"> <i class="icons-2 fa fa-clock-o"></i><span>07:30 am - 11:00 pm</span></a></li>
+      </ul>
+      <ul class="topbar-right list-unstyled list-inline">
+        <li><a href="#" class="link facebook"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#" class="link twitter"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#" class="link pinterest"><i class="fa fa-pinterest-p"></i></a></li>
+        <li><a href="#" class="link google"><i class="fa fa-google"></i></a></li>
+        <li><a href="#" class="link instagram"><i class="fa fa-linkedin"></i></a></li>
+        <li>
+          <a href ng-show="lang == 'en'" ng-click="changeLanguage('fr')" translate="BUTTON_LANG_FR"></a>
+          <a href ng-show="lang == 'en'" translate="BUTTON_LANG_EN"></a>
+        </li>
+        <li>
+          <a href ng-show="lang == 'fr'" translate="BUTTON_LANG_FR"></a>
+          <a href ng-show="lang == 'fr'" ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN"></a>
+        </li>
+      </ul>
     </div>
-    <div class="actions">
-        <a href="#/" class="btn btn-login btn-link">Login</a>
-        <a href="#/" class="btn btn-register btn-info">Sign up</a>
-        <a href class="btn btn-menu-toggle btn-link">
-            <span class="before"></span>
-            <span class="middle"></span>
-            <span class="after"></span>
-        </a>
+  </div>
+  <div class="header-main">
+    <div class="container">
+      <div class="header-main-wrapper">
+        <div class="hamburger-menu">
+          <div class="hamburger-menu-wrapper">
+            <div class="icons"></div>
+          </div>
+        </div>
+        <div class="logo-wrapper"><a href="/" class="logo"><img src="public/images/logo/gamba.png" alt=""/></a></div>
+        <nav class="navigation" ui-view="navigation"></nav>
+        <div class="clearfix"></div>
+      </div>
     </div>
+  </div>
 </div>

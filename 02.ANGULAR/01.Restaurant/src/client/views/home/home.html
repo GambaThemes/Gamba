@@ -1,50 +1,32 @@
-
-<div class="nav-section">
-	<h1 class="heading-title">Top Deals</h1>
-	<div class="nav-action">
-		<div class="btn-group">
-		  <button type="button" class="btn btn-default active">Featured</button>
-		  <button type="button" class="btn btn-default">Electronics</button>
-		  <button type="button" class="btn btn-default">Fashion</button>
-		  <button type="button" class="btn btn-default">Home & Garden</button>
-		  <button type="button" class="btn btn-default">Others</button>
-		</div>
-	</div>
-	<div class="clearfix"></div>
-</div>
-<div gridster="gridsterOpts" class="gridster-section">
-    <ul>
-        <li gridster-item size-x="item.size.x" size-y="item.size.y" ng-repeat="item in topDealItems" class="product-item" ng-class="{'product-item-2x' : item.size.x == 2}">
-        	<div class="product-thumb">
-        		<a href="#">
-        			<img ng-src="http://i.ebayimg.com/images/g/Q5EAAOSwwE5WVLyo/s-l500.jpg" alt="" />
-        		</a>
-        	</div>
-        	<div class="product-info">
-        		<div class="product-name">
-        			<a href="#">ETERNITY Perfume by Calvin Klein 3.4 oz edp for Women New Box Sealed</a>
-    			</div>
-        		<div class="product-prices">
-        			<div class="price-new">$290.99</div>
-        			<div class="price-old">$390.99</div>
-        		</div>
-        	</div>
-        </li>
-    	<li gridster-item size-x="1" size-y="1" row="3" col="2" class="product-item">
-        	<div class="product-thumb">
-        		<a href="#">
-        			<img ng-src="http://i.ebayimg.com/images/g/Q5EAAOSwwE5WVLyo/s-l500.jpg" alt="" />
-        		</a>
-        	</div>
-        	<div class="product-info">
-        		<div class="product-name">
-        			<a href="#">View all</a>
-    			</div>
-        		<div class="product-prices">
-        			<div class="price-new">$290.99</div>
-        			<div class="price-old">$390.99</div>
-        		</div>
-        	</div>
-        </li>
-    </ul>
-</div>
+<section class="homepage-banner homepage-default">
+  <div class="container">
+    <div class="homepage-banner-warpper">
+      <div class="homepage-banner-content">
+        <div data-wow-delay="0.5s" class="group-title wow fadeInRight">
+          <h1 class="title" translate="WELCOME_MESSAGE"></h1>
+          <p class="text">The Seafood Restaurant has been voted by locals as "Best in the area" year after year. We actively seek out the freshest in regional seafood and produce our restaurant is expanding.</p>
+        </div>
+        <div data-wow-delay="1s" class="group-open-hours wow fadeInRight">
+          <h5 class="title">open hours</h5>
+          <div class="time-1">
+            <div class="day">Monday - Friday :</div>
+            <div class="time">07:30 am - 11:00 pm</div>
+          </div>
+          <div class="time-2">
+            <div class="day">Saturday - Sunday :</div>
+            <div class="time">08:30 am - 12:00 pm</div>
+          </div>
+        </div>
+        <div data-wow-delay="1.8s" class="group-btn wow fadeInUp"><a href="#" class="btn btn-left btn-maincolor" translate="BUTTON_RESEVER_NOW"></a><a href="#" class="btn btn-right btn-transparent" translate="BUTTON_PURCHASE_NOW"></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section ui-view="about_us_1" class="about-us-1"></section>
+<section ui-view="special_menu_1" class="special-menu style-1 padding-top-100 padding-bottom-100"></section>
+<section ui-view="menu_of_day_1" class="menu-of-day style-1"></section>
+<section ui-view="banner_prallax" class="banner-prallax"></section>
+<section ui-view="new_of_day" class="new-of-day padding-top-100 padding-bottom-100"></section>
+<section ui-view="book_table_1" class="book-table style-1"></section>
+<section ui-view="coming_soon_1" class="coming-soon"></section>
+<div ui-view="subscribe_email" class="subscribe-email"></section>

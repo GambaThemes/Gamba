@@ -12,11 +12,14 @@
                 'header': {
                     templateUrl: '/views/layout/header.html'
                 },
-                'slider': {
-                    templateUrl: '/views/layout/slider.html'
+                'header_2': {
+                    templateUrl: '/views/layout/header-2.html'
                 },
-                'leftSidebar': {
-                    templateUrl: '/views/layout/left-sidebar.html'
+                'header_3': {
+                    templateUrl: '/views/layout/header-3.html'
+                },
+                'navigation@master': {
+                    templateUrl: '/views/layout/navigation.html'
                 },
                 'main': {
                     templateUrl: '/views/layout/master.html'
