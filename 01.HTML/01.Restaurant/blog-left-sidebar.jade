@@ -1,0 +1,121 @@
+section.morepage-banner-wrapper.blog
+    .container
+        .morepage-banner
+            .group-icons
+                i.icons.flaticon-anchor-1
+            h2.title Blog with sidebar
+            ol.breadcrumb
+                li
+                    a.link(href='index.html') Home
+                li.active
+                    a.link(href='#') Blog
+.page-main.padding-top-100.padding-bottom-100
+    .container
+        .row
+            .col-md-8.col-xs-12.main-right.blog-wrapper
+                .blog-post
+                    .blog-image
+                        img.img-responsive(src="assets/images/news/news-4.jpg", alt="")
+                    .blog-content
+                        .blog-detail-content
+                            .dates
+                                .day 27
+                                .month-year Aug-2016
+                            .content
+                                a(href="blog-detail.html").title A deliciously noble catch of the day in Montparnasse
+                                .info
+                                    .item.tag
+                                        a.link(href="#") Food
+                                        a.link(href="#") Recipes
+                                    .item.date 
+                                        i.fa.fa-calendar-o
+                                        span 08 - 27 - 2016
+                                    .item.comments
+                                        i.fa.fa-comments-o
+                                        span 26
+                                .description
+                                    p.text Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus , tortor mauris condimentum nibh.
+                                a(href="blog-detail.html").btn-readmore read more
+                .blog-post
+                    .blog-image
+                        .video-thumbnail
+                            .video-bg
+                                img.img-responsive(src="assets/images/news/news-5.jpg", alt="")
+                            .video-button-play 
+                                i.icons.fa.fa-play
+                            .video-button-close
+                            iframe.video-embed(src="https://www.youtube.com/embed/7D_BB-88GaQ?rel=0" allowfullscreen)
+                    .blog-content
+                        .blog-detail-content
+                            .dates
+                                .day 28
+                                .month-year Aug-2016
+                            .content
+                                a(href="blog-detail.html").title Fish Tales sells all sorts of fresh fish
+                                .info
+                                    .item.tag
+                                        a.link(href="#") sea food
+                                        a.link(href="#") clamp
+                                    .item.date 
+                                        i.fa.fa-calendar-o
+                                        span 08 - 28 - 2016
+                                    .item.comments
+                                        i.fa.fa-comments-o
+                                        span 52
+                                .description
+                                    p.text Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus , tortor mauris condimentum nibh.
+                                a(href="blog-detail.html").btn-readmore read more
+                .blog-post
+                    .blog-content
+                        .blog-detail-content
+                            .dates
+                                .day 29
+                                .month-year Aug-2016
+                            .content
+                                blockquote
+                                    .icons 
+                                        span &#10077;
+                                    .quote-wrapper
+                                        a.quote(href="javascript:void(0)") Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetur est at lobortis a.
+                                        .footer-quote
+                                            span.author Amber Ivy
+                                            span.company (Grancie Company)
+                                .description
+                                    p.text Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus , tortor mauris condimentum nibh.
+                                a(href="blog-detail.html").btn-readmore read more
+                .blog-post
+                    .blog-image
+                        img.img-responsive(src="assets/images/news/news-6.jpg", alt="")
+                    .blog-content
+                        .blog-detail-content
+                            .dates
+                                .day 30
+                                .month-year Aug-2016
+                            .content
+                                a(href="blog-detail.html").title A deliciously noble catch of the day in Montparnasse
+                                .info
+                                    .item.tag
+                                        a.link(href="#") restaurant
+                                        a.link(href="#") fish
+                                    .item.date 
+                                        i.fa.fa-calendar-o
+                                        span 08 - 30 - 2016
+                                    .item.comments
+                                        i.fa.fa-comments-o
+                                        span 78
+                                .description
+                                    p.text Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus , tortor mauris condimentum nibh.
+                                a(href="blog-detail.html").btn-readmore read more
+                != partial("_includes/widgets/pagination")
+            .col-md-4.col-xs-12.sidebar
+                .col-1
+                    != partial("_includes/widgets/search-widget")
+                .col-2
+                    != partial("_includes/widgets/recent-post-widget")
+                    != partial("_includes/widgets/categories-widget")
+                .col-2
+                    != partial("_includes/widgets/tags-widget")
+                    != partial("_includes/widgets/archives-widget")
+                    != partial("_includes/widgets/gallery-widget")
+                    != partial("_includes/widgets/social-widget")
+!= partial("_includes/subscribe-email")

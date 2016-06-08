@@ -5,14 +5,18 @@ jQuery(function($) {
 
     gamba.mainFunction = function(){
 
-        // js for calendar
-        $('.input-daterange, .archive-datepicker').datepicker({
-            format: 'mm/dd/yy',
-            maxViewMode: 0
-        });
-
         // show gallery
         $(".fancybox").fancybox();
+
+
+        // SHOW HIDE COMMENT WHEN CLICK BUTTON REALY
+        $('div[class*="merge"]').css("display","none");
+        $('.reply-1').click(function(event) {
+            $('.merge-1').toggle(300);
+        });
+        $('.reply-2').click(function(event) {
+            $('.merge-2').toggle(300);
+        });
     };
 
     /*======================================

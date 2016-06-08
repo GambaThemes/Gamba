@@ -21,13 +21,13 @@ form
                 .input-group-addon
                     i.fa.fa-users
         .col-sm-6.col-xs-6
-            .input-group
-                input.form-control(type='text', placeholder='Date', onfocus="this.placeholder = ''")
+            .input-group.input-daterange
+                input.form-control(type='text', placeholder='Date')
                 .input-group-addon
                     i.fa.fa-calendar
         .col-sm-6.col-xs-6
             .input-group
-                input.form-control(type='text', placeholder='Time', onfocus="this.placeholder = ''")
+                input.form-control.times-open(type='text', placeholder='Time', onfocus="this.placeholder = ''")
                 .input-group-addon
                     i.fa.fa-clock-o 
     button.btn(type='submit') Resever Now

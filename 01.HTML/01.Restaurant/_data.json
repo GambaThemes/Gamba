@@ -135,7 +135,7 @@
             }
         ]
     },
-    "blog-no-sidebar": {
+    "blog-left-sidebar": {
         "title": "Blog",
         "nav": "Blog",
         "url_style": [

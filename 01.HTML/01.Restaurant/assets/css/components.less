@@ -962,7 +962,7 @@
         position: absolute;
         top: 50%;
         margin-top: -100px;
-        p {
+        span {
             margin-bottom: 0;
             display: inline-block;
             padding: 0 10px;
@@ -1231,6 +1231,7 @@
             background-color: transparent;
             border-right: none;
             color: #fff;
+            text-align: left;
             &:hover, &:focus {
                 border-color: rgba(255,255,255,0.5);
             }
@@ -2908,6 +2909,12 @@ blockquote {
                 color: @main-color;
                 background-color: transparent;
                 border:0;
+                box-shadow: none;
+            }
+            .btn.btn-crystal:focus {
+                background-color: transparent;
+                border:0;
+                box-shadow: none;
             }
         }
         .btn-crystal {
@@ -2926,6 +2933,28 @@ blockquote {
             i{
                 margin-right: 7px;
             }
+        }
+        .comment-box {
+            margin-left: 70px;
+        }
+    }
+}
+
+.comment-box {
+    .list-item {
+        background-color: #fafafa;
+        padding: 30px 15px;
+        margin-bottom: 10px;
+        .comment-form textarea {
+            max-width: 650px;
+            border: none;
+        }
+        .btn-submit {
+            border: none;
+            background-color: @main-color;
+            color: #fff;
+            width: auto;
+            height: 36px;
         }
     }
 }
@@ -3233,7 +3262,6 @@ blockquote {
 
 .datepicker {
     z-index: 100 !important;
-    width: 100% !important;
     padding: 0 !important;
     .table-condensed {
         table-layout: fixed;
@@ -3367,6 +3395,16 @@ blockquote {
             }
         }
     }
+}
+
+.ui-timepicker-wrapper {
+    width: 200px;
+    height: 220px;
+}
+
+.ui-timepicker-list li {
+    padding: 10px 0 10px 15px;
+    text-align: left;
 }
 
 /*=================================

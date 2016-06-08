@@ -95,7 +95,7 @@ section.page-main.padding-top-100.padding-bottom-100
                                             i.fa.fa-clock-o 
                                             span 5 hours ago
                                         .des Donec faucibus iaculis nulla a consectetur. Nam sit amet tempor sapien, eu pellentesque justo. Morbi mattam et tempor sapien, eu pellentesque justo orbi mattis masa sed est eleifend.
-                                        a(href="#comment-form").btn-crystal.btn
+                                        a(href="javascript:void(0)").btn-crystal.btn.reply-1
                                             i.fa.fa-reply 
                                             | Reply
                                         .clearfix
@@ -112,10 +112,19 @@ section.page-main.padding-top-100.padding-bottom-100
                                                     i.fa.fa-clock-o 
                                                     span 6 hours ago
                                                 .des Donec faucibus iaculis nulla a consectetur. Nam sitsapien, eu pellentesque justo. Morbi mattam et tempor sapien, eu pellentesque justo orbi mattis masa sed est eleifend.
-                                                a(href="#comment-form").btn-crystal.btn
+                                                a(href="javascript:void(0)").btn-crystal.btn.reply-1
                                                     i.fa.fa-reply 
                                                     | Reply
                                                 .clearfix
+                                .comment-box.media.merge-1
+                                    .list-item
+                                        .media-body
+                                            form.bg-w-form.comment-form(action="#")
+                                                .form-group
+                                                    textarea.form-control.form-input( placeholder="Your comment here...")
+                                            .media-submit
+                                                button.btn.btn-submit(type="submit")
+                                                        span Submit
                             li.parent
                                 .comment-item
                                     .comment-left
@@ -128,10 +137,19 @@ section.page-main.padding-top-100.padding-bottom-100
                                             i.fa.fa-clock-o 
                                             span 8 hours ago
                                         .des Donec faucibus iaculis nulla a consectetur. Nam sit amet tempor sapien, eu pellentesque justo. Morbi mattam et tempor sapien, eu pellentesque justo orbi mattis masa sed est eleifend.
-                                        a(href="#comment-form").btn-crystal.btn
+                                        a(href="javascript:void(0)").btn-crystal.btn.reply-2
                                             i.fa.fa-reply 
                                             | Reply
                                         .clearfix
+                                .comment-box.media.merge-2
+                                    .list-item
+                                        .media-body
+                                            form.bg-w-form.comment-form(action="#")
+                                                .form-group
+                                                    textarea.form-control.form-input( placeholder="Your comment here...")
+                                            .media-submit
+                                                button.btn.btn-submit(type="submit")
+                                                        span Submit
                     .leave-comment.margin-top-50
                         .main-title-2
                             .icons //
