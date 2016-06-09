@@ -1289,6 +1289,10 @@ a {
 }
 
 .tags-widget {
+    .content-widget {
+        display: inline-block;
+        width: 100%;
+    }
     .tag {
         margin-right: 10px;
         margin-bottom: 10px;
@@ -1300,6 +1304,7 @@ a {
         display: inline-block;
         text-transform: capitalize;
         position: relative;
+        float: left;
         .transition(all 0.3s ease);
         &:hover {
             border: 1px solid @main-color;
@@ -1311,10 +1316,13 @@ a {
 .gallery-widget {
     ul {
         margin-bottom: 0;
+        display: inline-block;
+        width: 100%;
     }
     li {
         width: 25%;
         padding-bottom: 5px;
+        float: left;
         &:nth-last-child(-n + 4) {
             padding-bottom: 0;
         }
@@ -1341,6 +1349,12 @@ a {
             border-color: @main-color;
             color: @main-color;
         }
+    }
+}
+
+.archives-widget {
+    .datepicker {
+        width: 100% !important;
     }
 }
 

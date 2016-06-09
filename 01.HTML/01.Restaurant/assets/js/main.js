@@ -155,6 +155,19 @@ jQuery(function($) {
         }
     };
 
+    gamba.datepick = function() {
+        // js for calendar
+        $('.input-daterange, .archive-datepicker').datepicker({
+            format: 'mm/dd/yy',
+            maxViewMode: 0
+        });
+
+        // js for time
+        $('.times-open').timepicker({ 
+            'scrollDefault': 'now' 
+        });
+    };
+
     /*======================================
     =            INIT FUNCTIONS            =
     ======================================*/
@@ -162,6 +175,7 @@ jQuery(function($) {
     $(document).ready(function() {
         gamba.headerFunction();
         gamba.mainFunction();
+        gamba.datepick();
     });
 
     /*=====  End of INIT FUNCTIONS  ======*/
