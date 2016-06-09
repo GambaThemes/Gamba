@@ -163,6 +163,9 @@ $font-size: 14px;
     &.white {
         .title, .subtitle { color: #fff; }
     }
+    &.no-margin {
+        margin-bottom: 0;
+    }
 }
 
 .star-rating {

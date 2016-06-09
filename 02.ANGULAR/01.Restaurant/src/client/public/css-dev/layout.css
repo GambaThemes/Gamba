@@ -1059,7 +1059,6 @@ a {
   margin-bottom: 0; }
 
 .gallery-widget li {
-  float: left;
   width: 25%;
   padding-bottom: 5px; }
   .gallery-widget li:nth-last-child(-n + 4) {
@@ -1069,7 +1068,6 @@ a {
   margin-bottom: 0; }
 
 .social-widget li {
-  float: left;
   margin-bottom: 10px; }
 
 .social-widget .social-icon {

@@ -152,6 +152,8 @@
     color: #8d8f93; }
   .main-title-2.white .title, .main-title-2.white .subtitle {
     color: #fff; }
+  .main-title-2.no-margin {
+    margin-bottom: 0; }
 
 .star-rating {
   position: relative;

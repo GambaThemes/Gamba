@@ -5,7 +5,7 @@
         .module('app')
         .controller('AppController', AppController);
 
-    function AppController($rootScope, $scope, $timeout, $window, $translate, $location, $state, Constants) {
+    function AppController($rootScope, $scope, $timeout, $window, $translate, $location, $state, $interval, Constants) {
 
         $rootScope.APP_TITLE = Constants.APP_TITLE;
         $rootScope.state = $state;
@@ -38,9 +38,9 @@
 
 
         // Set active menu
-        $scope.isActive = function (viewLocation) {
-             var active = (viewLocation === $location.path());
-             return active;
+        $scope.isActive = function(viewLocation) {
+            var active = (viewLocation === $location.path());
+            return active;
         };
 
 
@@ -97,30 +97,64 @@
         // }, 1000);
 
         // JS for section Videos bg
-        
+
         //if (angular.element('.video-thumbnail').length) {
-            $scope.gurl = angular.element(".video-embed img").attr("src");
-            console.log($scope.gurl);
-            $scope.openVideo = function() {
-                angular.element(".video-embed").addClass('show-video');
-                angular.element(".video-button-close").addClass('show-video');
-                angular.element(".video-embed img").src += "&autoplay=1";
-            };
-            // $(".video-button-play ").on('click', function(event) {
-               
-            //     event.preventDefault();
-            // });
+        $scope.gurl = angular.element(".video-embed img").attr("src");
+        console.log($scope.gurl);
+        $scope.openVideo = function() {
+            angular.element(".video-embed").addClass('show-video');
+            angular.element(".video-button-close").addClass('show-video');
+            angular.element(".video-embed img").src += "&autoplay=1";
+        };
+        // $(".video-button-play ").on('click', function(event) {
 
-            $scope.closeVideo = function() {
-                angular.element(".video-embed img").src = $scope.gurl;
-                angular.element(".video-embed").removeClass('show-video');
-                angular.element(".video-button-close").removeClass('show-video');
-            };
+        //     event.preventDefault();
+        // });
 
-            // $(".video-button-close").on('click', function(event) {
-                
-            // });
+        $scope.closeVideo = function() {
+            angular.element(".video-embed img").src = $scope.gurl;
+            angular.element(".video-embed").removeClass('show-video');
+            angular.element(".video-button-close").removeClass('show-video');
+        };
+
+        // $(".video-button-close").on('click', function(event) {
+
+        // });
         //};
+
+        // Count down coming soon section
+        $scope.eventDay = {
+            date: new Date('August 10, 2016')
+        };
+
+        $scope.timeTillEvent = {};
+
+        var updateClock = function() {
+            var days, hours, minutes, seconds;
+            var futureTime = new Date($scope.eventDay.date).getTime();
+            var currentTime = new Date().getTime();
+            var milliSeconds = Math.floor((futureTime - currentTime) / 1000);
+
+            days = Math.floor(milliSeconds / 86400);
+            milliSeconds -= days * 86400;
+            hours = Math.floor(milliSeconds / 3600) % 24;
+            milliSeconds -= hours * 3600;
+            minutes = Math.floor(milliSeconds / 60) % 60;
+            milliSeconds -= minutes * 60;
+            seconds = milliSeconds % 60;
+
+            $scope.timeTillEvent = {
+                daysLeft: days,
+                hoursLeft: hours,
+                minutesLeft: minutes,
+                secondsLeft: seconds
+            }
+        };
+
+        setInterval(function() {
+            $scope.$apply(updateClock);
+        }, 1000);
+        updateClock();
 
 
         // Footer JS
