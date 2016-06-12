@@ -63,12 +63,24 @@ jQuery(function($) {
         // Menu Mobile
         if ($(window).width() <= 767) {
             $(".wrapper-menu-mobile").css("min-height", $(window).height());
+            $(".wrapper-search-mobile").css("min-height", $(window).height());
+
+            // show menu
             $(".hamburger-menu-mobile").on("click", function(){
                 $('body').addClass("open-menu-mobile");
             });
             $(".mb-button-close").on("click", function(){
                 $('body').removeClass("open-menu-mobile");
             });
+
+            //show search
+            $(".button-search-mobile").on("click", function(){
+                $('body').addClass("open-search-mobile");
+            });
+            $(".mb-button-close").on("click", function(){
+                $('body').removeClass("open-search-mobile");
+            });
+
 
             // show hide dropdown menu
             $('.mb-nav>.dropdown>.icons-dropdown').on('click', function(){

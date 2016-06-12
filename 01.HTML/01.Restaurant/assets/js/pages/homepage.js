@@ -111,7 +111,12 @@ jQuery(function($) {
             slidesToScroll: 1,
             speed: 500,
             dots: true,
-            arrows: false
+            arrows: false,
+            customPaging : function(slider, i) {
+                //var thumb = $(slider.$slides[i]).data('thumb');
+                var i = i + 1;
+                return '<button>' + '0' + i + '</button>';
+            }
         });
 
         // slide list infomation 
