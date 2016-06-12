@@ -1,0 +1,91 @@
+section.homepage-banner.background-slide
+    .slide-item.background-item-1
+        .container
+            .homepage-banner-warpper
+                .homepage-banner-content
+                    a.logo-images.animated.fadeInDown(href="index.html")
+                        img.img-responsive(src="assets/images/logo/gamba.png", alt="")
+                    .group-title.animated.fadeInUp
+                        h1.title WELCOME TO GAMBA RESTAURANT
+                        p.text The Seafood Restaurant has been voted by locals as "Best in the area" year after year. We actively seek out the freshest in regional seafood and produce our restaurant is expanding.
+                    .group-btn
+                        a.btn.btn-left.btn-maincolor.animated.fadeInLeft(href="#") Resever Now 
+                        a.btn.btn-right.btn-transparent.animated.fadeInRight(href="#")  purchase now
+    .slide-item.background-item-2
+        .container
+            .homepage-banner-warpper
+                .homepage-banner-content
+                    a.logo-images.animated.fadeInDown.hidden(href="index.html")
+                        img.img-responsive(src="assets/images/logo/gamba.png", alt="")
+                    .group-title.animated.fadeInUp.hidden
+                        h1.title online booking table & order menu
+                        p.text The Seafood Restaurant has been voted by locals as "Best in the area" year after year. We actively seek out the freshest in regional seafood and produce our restaurant is expanding.
+                    a.btn.btn-center.btn-maincolor.animated.zoomIn.hidden(href="#") booking now
+    .slide-item.background-item-3
+        .container
+            .homepage-banner-warpper
+                .homepage-banner-content
+                    .group-title-2.animated.fadeInRight.hidden
+                        h1.title WELCOME TO GAMBA RESTAURANT
+                        p.text The Seafood Restaurant has been voted by locals as "Best in the area" year after year. We actively seek out the freshest in regional seafood and produce our restaurant is expanding.
+                    .group-open-hours.animated.fadeInRight.hidden
+                        h5.title open hours
+                        .time-1
+                            .day Monday - Friday :
+                            .time 07:30 am - 11:00 pm
+                        .time-2
+                            .day Saturday - Sunday :
+                            .time 08:30 am - 12:00 pm
+                    .group-btn.group-btn-2.animated.fadeInUp.hidden
+                        a.btn.btn-left.btn-maincolor(href="#") Resever Now 
+                        a.btn.btn-right.btn-transparent(href="#")  purchase now
+section.about-us-3.padding-top-100.padding-bottom-100
+    .container
+        .content-wrapper
+                .main-title
+                    .bg-image
+                        img.crawfish(src="assets/images/seafood/crawfish.png", alt="")
+                    h2.title about us
+                .main-content
+                    p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci di dunt ut labore et dolore magna aliqua. Ut enim ad minim reprehederit veniam excepteur sint occacat cupidatat non proident, sunt in culpa qui officia deserunt. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt sed ut perspiciatis unde omnis iste natusluptatem accusantium sunt in culpa qui officia deserunt officia deserunt sed ut perspicia.
+                    .video-thumbnail
+                        .video-bg
+                            img.img-responsive(src="assets/images/more-image/video.jpg", alt="")
+                        .video-button-play 
+                            i.icons.fa.fa-play
+                        .video-button-close
+                        iframe.video-embed(src="https://www.youtube.com/embed/Gt8771uy4U0?rel=0" allowfullscreen)
+!= partial("_includes/menu-of-day-3")
+section.special-menu.style-3.padding-top-100.padding-bottom-100
+    .container
+        .main-title
+            .bg-image
+                img.clamp(src="assets/images/seafood/clamp.png", alt="")
+            h2.title special menu
+        .main-content
+            != partial("_includes/list-dish")
+section.book-table.style-2
+    .left-image
+    .right-infomation
+        .content-wrapper.padding-top-100.padding-bottom-100
+            .main-title.white
+                .bg-image
+                    img.scallop(src="assets/images/seafood/scallop-2.png", alt="")
+                h2.title book your table
+            .main-content
+                != partial("_includes/book-table")
+            .bg-images-pc
+                img.img-responsive(src="assets/images/more-image/chef-2.png", alt="")
+section.our-chefs.padding-top-100.padding-bottom-100
+    .container
+        .main-title
+            .bg-image
+                img.swordfish(src="assets/images/seafood/swordfish.png", alt="")
+            h2.title our chefs
+        .main-content
+            != partial("_includes/our-chefs-list")
+.testimonial.style-1.padding-top-100.padding-bottom-100
+    .container
+        != partial("_includes/testimonial-list")
+!= partial("_includes/coming-soon-1")
+!= partial("_includes/subscribe-email")

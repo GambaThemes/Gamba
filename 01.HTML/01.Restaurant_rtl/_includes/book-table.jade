@@ -1,0 +1,33 @@
+form
+    .row.form-group
+        .col-sm-6.col-xs-6
+            .input-group
+                .input-group-addon
+                    i.fa.fa-user
+                input.form-control(type='text', placeholder='Name', onfocus="this.placeholder = ''")
+        .col-sm-6.col-xs-6
+            .input-group
+                .input-group-addon
+                    i.fa.fa-phone
+                input.form-control(type='text', placeholder='Phone', onfocus="this.placeholder = ''")
+        .col-sm-6.col-xs-6
+            .input-group
+                .input-group-addon
+                    i.fa.fa-envelope
+                input.form-control(type='text', placeholder='Email', onfocus="this.placeholder = ''")
+        .col-sm-6.col-xs-6
+            .input-group
+                .input-group-addon
+                    i.fa.fa-users
+                input.form-control(type='text', placeholder='Number of people', onfocus="this.placeholder = ''")
+        .col-sm-6.col-xs-6
+            .input-group.input-daterange
+                .input-group-addon
+                    i.fa.fa-calendar
+                input.form-control(type='text', placeholder='Date')
+        .col-sm-6.col-xs-6
+            .input-group
+                .input-group-addon
+                    i.fa.fa-clock-o 
+                input.form-control.times-open(type='text', placeholder='Time', onfocus="this.placeholder = ''")
+    button.btn(type='submit') Resever Now

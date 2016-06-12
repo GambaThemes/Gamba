@@ -1,0 +1,87 @@
+section.morepage-banner-wrapper.gallery
+    .container
+        .morepage-banner
+            .group-icons
+                i.icons.flaticon-anchor-1
+            h2.title our gallery
+            ol.breadcrumb
+                li
+                    a.link(href='index.html') Home
+                li.active
+                    a.link(href='#') gallery
+section.page-main.padding-top-100.padding-bottom-100
+    .container
+        .gallery-wrapper
+            .nav-gallery
+                ul.tab-menu
+                    li.tab(data-filter=".appetizer", data-category="appetizer")
+                        .name appetizer
+                    li.tab(data-filter=".event", data-category="event")
+                        .name event
+                    li.tab(data-filter=".special", data-category="special")
+                        .name special
+                    li.tab(data-filter=".dish", data-category="dish")
+                        .name dish
+                    li.tab(data-filter=".seafood", data-category="seafood")
+                        .name seafood
+                    li.tab.active(data-filter="*", data-category="all")
+                        .name all
+            .description-gallery
+                h2.title Delicious & Tasty Dishes From Our Chef
+                P.text Lorem ipsum dolor sit a met, consec tetur adipisi cing elit, sed do eiusmod tempor in cididunt ut labore et dolore ma gna aliqua enim ad minim veniam, quis. 
+            .grid-gallery
+                .grid-item-wrapper.appetizer.special.seafood(data-category="appetizer")
+                    .grid-item
+                        a.link.fancybox(href="assets/images/gallery/gallery-1.jpg", data-fancybox-group='gallery')
+                            img(src="assets/images/gallery/gallery-1.jpg" alt="")
+                        a.dh-overlay.fancybox(href="assets/images/gallery/gallery-1.jpg", data-fancybox-group='gallery2')
+                            .content images gallery
+                .grid-item-wrapper.grid-item-height2.special.dish(data-category="special")
+                    .grid-item
+                        a.link.fancybox(href="assets/images/gallery/gallery-2.jpg", data-fancybox-group='gallery')
+                            img(src="assets/images/gallery/gallery-2.jpg" alt="")
+                        a.dh-overlay.fancybox(href="assets/images/gallery/gallery-2.jpg", data-fancybox-group='gallery2')
+                            .content images gallery
+                .grid-item-wrapper.appetizer.event(data-category="appetizer")
+                    .grid-item
+                        a.link.fancybox(href="assets/images/gallery/gallery-3.jpg", data-fancybox-group='gallery')
+                            img(src="assets/images/gallery/gallery-3.jpg" alt="")
+                        a.dh-overlay.fancybox(href="assets/images/gallery/gallery-3.jpg", data-fancybox-group='gallery2') 
+                            .content images gallery
+                .grid-item-wrapper.event.special.seafood.dish(data-category="event")
+                    .grid-item
+                        a.link.fancybox(href="assets/images/gallery/gallery-4.jpg", data-fancybox-group='gallery')
+                            img(src="assets/images/gallery/gallery-4.jpg" alt="")
+                        a.dh-overlay.fancybox(href="assets/images/gallery/gallery-4.jpg", data-fancybox-group='gallery2') 
+                            .content images gallery
+                .grid-item-wrapper.dish.special.seafood(data-category="dish")
+                    .grid-item
+                        a.link.fancybox(href="assets/images/gallery/gallery-5.jpg", data-fancybox-group='gallery')
+                            img(src="assets/images/gallery/gallery-5.jpg" alt="")
+                        a.dh-overlay.fancybox(href="assets/images/gallery/gallery-5.jpg", data-fancybox-group='gallery2') 
+                            .content images gallery
+                .grid-item-wrapper.grid-item-height2.dish.appetizer.seafood(data-category="dish")
+                    .grid-item
+                        a.link.fancybox(href="assets/images/gallery/gallery-6.jpg", data-fancybox-group='gallery')
+                            img(src="assets/images/gallery/gallery-6.jpg" alt="")
+                        a.dh-overlay.fancybox(href="assets/images/gallery/gallery-6.jpg", data-fancybox-group='gallery2') 
+                            .content images gallery
+                .grid-item-wrapper.dish.event(data-category="event")
+                    .grid-item
+                        a.link.fancybox(href="assets/images/gallery/gallery-7.jpg", data-fancybox-group='gallery')
+                            img(src="assets/images/gallery/gallery-7.jpg" alt="")
+                        a.dh-overlay.fancybox(href="assets/images/gallery/gallery-7.jpg", data-fancybox-group='gallery2') 
+                            .content images gallery
+                .grid-item-wrapper.grid-item-height2.appetizer.special(data-category="appetizer")
+                    .grid-item
+                        a.link.fancybox(href="assets/images/gallery/gallery-8.jpg", data-fancybox-group='gallery')
+                            img(src="assets/images/gallery/gallery-8.jpg" alt="")
+                        a.dh-overlay.fancybox(href="assets/images/gallery/gallery-8.jpg", data-fancybox-group='gallery2') 
+                            .content images gallery
+                .grid-item-wrapper.special.event.dish.seafood.appetizer(data-category="special")
+                    .grid-item
+                        a.link.fancybox(href="assets/images/gallery/gallery-9.jpg", data-fancybox-group='gallery')
+                            img(src="assets/images/gallery/gallery-9.jpg" alt="")
+                        a.dh-overlay.fancybox(href="assets/images/gallery/gallery-9.jpg", data-fancybox-group='gallery2') 
+                            .content images gallery
+            != partial("_includes/widgets/pagination")
