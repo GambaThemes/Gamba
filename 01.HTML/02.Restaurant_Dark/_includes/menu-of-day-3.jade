@@ -1,0 +1,35 @@
+section.menu-of-day.style-3
+    .container
+        .content-wrapper.padding-top-100.padding-bottom-100
+            .main-title
+                .bg-image
+                    img.kingcrab(src="assets/images/seafood/kingcrab-2.png", alt="")
+                h2.title menu of the day
+            .main-content
+                ul.tab-menu(role="tablist")
+                    li(role="presentation")
+                        a.name(href="#starters", aria-controls="starters", role="tab", data-toggle="tab") 
+                            i.icons.flaticon-food-2
+                            span starters
+                    li.active(role="presentation")
+                        a.name(href="#dishes", aria-controls="dishes", role="tab", data-toggle="tab") 
+                            i.icons.flaticon-lobster
+                            span Dishes
+                    li(role="presentation")
+                        a.name(href="#deserts", aria-controls="deserts", role="tab", data-toggle="tab") 
+                            i.icons.flaticon-fluffy-pancakes-with-syrup
+                            span deserts
+                    li(role="presentation")
+                        a.name(href="#drinks", aria-controls="drinks", role="tab", data-toggle="tab") 
+                            i.icons.flaticon-drink
+                            span Drinks
+                // Tab panes
+                .tab-content.content-menu
+                    #starters.tab-pane.fade(role="tabpanel")
+                        != partial("list-menu/list-menu-3-b")
+                    #dishes.tab-pane.fade.in.active(role="tabpanel")
+                        != partial("list-menu/list-menu-3")
+                    #deserts.tab-pane.fade(role="tabpanel")
+                        != partial("list-menu/list-menu-3-b")
+                    #drinks.tab-pane.fade(role="tabpanel")
+                        != partial("list-menu/list-menu-3")
