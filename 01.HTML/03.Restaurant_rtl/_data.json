@@ -216,6 +216,12 @@
             },
             {
                 "src": "assets/js/pages/contact.js"
+            },
+            {
+                "src": "assets/libs/mail/contact_me.js"
+            },
+            {
+                "src": "assets/libs/mail/jqBootstrapValidation.js"
             }
         ]
     },

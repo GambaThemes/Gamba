@@ -39,18 +39,27 @@ section.contact-form-wrapper.padding-top-100.padding-bottom-100
             .icons //
             h2.title get in touch today
         .main-content
-            form.contact-form#contact-form
+            form.contact-form#contactForm(novalidate)
                 .row
                     .col-sm-4
-                        input.form-control(type="text", placeholder="Your Name", onfocus="this.placeholder = ''")
+                        .form-group
+                            input.form-control#name(type="text", placeholder="Your Name", onfocus="this.placeholder = ''", required data-validation-required-message="Please enter your name.")
+                            p.help-block.text-danger
                     .col-sm-4
-                        input.form-control(type="email", placeholder="Your Email", onfocus="this.placeholder = ''")
+                        .form-group
+                            input.form-control#email(type="email", placeholder="Your Email", onfocus="this.placeholder = ''", required data-validation-required-message="Please enter your email address.")
+                            p.help-block.text-danger
                     .col-sm-4 
-                        input.form-control(type="text", placeholder="Your Phone", onfocus="this.placeholder = ''")
+                        .form-group
+                            input.form-control#phone(type="text", placeholder="Your Phone", onfocus="this.placeholder = ''", required data-validation-required-message="Please enter your phone number.")
+                            p.help-block.text-danger
                 .row
                     .col-sm-12
-                        textarea.form-control.form-textarea( placeholder="Your Message", onfocus="this.placeholder = ''")
-                button.btn.btn-maincolor.margin-top-50(type="submit") Send Message 
+                        .form-group
+                            textarea.form-control.form-textarea#message( placeholder="Your Message", onfocus="this.placeholder = ''", required data-validation-required-message="Please enter a message.")
+                            p.help-block.text-danger
+                #success.margin-top-50
+                button.btn.btn-maincolor(type="submit") Send Message 
         .bg-images-pc
             img.img-responsive(src="assets/images/more-image/chef-4.png", alt="")
 .contact-map

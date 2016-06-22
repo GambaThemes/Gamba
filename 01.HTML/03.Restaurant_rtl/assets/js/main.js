@@ -154,7 +154,7 @@ jQuery(function($) {
             autoplaySpeed: 5000,
             speed: 500,
             dots: false,
-            arows:true,
+            arrows:true,
             responsive: [
                 {
                     breakpoint: 768,
