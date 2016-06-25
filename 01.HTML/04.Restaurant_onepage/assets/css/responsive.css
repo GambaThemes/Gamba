@@ -549,6 +549,18 @@
         padding: 15px 0;
     }
 
+    .contact-form-wrapper {
+        background-attachment: scroll;
+    }
+
+    .contact-form .col-sm-4 {
+        margin-bottom: 30px;
+    }
+
+    .contact-form .col-sm-4:last-child {
+        margin-bottom: 0;
+    }
+
 }
 
 /*----------  1.4. Media screen max width 600px  ----------*/

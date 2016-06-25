@@ -92,6 +92,9 @@
                         <li>
                             <a class="page-scroll main-menu" href="#event">Event</a>
                         </li>
+                        <li>
+                            <a class="page-scroll main-menu" href="#contact">Contact</a>
+                        </li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -860,6 +863,44 @@
         </section>
 
         <!-- Contact -->
+        <section id="contact" class="contact-form-wrapper padding-top-100 padding-bottom-100">
+            <div class="container">
+                <div class="main-title white">
+                        <div class="bg-image"><img src="assets/images/seafood/scallop-2.png" alt="" class="scallop"></div>
+                        <h2 class="title">Contact Us</h2></div>
+                <div class="main-content">
+                    <form id="contactForm" novalidate="novalidate" class="contact-form">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group"><input id="name" type="text" placeholder="Your Name" onfocus="this.placeholder = ''" required="required" data-validation-required-message="Please enter your name." class="form-control">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group"><input id="email" type="email" placeholder="Your Email" onfocus="this.placeholder = ''" required="required" data-validation-required-message="Please enter your email address." class="form-control">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group"><input id="phone" type="text" placeholder="Your Phone" onfocus="this.placeholder = ''" required="required" data-validation-required-message="Please enter your phone number." class="form-control">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group"><textarea id="message" placeholder="Your Message" onfocus="this.placeholder = ''" required="required" data-validation-required-message="Please enter a message." class="form-control form-textarea"></textarea>
+                                    <p
+                                        class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="success" class="margin-top-50"></div><button type="submit" class="btn btn-maincolor">Send Message </button></form>
+                </div>
+                <div class="bg-images-pc"><img src="assets/images/more-image/chef-4.png" alt="" class="img-responsive"></div>
+            </div>
+        </section>
+
         <section class="subscribe-email last-section">
             <div class="container">
                 <div class="subscribe-email-wrapper">
@@ -876,6 +917,7 @@
                 </div>
             </div>
         </section>
+
 
         <footer>
             <div class="footer">
@@ -967,7 +1009,8 @@
         <script src="assets/libs/onepage/cbpAnimatedHeader.js"></script>
         <script src="assets/libs/onepage/agency.js"></script>
         <script src="assets/libs/background-video/video-bg.js"></script>
-        <!-- <script src="assets/js/pages/coming-soon.js"></script> -->
+        <script src="assets/libs/mail/contact_me.js"></script>
+        <script src="assets/libs/mail/jqBootstrapValidation.js"></script>
         <script src="assets/libs/parallax/jquery.parallax-scroll.js"></script>
         <!-- MAIN JS-->
         <script src="assets/js/main.js"></script>

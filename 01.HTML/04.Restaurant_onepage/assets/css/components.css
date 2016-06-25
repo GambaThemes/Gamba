@@ -1726,6 +1726,101 @@
         content: '\f178';
     }
 
+    .contact-form-wrapper {
+        position: relative;
+        background-color: #ed421c;
+        background-image: url('../images/background/homepage-4.jpg');
+        background-size: cover;
+        position: center;
+        background-attachment: fixed;
+    }
+
+    .contact-form-wrapper:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: '';
+        background-color: rgba(0, 2, 5, .5);
+    }
+
+    .contact-form-wrapper .bg-images-pc {
+        position: absolute;
+        bottom: 0;
+        left: -5%;
+        display: none;
+        width: 25%;
+    }
+
+    .contact-form {
+        text-align: center;
+    }
+
+    .contact-form .form-control {
+        border: 1px solid #fff;
+        background-color: transparent;
+        color: #fff;
+    }
+
+    .contact-form .form-control:hover,
+    .contact-form .form-control:focus {
+        border: 1px solid #fff;
+    }
+
+    .contact-form .form-control::-webkit-input-placeholder {
+        color: rgba(255, 255, 255, .8);
+    }
+
+    .contact-form .form-control:-moz-placeholder {
+        color: rgba(255, 255, 255, .8);
+    }
+
+    .contact-form .form-control::-moz-placeholder {
+        color: rgba(255, 255, 255, .8);
+    }
+
+    .contact-form .form-control:-ms-input-placeholder {
+        color: rgba(255, 255, 255, .8);
+    }
+
+    .contact-form .form-textarea {
+        max-width: 100%;
+        height: 120px;
+        margin-top: 30px;
+    }
+
+    .contact-form .btn {
+        background-color: transparent;
+        border: 2px solid #fff;
+        position: relative;
+        z-index: 10;
+    }
+
+    .contact-form .btn:hover {
+        background-color: #fff;
+        border: 2px solid #fff;
+        color: #ed421c;
+    }
+
+    .text-danger {
+        color: rgba(255, 255, 255, .8);
+    }
+
+    .form-group {
+        margin-bottom: 0;
+    }
+
+    .help-block {
+        margin: 0;
+    }
+
+    .help-block ul {
+        margin-bottom: 0;
+
+        text-align: left;
+    }
+
 /*=================================
 ======        END PAGE       ======
 ==================================*/
